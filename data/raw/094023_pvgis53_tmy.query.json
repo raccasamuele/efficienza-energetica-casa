@@ -1,0 +1,15 @@
+{
+  "climateId": "094023",
+  "name": "Isernia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.6002&lon=14.2383&outputformat=json",
+  "query": {
+    "lat": "41.6002",
+    "lon": "14.2383",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:47+00:00",
+  "sha256": "d487b39e37e09a50c8be09dc7913002b4c44a21eb5f9e3beb786cc3a6189e81c",
+  "bytes": 1262140,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41385"
+}

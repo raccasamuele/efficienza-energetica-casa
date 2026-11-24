@@ -1,0 +1,15 @@
+{
+  "climateId": "036023",
+  "name": "Modena",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.6459&lon=10.9256&outputformat=json",
+  "query": {
+    "lat": "44.6459",
+    "lon": "10.9256",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:52+00:00",
+  "sha256": "89de4d586175e6ad50da2d4c5b1339b37cc5c31fb220fa92cf75e18d3f0d6649",
+  "bytes": 1270070,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43336"
+}

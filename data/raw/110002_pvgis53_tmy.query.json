@@ -1,0 +1,15 @@
+{
+  "climateId": "110002",
+  "name": "Barletta",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.3215&lon=16.2869&outputformat=json",
+  "query": {
+    "lat": "41.3215",
+    "lon": "16.2869",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:44+00:00",
+  "sha256": "b21843f63b33ecef2929b7d688336e1e462362128f36ac19ed17b2dca4c88736",
+  "bytes": 1273306,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41200"
+}

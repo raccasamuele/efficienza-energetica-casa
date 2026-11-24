@@ -1,0 +1,15 @@
+{
+  "climateId": "090064",
+  "name": "Sassari",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.7235&lon=8.5613&outputformat=json",
+  "query": {
+    "lat": "40.7235",
+    "lon": "8.5613",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:56+00:00",
+  "sha256": "e01cbf0b7a16ed9ebe90d8955af9932af1a741b65dce3c4884e4991570f0f71b",
+  "bytes": 1266280,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40683"
+}

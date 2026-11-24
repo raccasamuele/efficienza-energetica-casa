@@ -1,0 +1,303 @@
+[
+  {
+    "name": "esempio-pdc",
+    "questions": [
+      {
+        "goal": "fv",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3084.610090172339,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "P",
+            "annualCost": 2432.322782445973,
+            "investment": 12280,
+            "npv": -1755.5816253615105,
+            "payback": null
+          }
+        ]
+      },
+      {
+        "goal": "pdc",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3084.610090172339,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "H",
+            "annualCost": 2439.093148273307,
+            "investment": 13695,
+            "npv": -4091.3379248990423,
+            "payback": 21.215554714506776
+          }
+        ]
+      },
+      {
+        "goal": "completo",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3084.610090172339,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "W",
+            "annualCost": 2898.135415591063,
+            "investment": 12760,
+            "npv": -9985.727716805446,
+            "payback": 68.42752255046031
+          },
+          {
+            "id": "H",
+            "annualCost": 2439.093148273307,
+            "investment": 13695,
+            "npv": -4091.3379248990423,
+            "payback": 21.215554714506776
+          },
+          {
+            "id": "P",
+            "annualCost": 2807.028068854218,
+            "investment": 8580,
+            "npv": 439.2201831830632,
+            "payback": 18.739131900350554
+          },
+          {
+            "id": "WH",
+            "annualCost": 2326.2735883747373,
+            "investment": 26455,
+            "npv": -15172.867758740413,
+            "payback": 34.88556852701887
+          },
+          {
+            "id": "HP",
+            "annualCost": 2041.2864161353255,
+            "investment": 22275,
+            "npv": -2531.6921939364706,
+            "payback": null
+          },
+          {
+            "id": "WHP",
+            "annualCost": 1935.316791766399,
+            "investment": 35035,
+            "npv": -13676.872144187268,
+            "payback": null
+          },
+          {
+            "id": "WP",
+            "annualCost": 2620.553394272942,
+            "investment": 21340,
+            "npv": -9546.50753362239,
+            "payback": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "esempio-fv-esistente",
+    "questions": [
+      {
+        "goal": "pdc",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 2820.333236370372,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "H",
+            "annualCost": 2075.0625589705023,
+            "investment": 13695,
+            "npv": -3137.284122802821,
+            "payback": 19.29839944395512
+          }
+        ]
+      },
+      {
+        "goal": "completo",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 2820.333236370372,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "W",
+            "annualCost": 2633.8585617890963,
+            "investment": 12760,
+            "npv": -9985.727716805446,
+            "payback": 68.42752255046031
+          },
+          {
+            "id": "H",
+            "annualCost": 2075.0625589705023,
+            "investment": 13695,
+            "npv": -3137.284122802821,
+            "payback": 19.29839944395512
+          },
+          {
+            "id": "P",
+            "annualCost": 2453.4311008835425,
+            "investment": 3700,
+            "npv": -2264.880133649348,
+            "payback": null
+          },
+          {
+            "id": "WH",
+            "annualCost": 1967.4896981189825,
+            "investment": 26455,
+            "npv": -14268.993863683829,
+            "payback": 32.297997640130085
+          },
+          {
+            "id": "HP",
+            "annualCost": 1731.6890334316126,
+            "investment": 17395,
+            "npv": -5605.718767971647,
+            "payback": null
+          },
+          {
+            "id": "WHP",
+            "annualCost": 1622.312514341725,
+            "investment": 30155,
+            "npv": -16722.662631698124,
+            "payback": null
+          },
+          {
+            "id": "WP",
+            "annualCost": 2266.956426302267,
+            "investment": 16460,
+            "npv": -12250.607850454802,
+            "payback": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "esempio-auto",
+    "questions": [
+      {
+        "goal": "fv",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3650.8662556894787,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "P",
+            "annualCost": 2967.593660871552,
+            "investment": 12280,
+            "npv": -1583.8548669827103,
+            "payback": null
+          }
+        ]
+      },
+      {
+        "goal": "pdc",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3650.8662556894787,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "H",
+            "annualCost": 3005.3493137905166,
+            "investment": 13695,
+            "npv": -4091.337924900075,
+            "payback": 21.215554714509064
+          }
+        ]
+      },
+      {
+        "goal": "completo",
+        "ok": true,
+        "packages": [
+          {
+            "id": "base",
+            "annualCost": 3650.8662556894787,
+            "investment": 0,
+            "npv": null,
+            "payback": null
+          },
+          {
+            "id": "W",
+            "annualCost": 3464.3915811082034,
+            "investment": 12760,
+            "npv": -9985.727716805453,
+            "payback": 68.42752255046047
+          },
+          {
+            "id": "H",
+            "annualCost": 3005.3493137905166,
+            "investment": 13695,
+            "npv": -4091.337924900075,
+            "payback": 21.215554714509064
+          },
+          {
+            "id": "P",
+            "annualCost": 3362.4820957722864,
+            "investment": 8580,
+            "npv": 531.6910100155288,
+            "payback": 18.493377924153798
+          },
+          {
+            "id": "WH",
+            "annualCost": 2892.529753891942,
+            "investment": 26455,
+            "npv": -15172.867758741375,
+            "payback": 34.88556852702186
+          },
+          {
+            "id": "HP",
+            "annualCost": 2597.0758035910503,
+            "investment": 22275,
+            "npv": -2442.2621344749928,
+            "payback": null
+          },
+          {
+            "id": "WHP",
+            "annualCost": 2491.1061792221253,
+            "investment": 35035,
+            "npv": -13587.442084725633,
+            "payback": null
+          },
+          {
+            "id": "WP",
+            "annualCost": 3176.0074211910105,
+            "investment": 21340,
+            "npv": -9454.03670678992,
+            "payback": null
+          }
+        ]
+      }
+    ]
+  }
+]

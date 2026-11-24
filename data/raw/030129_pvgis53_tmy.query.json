@@ -1,0 +1,15 @@
+{
+  "climateId": "030129",
+  "name": "Udine",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=46.0635&lon=13.2358&outputformat=json",
+  "query": {
+    "lat": "46.0635",
+    "lon": "13.2358",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:19+00:00",
+  "sha256": "0848e5d4fdbaeacb1a2ae7a545cf1c807c3f1548444a9d18452a34eae84b0c07",
+  "bytes": 1263278,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/179272"
+}

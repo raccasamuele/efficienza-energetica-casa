@@ -1,0 +1,15 @@
+{
+  "climateId": "083048",
+  "name": "Messina",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=38.1938&lon=15.5542&outputformat=json",
+  "query": {
+    "lat": "38.1938",
+    "lon": "15.5542",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:28+00:00",
+  "sha256": "9385d67aeccff58f93fecedc5a9cc962ed69689f75409e05ecd2ca5d3bbd0de9",
+  "bytes": 1265041,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39514"
+}

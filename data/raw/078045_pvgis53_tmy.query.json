@@ -1,0 +1,15 @@
+{
+  "climateId": "078045",
+  "name": "Cosenza",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=39.3100&lon=16.2502&outputformat=json",
+  "query": {
+    "lat": "39.3100",
+    "lon": "16.2502",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:00+00:00",
+  "sha256": "f140b865409463ee7b2d0b305dca054ae382690238b0e10225ccc7fca5b80694",
+  "bytes": 1263622,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39859"
+}

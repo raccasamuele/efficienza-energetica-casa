@@ -1,0 +1,89 @@
+{
+  "revision": "125c2ef6c3fc38043368daac1352557fd2a90106",
+  "files": [
+    {
+      "path": "keymark/LICENSE-hplib",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/LICENSE",
+      "acquiredAt": "2026-10-28T16:02:39.282Z",
+      "sha256": "ec1a20839361993ecae88db7ceb4dbd6588f7b8cd7304917137d5889a7900fe2",
+      "bytes": 1100
+    },
+    {
+      "path": "keymark/README-hplib.md",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/README.md",
+      "acquiredAt": "2026-10-28T16:02:39.525Z",
+      "sha256": "a50b9a1f7d769e118628a5135c274ed546e0302fc2ae3dd1bbc6261f992dc4a8",
+      "bytes": 8244
+    },
+    {
+      "path": "keymark/hplib.py",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib.py",
+      "acquiredAt": "2026-10-28T16:02:39.755Z",
+      "sha256": "3273ef8e66cafd9d831b9a1ed1dedafd0f710d3dd7d435b726868d530ed64ddf",
+      "bytes": 28140
+    },
+    {
+      "path": "keymark/hplib_database.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib_database.csv",
+      "acquiredAt": "2026-10-28T16:02:40.428Z",
+      "sha256": "4e07619b153f11bde611451dca4eb736813388fd47687743fe44349401987f6e",
+      "bytes": 5280375
+    },
+    {
+      "path": "keymark/hplib_database.py",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib_database.py",
+      "acquiredAt": "2026-10-28T16:02:40.684Z",
+      "sha256": "b7588dfa6b5c010f21d6683c61f4095f44d9e27608293e79b5b07e370e4a9200",
+      "bytes": 61748
+    },
+    {
+      "path": "keymark/relative_error.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/output/relative_error.csv",
+      "acquiredAt": "2026-10-28T16:02:42.535Z",
+      "sha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb",
+      "bytes": 19823191
+    },
+    {
+      "path": "keymark/_Acond_a.s.Acond_PRO-N.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Acond_a.s.Acond_PRO-N.csv",
+      "acquiredAt": "2026-10-28T16:02:42.919Z",
+      "sha256": "78b537b8835d33f317f94f6ce78a92def3a8f0275a783586ab3ff00887752881",
+      "bytes": 4512
+    },
+    {
+      "path": "keymark/_Acond_a.s.Acond_PRO-R.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Acond_a.s.Acond_PRO-R.csv",
+      "acquiredAt": "2026-10-28T16:02:43.174Z",
+      "sha256": "5f0bef0dc68cd3bcdb525691608327acbd1b88c74495a8bb28322f83775acb75",
+      "bytes": 8634
+    },
+    {
+      "path": "keymark/_Bosch_Thermotechnik_GmbH_Bosch_Compress_CS3400iAWS_10,12,14_OR-T.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Bosch_Thermotechnik_GmbH_Bosch_Compress_CS3400iAWS_10,12,14_OR-T.csv",
+      "acquiredAt": "2026-10-28T16:02:43.486Z",
+      "sha256": "2a8e64eea331cdb5ca4867f9af54c6bc06a0e292657173f2a924271741efdd60",
+      "bytes": 94784
+    },
+    {
+      "path": "keymark/_KRONOTERM_d.o.o.ADAPT_0724.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_KRONOTERM_d.o.o.ADAPT_0724.csv",
+      "acquiredAt": "2026-10-28T16:02:43.722Z",
+      "sha256": "5635bf7c7bdc8077197da5bdda4e27c30c0adbc32ee5d9567e18c3c6b7b76a6f",
+      "bytes": 4544
+    },
+    {
+      "path": "keymark/_KRONOTERM_d.o.o.VERSI_0209.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_KRONOTERM_d.o.o.VERSI_0209.csv",
+      "acquiredAt": "2026-10-28T16:02:43.958Z",
+      "sha256": "bb80b7669900c2df8cb853ccda6f9dfae12a24b24979f3f406dcfaf3ac0d04cc",
+      "bytes": 47250
+    },
+    {
+      "path": "keymark/_ait-deutschland_GmbHHybrox_8.csv",
+      "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_ait-deutschland_GmbHHybrox_8.csv",
+      "acquiredAt": "2026-10-28T16:02:44.178Z",
+      "sha256": "8521f48da480f29d25e813b619167155e37483fc2a9b1f198695ce1e68f3e12a",
+      "bytes": 10073
+    }
+  ]
+}

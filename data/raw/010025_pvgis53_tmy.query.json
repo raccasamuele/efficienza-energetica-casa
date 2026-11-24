@@ -1,0 +1,15 @@
+{
+  "climateId": "010025",
+  "name": "Genova",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.4073&lon=8.9339&outputformat=json",
+  "query": {
+    "lat": "44.4073",
+    "lon": "8.9339",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:37+00:00",
+  "sha256": "9d801b861e921a1114f08a2664ec0ddcd9c16189727eb79aa0d5a70135a06739",
+  "bytes": 1258382,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44875"
+}

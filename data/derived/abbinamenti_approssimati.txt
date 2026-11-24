@@ -1,0 +1,127 @@
+Campiglione Fenile (TO) <- Campiglione Tenile (TO): 
+Lombriasco (TO) <- Lobriasco (TO): 
+Poirino (TO) <- Piorino (TO): 
+Sant'Antonino di Susa (TO) <- Sant'Antonio di Susa (TO): 
+Venaria Reale (TO) <- Venaria (TO): 
+Cellio con Breia (VC) <- Cellio (VC): 
+Gattico-Veruno (NO) <- Gattico (NO): 
+Castellinaldo d'Alba (CN) <- Castellinaldo (CN): 
+Cerretto Langhe (CN) <- Cerreto Langhe (CN): 
+Costigliole Saluzzo (CN) <- Costiglione Saluzzo (CN): 
+Agliano Terme (AT) <- Agliano (AT): 
+Calliano Monferrato (AT) <- Calliano (AT): 
+Casorzo Monferrato (AT) <- Casorzo (AT): 
+Montemagno Monferrato (AT) <- Montemagno (AT): 
+Montiglio Monferrato (AT) <- Montiglio (AT): 
+Moransengo-Tonengo (AT) <- Moransengo (AT): 
+Castellania Coppi (AL) <- Castellania (AL): 
+Fubine Monferrato (AL) <- Fubine (AL): 
+Murisengo Monferrato (AL) <- Murisengo (AL): 
+Lu e Cuccaro Monferrato (AL) <- Cuccaro Monferrato (AL): 
+Saint-Rhémy-en-Bosses (AO) <- Saint-Rhemy (AO): 
+Aquila d'Arroscia (IM) <- Aquila di Arroscia (IM): 
+Cosio d'Arroscia (IM) <- Cosio di Arroscia (IM): 
+Albissola Marina (SV) <- Albisola Marina (SV): 
+Riccò del Golfo di Spezia (SP) <- Riccò del Golfo di La Spezia (SP): 
+Maccagno con Pino e Veddasca (VA) <- Maccagno (VA): 
+Cadrezzate con Osmate (VA) <- Cadrezzate (VA): 
+Bardello con Malgesso e Bregano (VA) <- Bardello (VA): 
+Gravedona ed Uniti (CO) <- Gravedona (CO): 
+Solbiate con Cagno (CO) <- Solbiate (CO): 
+Vermezzo con Zelo (MI) <- Vermezzo (MI): 
+Brembate (BG) <- Brambate (BG): 
+Cortenuova (BG) <- Cortenova (BG): 
+Riva di Solto (BG) <- Riva di Sotto (BG): 
+Costa Serina (BG) <- Costa di Serina (BG): 
+Val Brembilla (BG) <- Brembilla (BG): 
+Lonato del Garda (BS) <- Lonato (BS): 
+Puegnago del Garda (BS) <- Puegnago sul Garda (BS): 
+Tremosine sul Garda (BS) <- Tremosine (BS): 
+Campospinoso Albaredo (PV) <- Campospinoso (PV): 
+Godiasco Salice Terme (PV) <- Godiasco (PV): 
+Montalto Pavese (PV) <- Montalto Pavese (PV): Confini modificati nel 2026: classificazione delle singole località da verificare
+Rivanazzano Terme (PV) <- Rivanazzano (PV): 
+Vellezzo Bellini (PV) <- Velezzo Bellini (PV): 
+Cornale e Bastida (PV) <- Cornale (PV): 
+Corteolona e Genzone (PV) <- Corteolona (PV): 
+Piadena Drizzona (CR) <- Piadena (CR): 
+San Martino dall'Argine (MN) <- San Martino dell'Argine (MN): 
+Sermide e Felonica (MN) <- Sermide (MN): 
+Monguelfo-Tesido (BZ) <- Monguelfo (BZ): 
+Montagna sulla strada del vino (BZ) <- Montagna (BZ): 
+Salorno sulla strada del vino (BZ) <- Salorno (BZ): 
+Trodena nel parco naturale (BZ) <- Trodena (BZ): 
+Valle Aurina (BZ) <- Valle urina (BZ): 
+Bedollo (TN) <- Betollo (TN): 
+Caderzone Terme (TN) <- Caderzone (TN): 
+Garniga Terme (TN) <- Garniga (TN): 
+Roncegno Terme (TN) <- Roncegno (TN): 
+Ruffrè-Mendola (TN) <- Ruffrè (TN): 
+Soraga di Fassa (TN) <- Soraga (TN): 
+Dimaro Folgarida (TN) <- Dimaro (TN): 
+Pieve di Bono-Prezzo (TN) <- Pieve di Bono (TN): 
+Amblar-Don (TN) <- Amblar (TN): 
+Cembra Lisignago (TN) <- Cembra (TN): 
+Brenzone sul Garda (VR) <- Brenzone (VR): 
+Costermano sul Garda (VR) <- Costermano (VR): 
+Negrar di Valpolicella (VR) <- Negrar (VR): 
+Lusiana Conco (VI) <- Lusiana (VI): 
+Castegnero Nanto (VI) <- Castegnero (VI): Confini modificati nel 2026: classificazione delle singole località da verificare
+Vallada Agordina (BL) <- Vallada gordina (BL): 
+San Stino di Livenza (VE) <- Santo Stino di Livenza (VE): 
+Sant'Angelo di Piove di Sacco (PD) <- Sant'Angelo di Piove di (PD): 
+Rivignano Teor (UD) <- Rivignano (UD): 
+Fiumicello Villa Vicentina (UD) <- Fiumicello (UD): 
+San Dorligo della Valle (TS) <- San Dorligo della Valle - Dolina (TS): 
+Fornovo di Taro (PR) <- Fornoro di Taro (PR): 
+Sorbolo Mezzani (PR) <- Sorbolo (PR): 
+San Giorgio di Piano (BO) <- San Giorgio di Pano (BO): 
+Serravalle di Chienti (MC) <- Serravalle di Chieti (MC): 
+Sillano Giuncugnano (LU) <- Sillano (LU): 
+Chiesina Uzzanese (PT) <- Chiesa Uzzanese (PT): 
+Abetone Cutigliano (PT) <- Abetone (PT): 
+Scarperia e San Piero (FI) <- Scarperia (FI): 
+Casciana Terme Lari (PI) <- Casciana Terme (PI): 
+Crespina Lorenzana (PI) <- Crespina (PI): 
+Badia Tedalda (AR) <- Badia Tebalda (AR): 
+Pratovecchio Stia (AR) <- Pratovecchio (AR): 
+Laterina Pergine Valdarno (AR) <- Laterina (AR): 
+Civitella Paganico (GR) <- Civitella Paganio (GR): 
+Massa Martana (PG) <- Massa Artana (PG): 
+Paganico Sabino (RI) <- Paganico (RI): 
+Pozzaglia Sabina (RI) <- Pozzaglia Sabino (RI): 
+Capriati a Volturno (CE) <- Capriati al Volturno (CE): 
+Guardia Sanframondi (BN) <- Guardia Sanframodi (BN): 
+Pietrelcina (BN) <- Pietralcina (BN): 
+Telese Terme (BN) <- Telese (BN): 
+Castelfranci (AV) <- Castalfranci (AV): 
+Montaguto (AV) <- Montacuto (AV): 
+Torrioni (AV) <- Torrione (AV): 
+Capaccio Paestum (SA) <- Capaccio (SA): 
+Castiglione del Genovesi (SA) <- Castiglione dei Genovesi (SA): 
+Popoli Terme (PE) <- Popoli (PE): 
+Volturara Appula (FG) <- Voltura Appula (FG): 
+San Pietro Vernotico (BR) <- San Pietro Vernoico (BR): 
+Gagliano del Capo (LE) <- Gagliano del Campo (LE): 
+Salice Salentino (LE) <- Salice Valentino (LE): 
+Presicce-Acquarica (LE) <- Presicce (LE): 
+Cassano all'Ionio (CS) <- Cassano allo Ionio (CS): 
+San Benedetto Ullano (CS) <- San Benedetto Ulano (CS): 
+Nocera Terinese (CZ) <- Nocera Tirinese (CZ): 
+Simeri Crichi (CZ) <- Simetri Crichi (CZ): 
+Caraffa del Bianco (RC) <- Caraffa del Biano (RC): 
+Gioiosa Ionica (RC) <- Giosa Ionica (RC): 
+Santo Stefano in Aspromonte (RC) <- Santo Stefano in (RC): 
+Calatafimi-Segesta (TP) <- Calatafimi (TP): 
+Castronovo di Sicilia (PA) <- Castronuovo di Sicilia (PA): 
+San Giovanni la Punta (CT) <- San Giovanni la Unta (CT): 
+San Michele di Ganzaria (CT) <- San Michele di Garanzia (CT): 
+Casarsa della Delizia (PN) <- Casarza della Delizia (PN): 
+Valvasone Arzene (PN) <- Valvasone (PN): 
+Rocchetta a Volturno (IS) <- Rocchetta al Volturno (IS): 
+Cortenova (LC) <- Cortenova (CO): 
+Correzzana (MB) <- Coprezzana (MI): 
+Magliano di Tenna (FM) <- Magliamo di Tenna (AP): 
+Monte Urano (FM) <- Monte Urbano (AP): 
+Nughedu San Nicolò (SS) <- Nughedu di San Nicolò (SS): 
+Trinità d'Agultu e Vignola (OT) <- Trinità d'Agultu e Vignolas (SS): 

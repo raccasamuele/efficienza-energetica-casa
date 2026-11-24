@@ -1,0 +1,26 @@
+enel Bolletta luce
+Enel Energia - Mercato libero dell'energia
+Numero cliente 777 777 777 MARIO ESEMPIO
+Codice POD IT000E00000000 VIA ESEMPIO 1
+Codice fiscale ESMMRA00A00X000X 00000 CITTÀ XX
+Periodo di fatturazione: dal 01/01/2026 al 28/02/2026
+Totale da pagare 112,40 € Consumo totale fatturato del periodo
+entro il 20/03/2026 412 kWh
+di cui consumi stimati 0 kWh
+Consumo annuo dal 01/03/2025 al 28/02/2026: 2.540 kWh
+F1 812 kWh F2 790 kWh F3 938 kWh
+Offerta: Enel Esempio Luce Mercato libero
+Tipologia offerta: a prezzo fisso
+Scontrino dell'energia
+QUOTA PER CONSUMI 412 kWh 0,162300 €/kWh 66,87 €
+QUOTA FISSA 2 mesi 7,200000 €/mese 14,40 €
+QUOTA POTENZA 3 kW 1,850000 €/kW/mese 11,10 €
+Imposte e IVA 20,03 €
+Totale da pagare 112,40 €
+Dati della fornitura
+Tensione di fornitura 220 V Potenza contrattualmente impegnata 3,0 kW
+Potenza disponibile 3,3 kW
+Letture e consumi
+Lettura effettiva 31/01/2026 F1 10.120 F2 9.800 F3 11.300
+Lettura effettiva 28/02/2026 F1 10.250 F2 9.930 F3 11.452
+Spesa annua sostenuta dal 01/03/2025 al 28/02/2026 712,35 €

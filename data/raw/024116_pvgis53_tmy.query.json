@@ -1,0 +1,15 @@
+{
+  "climateId": "024116",
+  "name": "Vicenza",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.5463&lon=11.5567&outputformat=json",
+  "query": {
+    "lat": "45.5463",
+    "lon": "11.5567",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:02+00:00",
+  "sha256": "2eb1b6dafd533f7516c5157cb1b6b4e4f45156834be8f491a41e3a44bc60c2e2",
+  "bytes": 1266105,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45159"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "023091",
+  "name": "Verona",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4385&lon=10.9924&outputformat=json",
+  "query": {
+    "lat": "45.4385",
+    "lon": "10.9924",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:59+00:00",
+  "sha256": "9819da826373082d1acf3c3ccd8134f5ab1a328b4d55e3733592abaa8b8a3791",
+  "bytes": 1270556,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44830"
+}

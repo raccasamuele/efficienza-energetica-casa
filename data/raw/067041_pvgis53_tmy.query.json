@@ -1,0 +1,15 @@
+{
+  "climateId": "067041",
+  "name": "Teramo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=42.6613&lon=13.6984&outputformat=json",
+  "query": {
+    "lat": "42.6613",
+    "lon": "13.6984",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:32+00:00",
+  "sha256": "3445405718b9f6e81ac53b3658ac086c140e03879d76212cd13055a1105f5bc2",
+  "bytes": 1263436,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42107"
+}

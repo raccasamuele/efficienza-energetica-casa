@@ -1,0 +1,15 @@
+{
+  "climateId": "111009",
+  "name": "Carbonia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=39.1653&lon=8.5278&outputformat=json",
+  "query": {
+    "lat": "39.1653",
+    "lon": "8.5278",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:18:09+00:00",
+  "sha256": "4c99bf5e54e8216f85b9e78058abdb8cb75909665b6f8e24f434266200ac250e",
+  "bytes": 1274233,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39821"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "097042",
+  "name": "Lecco",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.8554&lon=9.3896&outputformat=json",
+  "query": {
+    "lat": "45.8554",
+    "lon": "9.3896",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:40+00:00",
+  "sha256": "d7cb809db898d6e7a9afaae8ce10f8d587f68a0ab83a220180b6b53cfb8ea65f",
+  "bytes": 1259528,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46229"
+}

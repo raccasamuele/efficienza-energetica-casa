@@ -1,0 +1,74 @@
+plenitude Bolletta Numero Cliente
+Gas 9999999999999
+Contratto intestato a:
+MARIO ESEMPIO
+Codice Fiscale/Partita IVA
+ESMMRA00A00X000X
+Indirizzo di fatturazione MARIO ESEMPIO
+VIA ESEMPIO 1, 00000 CITTÀ XX VIA ESEMPIO 1
+00000 CITTÀ XX
+Periodo di fatturazione: dal 01/03/2025 al 30/04/2025
+Fattura elettronica numero 8888888888 valida ai fini fiscali - Data di emissione 28/05/2025
+Gas
+Totale da pagare entro il 18/06/2025 Consumo totale
+fatturato del periodo
+179,33 € 127 Smc
+Per maggiori dettagli si veda lo Scontrino dell'energia nella pagina seguente In un anno hai consumato 895 smc
+(dal 01/05/2024 al 30/04/2025)
+Modalità di pagamento
+Puoi usare il codice QR per pagare online o nei punti fisici abilitati come Offerta contrattuale attiva
+indicato nell'ultima pagina della bolletta. Trend Casa Base Gas
+Mercato libero
+I tuoi pagamenti sono regolari Scadenza condizioni economiche: 16/08/2026
+Al 28/05/2025 le tue bollette scadute risultano pagate.
+Il bonus sociale economico è attivo fino al 31/12/2025
+Come contattare Plenitude Chi chiamare in caso di guasti o pronto
+Sito web Corrispondenza e reclami intervento
+eniplenitude.com/info - vai su eniplenitude.com/scrivici
+Periodo di fatturazione: dal 01/03/2025 al 30/04/2025 Bolletta Numero Cliente
+Fattura elettronica numero 8888888888 valida ai fini fiscali - Data di emissione 28/05/2025 Gas 9999999999999
+Indirizzo di fornitura PDR
+Via Esempio 1, 00000 Città XX 00000000000000
+Scontrino dell'energia Box offerta
+Prezzo medio Importi Caratteristiche della mia offerta
+QUOTA PER CONSUMI 0,808898 102,73 € Nome offerta: Trend Casa Base Gas
+127 Smc €/Smc Codice offerta: 000000GSVML00XX0GTCASAVBAS000000
+di cui spesa per la vendita di gas 0,484094 61,48 € Tipologia offerta: a prezzo variabile
+naturale €/Smc Codice condizioni economiche: D_GTCASAVBAS_BASE_00000000_GAS
+di cui spesa per la rete e gli oneri 0,324803 41,25 € Validità condizioni economiche: dal 16/08/2024 al 16/08/2026
+generali di sistema €/Smc Scadenza contratto: indeterminata
+QUOTA FISSA 16,570000 33,14 € Frequenza fatturazione: Bimestrale
+2 mesi €/mese Oneri di recesso: No
+di cui spesa per la vendita di gas 12,000000 24,00 € Altre caratteristiche: Gas con compensazione CO2
+naturale €/mese Dettaglio dei costi della mia offerta
+di cui spesa per la rete e gli oneri 4,570000 9,14 € Totale spesa prevista dall'offerta: 85,48 €
+generali di sistema €/mese Di cui spesa per la quota consumi: 61,48 €
+Accise e IVA 43,46 € Di cui spesa per la quota fissa: 24,00 €
+Totale bolletta 179,33 €
+Totale da pagare 179,33 €
+Caratteristiche tecniche della fornitura
+Tipologia cliente: domestico Classe misuratore: G4
+Potere calorifico superiore convenzionale: 0,0394998 GJ/Smc Tipologia misuratore: smart meter
+Tipologia d'uso: acqua calda sanitaria e/o cottura cibi abitazione + Coefficiente C*: 1,019502
+riscaldamento
+Letture e consumi
+Nelle precedenti bollette Data Segnanti Consumo Come comunico l'autolettura?
+Smc
+Ultima Lettura Rilevata fatturata 28/02/2025 8106 768 La tua bolletta è calcolata sulla base di consumi
+effettivi, per questo non è necessario comunicarci
+Nella presente bolletta Data Segnanti Consumo l'autolettura.
+Smc
+Lettura Rilevata 31/03/2025 8190 84
+Lettura Rilevata 30/04/2025 8233 43
+Consumo fatturato* 127
+*consumi adeguati al coefficiente correttivo C pari a 1,019502
+Informazioni storiche
+Storico consumi 139 145
+124 Consumo annuo 895 smc
+92 94 112 dal 01/05/2024 al 30/04/2025
+69 84
+61 Spesa annua 820,62 €
+18 18 14 16 20 31 25 dal 18/05/2024 al 17/05/2025
+4 3
+dic gen feb mar apr mag giu lug ago set ott nov dic gen feb mar apr mag
+2024 2025

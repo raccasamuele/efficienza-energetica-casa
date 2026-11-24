@@ -1,0 +1,15 @@
+{
+  "climateId": "032006",
+  "name": "Trieste",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.6496&lon=13.7773&outputformat=json",
+  "query": {
+    "lat": "45.6496",
+    "lon": "13.7773",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:25+00:00",
+  "sha256": "53eba5c3d16f38fcce645e846664851e7950c49a3f03efc8a291f979e7450ba7",
+  "bytes": 1258493,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/179180"
+}

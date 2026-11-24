@@ -1,0 +1,15 @@
+{
+  "climateId": "050026",
+  "name": "Pisa",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.7159&lon=10.4019&outputformat=json",
+  "query": {
+    "lat": "43.7159",
+    "lon": "10.4019",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:27+00:00",
+  "sha256": "2cb79f11d4e48a53c87af852e5ea0040045cdb2fa5b89f60c02f630e84c9cd45",
+  "bytes": 1270435,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42527"
+}

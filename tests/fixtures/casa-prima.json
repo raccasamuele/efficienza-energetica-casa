@@ -1,0 +1,499 @@
+[
+  {
+    "mode": "rapida",
+    "goal": "fv",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3084.610090172339,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2898.135415591063,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.3379248990423,
+        "spending": 2439.093148273307,
+        "electricityKwh": 6953.904100976097,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": -1755.5816253615105,
+        "spending": 2432.322782445973,
+        "electricityKwh": 370.40247240567544,
+        "gasSmc": 2092.610090172384,
+        "investment": 12280
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758740413,
+        "spending": 2326.2735883747373,
+        "electricityKwh": 6550.977101338346,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -4902.679982886519,
+        "spending": 1685.4995466734374,
+        "electricityKwh": 4262.498380976562,
+        "gasSmc": 190,
+        "investment": 25975
+      },
+      {
+        "id": "WHP",
+        "npv": -16034.064080955897,
+        "spending": 1577.8959696642764,
+        "electricityKwh": 3878.1998916581297,
+        "gasSmc": 190,
+        "investment": 38735
+      },
+      {
+        "id": "WP",
+        "npv": -11741.30934216696,
+        "spending": 2245.8481078646973,
+        "electricityKwh": 370.40247240567544,
+        "gasSmc": 1906.1354155911083,
+        "investment": 25040
+      }
+    ]
+  },
+  {
+    "mode": "rapida",
+    "goal": "batteria",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 2820.333236370372,
+        "electricityKwh": 1756.1540935642429,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2633.8585617890963,
+        "electricityKwh": 1756.1540935642429,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -3137.284122802821,
+        "spending": 2075.0625589705023,
+        "electricityKwh": 5653.79485346608,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": -2264.880133649348,
+        "spending": 2453.4311008835425,
+        "electricityKwh": 445.7893239684239,
+        "gasSmc": 2092.610090172384,
+        "investment": 3700
+      },
+      {
+        "id": "WH",
+        "npv": -14268.993863683829,
+        "spending": 1967.4896981189825,
+        "electricityKwh": 5269.6060647106515,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -5605.718767971647,
+        "spending": 1731.6890334316126,
+        "electricityKwh": 4427.46083368433,
+        "gasSmc": 190,
+        "investment": 17395
+      },
+      {
+        "id": "WHP",
+        "npv": -16722.662631698124,
+        "spending": 1622.312514341725,
+        "electricityKwh": 4036.830408363304,
+        "gasSmc": 190,
+        "investment": 30155
+      },
+      {
+        "id": "WP",
+        "npv": -12250.607850454802,
+        "spending": 2266.956426302267,
+        "electricityKwh": 445.7893239684239,
+        "gasSmc": 1906.1354155911083,
+        "investment": 16460
+      }
+    ]
+  },
+  {
+    "mode": "rapida",
+    "goal": "pdc",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3084.610090172339,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2898.135415591063,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.3379248990423,
+        "spending": 2439.093148273307,
+        "electricityKwh": 6953.904100976097,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": 439.2201831830632,
+        "spending": 2807.028068854218,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 2092.610090172384,
+        "investment": 8580
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758740413,
+        "spending": 2326.2735883747373,
+        "electricityKwh": 6550.977101338346,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -2531.6921939364706,
+        "spending": 2041.2864161353255,
+        "electricityKwh": 5533.165771911876,
+        "gasSmc": 190,
+        "investment": 22275
+      },
+      {
+        "id": "WHP",
+        "npv": -13676.872144187268,
+        "spending": 1935.316791766399,
+        "electricityKwh": 5154.702827737139,
+        "gasSmc": 190,
+        "investment": 35035
+      },
+      {
+        "id": "WP",
+        "npv": -9546.50753362239,
+        "spending": 2620.553394272942,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 1906.1354155911083,
+        "investment": 21340
+      }
+    ]
+  },
+  {
+    "mode": "rapida",
+    "goal": "serramenti",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3084.610090172339,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2898.135415591063,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.3379248990423,
+        "spending": 2439.093148273307,
+        "electricityKwh": 6953.904100976097,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": 439.2201831830632,
+        "spending": 2807.028068854218,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 2092.610090172384,
+        "investment": 8580
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758740413,
+        "spending": 2326.2735883747373,
+        "electricityKwh": 6550.977101338346,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -2531.6921939364706,
+        "spending": 2041.2864161353255,
+        "electricityKwh": 5533.165771911876,
+        "gasSmc": 190,
+        "investment": 22275
+      },
+      {
+        "id": "WHP",
+        "npv": -13676.872144187268,
+        "spending": 1935.316791766399,
+        "electricityKwh": 5154.702827737139,
+        "gasSmc": 190,
+        "investment": 35035
+      },
+      {
+        "id": "WP",
+        "npv": -9546.50753362239,
+        "spending": 2620.553394272942,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 1906.1354155911083,
+        "investment": 21340
+      }
+    ]
+  },
+  {
+    "mode": "rapida",
+    "goal": "auto",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3650.8662556894787,
+        "electricityKwh": 4722.343448275338,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805453,
+        "spending": 3464.3915811082034,
+        "electricityKwh": 4722.343448275338,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.337924900075,
+        "spending": 3005.3493137905166,
+        "electricityKwh": 8976.247549251844,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": 531.6910100155288,
+        "spending": 3362.4820957722864,
+        "electricityKwh": 3692.4000199996512,
+        "gasSmc": 2092.610090172384,
+        "investment": 8580
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758741375,
+        "spending": 2892.529753891942,
+        "electricityKwh": 8573.320549614078,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -2442.2621344749928,
+        "spending": 2597.0758035910503,
+        "electricityKwh": 7518.127869968036,
+        "gasSmc": 190,
+        "investment": 22275
+      },
+      {
+        "id": "WHP",
+        "npv": -13587.442084725633,
+        "spending": 2491.1061792221253,
+        "electricityKwh": 7139.664925793304,
+        "gasSmc": 190,
+        "investment": 35035
+      },
+      {
+        "id": "WP",
+        "npv": -9454.03670678992,
+        "spending": 3176.0074211910105,
+        "electricityKwh": 3692.4000199996512,
+        "gasSmc": 1906.1354155911083,
+        "investment": 21340
+      }
+    ]
+  },
+  {
+    "mode": "rapida",
+    "goal": "completo",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3084.610090172339,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2898.135415591063,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.3379248990423,
+        "spending": 2439.093148273307,
+        "electricityKwh": 6953.904100976097,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": 439.2201831830632,
+        "spending": 2807.028068854218,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 2092.610090172384,
+        "investment": 8580
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758740413,
+        "spending": 2326.2735883747373,
+        "electricityKwh": 6550.977101338346,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -2531.6921939364706,
+        "spending": 2041.2864161353255,
+        "electricityKwh": 5533.165771911876,
+        "gasSmc": 190,
+        "investment": 22275
+      },
+      {
+        "id": "WHP",
+        "npv": -13676.872144187268,
+        "spending": 1935.316791766399,
+        "electricityKwh": 5154.702827737139,
+        "gasSmc": 190,
+        "investment": 35035
+      },
+      {
+        "id": "WP",
+        "npv": -9546.50753362239,
+        "spending": 2620.553394272942,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 1906.1354155911083,
+        "investment": 21340
+      }
+    ]
+  },
+  {
+    "mode": "documentata",
+    "goal": "completo",
+    "ok": true,
+    "packages": [
+      {
+        "id": "base",
+        "npv": null,
+        "spending": 3084.610090172339,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 2092.610090172384,
+        "investment": 0
+      },
+      {
+        "id": "W",
+        "npv": -9985.727716805446,
+        "spending": 2898.135415591063,
+        "electricityKwh": 2699.999999999839,
+        "gasSmc": 1906.1354155911083,
+        "investment": 12760
+      },
+      {
+        "id": "H",
+        "npv": -4091.3379248990423,
+        "spending": 2439.093148273307,
+        "electricityKwh": 6953.904100976097,
+        "gasSmc": 190,
+        "investment": 13695
+      },
+      {
+        "id": "P",
+        "npv": 439.2201831830632,
+        "spending": 2807.028068854218,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 2092.610090172384,
+        "investment": 8580
+      },
+      {
+        "id": "WH",
+        "npv": -15172.867758740413,
+        "spending": 2326.2735883747373,
+        "electricityKwh": 6550.977101338346,
+        "gasSmc": 190,
+        "investment": 26455
+      },
+      {
+        "id": "HP",
+        "npv": -2531.6921939364706,
+        "spending": 2041.2864161353255,
+        "electricityKwh": 5533.165771911876,
+        "gasSmc": 190,
+        "investment": 22275
+      },
+      {
+        "id": "WHP",
+        "npv": -13676.872144187268,
+        "spending": 1935.316791766399,
+        "electricityKwh": 5154.702827737139,
+        "gasSmc": 190,
+        "investment": 35035
+      },
+      {
+        "id": "WP",
+        "npv": -9546.50753362239,
+        "spending": 2620.553394272942,
+        "electricityKwh": 1708.6356381494068,
+        "gasSmc": 1906.1354155911083,
+        "investment": 21340
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "climateId": "089017",
+  "name": "Siracusa",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=37.0316&lon=15.2124&outputformat=json",
+  "query": {
+    "lat": "37.0316",
+    "lon": "15.2124",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:52+00:00",
+  "sha256": "a3f6db996a77798b77f756040fb78bbb9c74323f64a7cf3ddae0ffa39f399030",
+  "bytes": 1265294,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39169"
+}

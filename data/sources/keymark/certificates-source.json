@@ -1,0 +1,66 @@
+[
+  {
+    "name": "acond-n",
+    "subtype": 2951,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=426ff6625b20dbbbf60dcb1fd6a432e5&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2951",
+    "path": "keymark/acond-n-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=2951&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=0c9170dd8b492c774fc85b9bdd9da234",
+    "acquiredAt": "2026-10-28T15:58:53.532Z",
+    "sha256": "1629f0c028ec14ae45feed2e45a8a564fa9a93bd1ca76589a719ad1a40b56a32",
+    "bytes": 69307
+  },
+  {
+    "name": "acond-r",
+    "subtype": 5667,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=26eaf8bf61ef5ae837e562db57c7e92e&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=5667",
+    "path": "keymark/acond-r-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=5667&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=df5508731a2e8fac1a74ae190eda3645",
+    "acquiredAt": "2026-10-28T15:58:59.677Z",
+    "sha256": "1ec2b5438c50e62ac67df897c165bbf248fc0444e087c108d755c61da074f3f2",
+    "bytes": 75900
+  },
+  {
+    "name": "versi",
+    "subtype": 2833,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=7a2ede4eb514b04f7ccd8d5639a891ad&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2833",
+    "error": "Link al report non trovato"
+  },
+  {
+    "name": "hybrox",
+    "subtype": 4195,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=acc8d0512678bf0a53fee2e2bb0eb153&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=4195",
+    "path": "keymark/hybrox-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=4195&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=53524e7b4c32af01a6ce2b40b1ba30c1",
+    "acquiredAt": "2026-10-28T15:59:06.224Z",
+    "sha256": "74c1f22715c7942f818870ba55df3443d00232f93e1d21aace8a971a8ef2b87c",
+    "bytes": 75324
+  },
+  {
+    "name": "bosch",
+    "subtype": 2923,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=838e0762d3468c10bb1e66ea44e96fd1&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2923",
+    "path": "keymark/bosch-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=2923&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=39bf0ad413eb5f62dcef47888c9af43e",
+    "acquiredAt": "2026-10-28T15:59:31.274Z",
+    "sha256": "9a9433ee8d0d6209f8290f8ff8d361a663e9e59305708dc7254ff173a7db014c",
+    "bytes": 194304
+  },
+  {
+    "name": "adapt",
+    "subtype": 2832,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=2fa94ff7c44a2cdf01434f3c4d3c987b&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2832",
+    "error": "Link al report non trovato"
+  },
+  {
+    "name": "advantix",
+    "subtype": null,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/",
+    "error": "macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato"
+  },
+  {
+    "name": "panasonic-tcap",
+    "subtype": null,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/",
+    "error": "macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato"
+  }
+]

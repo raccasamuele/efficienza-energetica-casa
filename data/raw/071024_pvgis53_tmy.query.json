@@ -1,0 +1,15 @@
+{
+  "climateId": "071024",
+  "name": "Foggia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.4620&lon=15.5433&outputformat=json",
+  "query": {
+    "lat": "41.4620",
+    "lon": "15.5433",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:18+00:00",
+  "sha256": "01da344a1a2632279e95233aeb2acd67ace0372ab8065c26a302b21252915050",
+  "bytes": 1267447,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41243"
+}

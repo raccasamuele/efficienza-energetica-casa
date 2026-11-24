@@ -1,0 +1,15 @@
+{
+  "climateId": "033032",
+  "name": "Piacenza",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.0535&lon=9.6947&outputformat=json",
+  "query": {
+    "lat": "45.0535",
+    "lon": "9.6947",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:43+00:00",
+  "sha256": "91225a791741b8c2da719c07d5d88bf10ab2c5b1fcea8dff0edd42bc82a87aca",
+  "bytes": 1267461,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43981"
+}

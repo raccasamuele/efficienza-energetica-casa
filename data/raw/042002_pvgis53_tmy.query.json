@@ -1,0 +1,15 @@
+{
+  "climateId": "042002",
+  "name": "Ancona",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.6170&lon=13.5171&outputformat=json",
+  "query": {
+    "lat": "43.6170",
+    "lon": "13.5171",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:56+00:00",
+  "sha256": "50d8b8caf42ea149f6c5b31be6de4d77ead60393ccfcaa1d47d5a07578569e93",
+  "bytes": 1262770,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42499"
+}

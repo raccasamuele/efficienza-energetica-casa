@@ -1,0 +1,15 @@
+{
+  "climateId": "052032",
+  "name": "Siena",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.3186&lon=11.3317&outputformat=json",
+  "query": {
+    "lat": "43.3186",
+    "lon": "11.3317",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:35+00:00",
+  "sha256": "7b72dce14485b609ae659d477ca714a23d2a08567ec316571a1fb78563b033fe",
+  "bytes": 1262330,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42398"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "051002",
+  "name": "Arezzo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.4629&lon=11.8782&outputformat=json",
+  "query": {
+    "lat": "43.4629",
+    "lon": "11.8782",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:31+00:00",
+  "sha256": "580dd3660bc0c0d72338b817fa4b4e7ac92a8f7d954f95b69ac8d07d8a5ee6d2",
+  "bytes": 1260406,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42414"
+}

@@ -1,0 +1,8 @@
+Enel Energia
+Gas naturale
+Periodo di fatturazione: dal 01/07/2026 al 31/08/2026
+Consumo fatturato del periodo 41 Smc
+Consumo annuo 1200 Smc dal 01/09/2025 al 31/08/2026
+Lettura effettiva 31/07/2026 100
+Lettura effettiva 31/08/2026 121
+Potere calorifico superiore: 10,7 kWh/Smc

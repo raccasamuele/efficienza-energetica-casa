@@ -1,0 +1,58 @@
+# Pubblicazione automatica di Casa: a ogni push su main, se typecheck, test del motore e build passano, si pubblica
+# il Worker casa-sito su casa.raccasamuele.it con la CLI cf (pubblica/, README.md "Pubblicazione").
+# Servono, nelle impostazioni del repository su GitHub: il segreto CLOUDFLARE_API_TOKEN (token di Cloudflare,
+# modello "Edit Cloudflare Workers", limitato all'account e alla zona raccasamuele.it) e la variabile
+# CLOUDFLARE_ACCOUNT_ID. Senza il token la pubblicazione si salta, con un avviso.
+
+name: pubblica
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pubblica-casa
+  cancel-in-progress: false
+
+# Il lavoro legge solo il repository: il token di GitHub non può scrivere (docs/sicurezza/TEST-2026-11-23.md, punto 6).
+permissions:
+  contents: read
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      # Azioni fissate al commit della versione, scritta nel commento: un'etichetta spostata non cambia cosa gira.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            pubblica/package-lock.json
+      # I test delle pipeline dei dati (audit-b) chiedono il Python di .venv, che qui non c'è: girano in locale.
+      - name: Casa
+        run: |
+          npm ci
+          npm run typecheck
+          npx vitest run --exclude tests/audit-b-pipelines.test.ts
+          npm run build
+      # Il token di Cloudflare serve solo all'ultimo passo: installazione, test e build girano senza.
+      - name: Dipendenze della pubblicazione
+        working-directory: pubblica
+        run: npm ci
+      - name: Pubblica casa-sito
+        working-directory: pubblica
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::warning::Manca il segreto CLOUDFLARE_API_TOKEN: pubblicazione saltata."
+            exit 0
+          fi
+          npx cf deploy

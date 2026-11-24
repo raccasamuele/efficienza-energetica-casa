@@ -1,0 +1,15 @@
+{
+  "climateId": "017029",
+  "name": "Brescia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.5398&lon=10.2200&outputformat=json",
+  "query": {
+    "lat": "45.5398",
+    "lon": "10.2200",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:28+00:00",
+  "sha256": "e91d5efc27c569c08d456385a88905de756ea9058f87f54d23b86f1beeab5cf7",
+  "bytes": 1261732,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45144"
+}

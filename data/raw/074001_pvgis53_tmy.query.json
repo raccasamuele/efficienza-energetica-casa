@@ -1,0 +1,15 @@
+{
+  "climateId": "074001",
+  "name": "Brindisi",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.6375&lon=17.9455&outputformat=json",
+  "query": {
+    "lat": "40.6375",
+    "lon": "17.9455",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:31+00:00",
+  "sha256": "5883d9ba5196bcf1c97e236f50fb54158019600236453ba23d011c77ed9060d3",
+  "bytes": 1275178,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40545"
+}

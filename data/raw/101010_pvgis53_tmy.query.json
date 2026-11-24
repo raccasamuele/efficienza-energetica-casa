@@ -1,0 +1,15 @@
+{
+  "climateId": "101010",
+  "name": "Crotone",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=39.0806&lon=17.1272&outputformat=json",
+  "query": {
+    "lat": "39.0806",
+    "lon": "17.1272",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:11+00:00",
+  "sha256": "469abd94211b4cfe721a272bf3ab9496f2cdd6ba36b9c1c1541f99e0bc85be38",
+  "bytes": 1264076,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39779"
+}

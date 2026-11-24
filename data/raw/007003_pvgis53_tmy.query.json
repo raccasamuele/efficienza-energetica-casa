@@ -1,0 +1,15 @@
+{
+  "climateId": "007003",
+  "name": "Aosta",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.7373&lon=7.3204&outputformat=json",
+  "query": {
+    "lat": "45.7373",
+    "lon": "7.3204",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:07+00:00",
+  "sha256": "dc4ab034fc631931f5e18f7d0ff48bde13ca4e62a4724f55603d9ce84e7721ec",
+  "bytes": 1261735,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45916"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "003106",
+  "name": "Novara",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4464&lon=8.6197&outputformat=json",
+  "query": {
+    "lat": "45.4464",
+    "lon": "8.6197",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:32+00:00",
+  "sha256": "f3264166e80368ce57be4692eab3e6693e60d80771c650128d921472c1c1f8fd",
+  "bytes": 1265244,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44898"
+}

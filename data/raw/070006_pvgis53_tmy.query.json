@@ -1,0 +1,15 @@
+{
+  "climateId": "070006",
+  "name": "Campobasso",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.5598&lon=14.6603&outputformat=json",
+  "query": {
+    "lat": "41.5598",
+    "lon": "14.6603",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:43+00:00",
+  "sha256": "ea564c1f85d3cdc44e27387c23479bcf0b19a6275030f440739edcf689a8cd3f",
+  "bytes": 1261245,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41361"
+}

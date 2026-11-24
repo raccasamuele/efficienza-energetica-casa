@@ -1,0 +1,15 @@
+{
+  "climateId": "015146",
+  "name": "Milano",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4642&lon=9.1896&outputformat=json",
+  "query": {
+    "lat": "45.4642",
+    "lon": "9.1896",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:20+00:00",
+  "sha256": "c6f2a89fca6bc11592a4c1571568c5cc2a7c04f920303253e1327c940cca793f",
+  "bytes": 1269324,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44915"
+}

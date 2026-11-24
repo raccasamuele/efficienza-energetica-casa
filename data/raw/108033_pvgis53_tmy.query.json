@@ -1,0 +1,15 @@
+{
+  "climateId": "108033",
+  "name": "Monza",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.5845&lon=9.2749&outputformat=json",
+  "query": {
+    "lat": "45.5845",
+    "lon": "9.2749",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:46+00:00",
+  "sha256": "8a993155ee1e95e8885489b4c2fd5105ae59e94cca6dac27e34a16888bf34710",
+  "bytes": 1264080,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45319"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "047014",
+  "name": "Pistoia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.9336&lon=10.9174&outputformat=json",
+  "query": {
+    "lat": "43.9336",
+    "lon": "10.9174",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:18+00:00",
+  "sha256": "b914535f0201d4027811f14eeb7c8397709c6c1de8390f83a96e775f8dc7d19f",
+  "bytes": 1261691,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42722"
+}

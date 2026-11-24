@@ -1,0 +1,15 @@
+{
+  "climateId": "041044",
+  "name": "Pesaro",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.9098&lon=12.9131&outputformat=json",
+  "query": {
+    "lat": "43.9098",
+    "lon": "12.9131",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:52+00:00",
+  "sha256": "1ba80eefc4628b59be3e803bd4aaf8d847dab819c89fbfd03b086ce3452f20ac",
+  "bytes": 1261928,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42672"
+}

@@ -1,0 +1,6 @@
+{
+  "url": "https://archive-api.open-meteo.com/v1/archive?latitude=44.2227&longitude=12.0413&start_date=2015-01-01&end_date=2026-10-31&daily=temperature_2m_mean&timezone=Europe%2FRome",
+  "date": "20261110T100204Z",
+  "sha256": "119c3d84e96a9e67594c4a9b371095e102933224a9b30d5a42847f5306d8ddf0",
+  "bytes": 76735
+}

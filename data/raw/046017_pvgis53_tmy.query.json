@@ -1,0 +1,15 @@
+{
+  "climateId": "046017",
+  "name": "Lucca",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.8428&lon=10.5029&outputformat=json",
+  "query": {
+    "lat": "43.8428",
+    "lon": "10.5029",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:15+00:00",
+  "sha256": "effac4cff14273595b931aa2caf9a882cd4a3b9c22f3fbcaf53be0040aee0173",
+  "bytes": 1262407,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42659"
+}

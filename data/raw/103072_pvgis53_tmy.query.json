@@ -1,0 +1,15 @@
+{
+  "climateId": "103072",
+  "name": "Verbania",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.9344&lon=8.5580&outputformat=json",
+  "query": {
+    "lat": "45.9344",
+    "lon": "8.5580",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:04+00:00",
+  "sha256": "6c0fc3c6b2ddcbd522c264c1a7671c321699c0f8f9714cb50b465bde10390c3e",
+  "bytes": 1261137,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46498"
+}

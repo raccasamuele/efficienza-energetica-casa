@@ -1,0 +1,15 @@
+{
+  "climateId": "038008",
+  "name": "Ferrara",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.8373&lon=11.6186&outputformat=json",
+  "query": {
+    "lat": "44.8373",
+    "lon": "11.6186",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:58+00:00",
+  "sha256": "d8f190332ebd46af132c19b7330ee2a348b1b7d2cb71d99dbac54138bc380519",
+  "bytes": 1269977,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43512"
+}

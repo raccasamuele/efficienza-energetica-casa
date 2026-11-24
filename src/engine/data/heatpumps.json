@@ -1,0 +1,1513 @@
+{
+ "source": "hplib (codice MIT, CSV CC BY 4.0) – parametri adattati ai dati pubblici HP Keymark (EN 14511/EN 14825); https://github.com/FZJ-IEK3-VSA/hplib",
+ "license": "Codice hplib: MIT, Copyright (c) 2021 Tjarko Tjaden, Hauke Hoops, RE-Lab-Projects; testo in data/sources/keymark/LICENSE-hplib. Database CSV: CC BY 4.0 come dichiarato nel README della revisione acquisita.",
+ "revision": "125c2ef6c3fc38043368daac1352557fd2a90106",
+ "sourceFiles": [
+  {
+   "path": "keymark/LICENSE-hplib",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/LICENSE",
+   "acquiredAt": "2026-10-28T16:02:39.282Z",
+   "sha256": "ec1a20839361993ecae88db7ceb4dbd6588f7b8cd7304917137d5889a7900fe2",
+   "bytes": 1100
+  },
+  {
+   "path": "keymark/README-hplib.md",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/README.md",
+   "acquiredAt": "2026-10-28T16:02:39.525Z",
+   "sha256": "a50b9a1f7d769e118628a5135c274ed546e0302fc2ae3dd1bbc6261f992dc4a8",
+   "bytes": 8244
+  },
+  {
+   "path": "keymark/hplib.py",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib.py",
+   "acquiredAt": "2026-10-28T16:02:39.755Z",
+   "sha256": "3273ef8e66cafd9d831b9a1ed1dedafd0f710d3dd7d435b726868d530ed64ddf",
+   "bytes": 28140
+  },
+  {
+   "path": "keymark/hplib_database.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib_database.csv",
+   "acquiredAt": "2026-10-28T16:02:40.428Z",
+   "sha256": "4e07619b153f11bde611451dca4eb736813388fd47687743fe44349401987f6e",
+   "bytes": 5280375
+  },
+  {
+   "path": "keymark/hplib_database.py",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/hplib/hplib_database.py",
+   "acquiredAt": "2026-10-28T16:02:40.684Z",
+   "sha256": "b7588dfa6b5c010f21d6683c61f4095f44d9e27608293e79b5b07e370e4a9200",
+   "bytes": 61748
+  },
+  {
+   "path": "keymark/relative_error.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/output/relative_error.csv",
+   "acquiredAt": "2026-10-28T16:02:42.535Z",
+   "sha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb",
+   "bytes": 19823191
+  },
+  {
+   "path": "keymark/_Acond_a.s.Acond_PRO-N.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Acond_a.s.Acond_PRO-N.csv",
+   "acquiredAt": "2026-10-28T16:02:42.919Z",
+   "sha256": "78b537b8835d33f317f94f6ce78a92def3a8f0275a783586ab3ff00887752881",
+   "bytes": 4512
+  },
+  {
+   "path": "keymark/_Acond_a.s.Acond_PRO-R.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Acond_a.s.Acond_PRO-R.csv",
+   "acquiredAt": "2026-10-28T16:02:43.174Z",
+   "sha256": "5f0bef0dc68cd3bcdb525691608327acbd1b88c74495a8bb28322f83775acb75",
+   "bytes": 8634
+  },
+  {
+   "path": "keymark/_Bosch_Thermotechnik_GmbH_Bosch_Compress_CS3400iAWS_10,12,14_OR-T.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_Bosch_Thermotechnik_GmbH_Bosch_Compress_CS3400iAWS_10,12,14_OR-T.csv",
+   "acquiredAt": "2026-10-28T16:02:43.486Z",
+   "sha256": "2a8e64eea331cdb5ca4867f9af54c6bc06a0e292657173f2a924271741efdd60",
+   "bytes": 94784
+  },
+  {
+   "path": "keymark/_KRONOTERM_d.o.o.ADAPT_0724.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_KRONOTERM_d.o.o.ADAPT_0724.csv",
+   "acquiredAt": "2026-10-28T16:02:43.722Z",
+   "sha256": "5635bf7c7bdc8077197da5bdda4e27c30c0adbc32ee5d9567e18c3c6b7b76a6f",
+   "bytes": 4544
+  },
+  {
+   "path": "keymark/_KRONOTERM_d.o.o.VERSI_0209.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_KRONOTERM_d.o.o.VERSI_0209.csv",
+   "acquiredAt": "2026-10-28T16:02:43.958Z",
+   "sha256": "bb80b7669900c2df8cb853ccda6f9dfae12a24b24979f3f406dcfaf3ac0d04cc",
+   "bytes": 47250
+  },
+  {
+   "path": "keymark/_ait-deutschland_GmbHHybrox_8.csv",
+   "url": "https://raw.githubusercontent.com/FZJ-IEK3-VSA/hplib/125c2ef6c3fc38043368daac1352557fd2a90106/input/csv/_ait-deutschland_GmbHHybrox_8.csv",
+   "acquiredAt": "2026-10-28T16:02:44.178Z",
+   "sha256": "8521f48da480f29d25e813b619167155e37483fc2a9b1f198695ce1e68f3e12a",
+   "bytes": 10073
+  }
+ ],
+ "notes": "Fit COP su 8 punti; fit P_el su 4 punti: l'inviluppo comune è registrato in fitDomain.points. Oltre l'inviluppo l'app conta ore ed energia estrapolate; restano i blocchi prudenziali sotto −7 °C e oltre 55 °C di mandata, con saturazione dell'aria a 12 °C nelle ore miti. Correzione di capacità a −7 °C non validata, anch'essa segnalata se estrapola. TOL è il limite della dichiarazione usata, non un dominio osservato.",
+ "csvSha256": "4e07619b153f11bde611451dca4eb736813388fd47687743fe44349401987f6e",
+ "model": "COP = p1·T_aria + p2·T_mandata + p3 + p4·T_aria; P_el = P_el_ref·(p1e·T_aria + p2e·T_mandata + p3e + p4e·T_aria); P_th = P_el·COP",
+ "models": [
+  {
+   "id": "acond-pro-n",
+   "manufacturer": "Acond a.s.",
+   "model": "Acond PRO-N",
+   "aux": {
+    "pOFF_W": 16,
+    "pTO_W": 16,
+    "pSB_W": 16,
+    "pCK_W": 0,
+    "page": "certificato Keymark, p. 2",
+    "accessDate": "2026-11-09"
+   },
+   "family": "Acond PRO-N",
+   "variant": "Acond PRO-N",
+   "csvRow": 10,
+   "certificate": {
+    "name": "acond-n",
+    "subtype": 2951,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=426ff6625b20dbbbf60dcb1fd6a432e5&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2951",
+    "path": "keymark/acond-n-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=2951&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=0c9170dd8b492c774fc85b9bdd9da234",
+    "acquiredAt": "2026-10-28T15:58:53.532Z",
+    "sha256": "1629f0c028ec14ae45feed2e45a8a564fa9a93bd1ca76589a719ad1a40b56a32",
+    "bytes": 69307,
+    "registration": "037-0075-22",
+    "revision": "Non indicata nel report acquisito; copia identificata da data di esportazione e SHA256",
+    "schemeRevision": "HP Keymark scheme rules rev. no. 9",
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report acquisito; identità e metadati verificati, non una validazione della curva di capacità"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 2.98,
+      "pTh_W": 4680.0,
+      "pEl_W": 1570.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.2,
+      "pTh_W": 4540.0,
+      "pEl_W": 2064.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 4.18,
+      "pTh_W": 2880.0,
+      "pEl_W": 689.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.42,
+      "pTh_W": 2770.0,
+      "pEl_W": 810.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 5.11,
+      "pTh_W": 1830.0,
+      "pEl_W": 358.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.46,
+      "pTh_W": 1860.0,
+      "pEl_W": 417.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 5.18,
+      "pTh_W": 1810.0,
+      "pEl_W": 349.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 4.86,
+      "pTh_W": 1760.0,
+      "pEl_W": 362.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "17.03.2022",
+   "refrigerant": "R290",
+   "ratedPowerLowT_kW": 5.29,
+   "ratedPowerMediumT_kW": 5.14,
+   "scop": 4.18,
+   "tol_C": -22.0,
+   "maxFlow_C": 70.0,
+   "pElRef_W": 2064.0,
+   "pThRef_W": 4540.0,
+   "pEl": [
+    -71.55804146406061,
+    0.0107086155038718,
+    0.0758942348376784,
+    71.50890372513264
+   ],
+   "cop": [
+    80.58700896955737,
+    -0.0524499090590043,
+    5.534958034425514,
+    -80.49650680007827
+   ],
+   "mape": {
+    "pTh": 7.1,
+    "pEl": 4.1,
+    "cop": 3.5
+   }
+  },
+  {
+   "id": "kronoterm-0209",
+   "manufacturer": "KRONOTERM d.o.o.",
+   "model": "VERSI-O 0209-K1 HT / HK 1F",
+   "aux": {
+    "pOFF_W": 8,
+    "pTO_W": 8,
+    "pSB_W": 8,
+    "pCK_W": 8,
+    "page": "certificato Keymark VERSI 0209 (reg. 011-1W0519), heatpumpkeymark.com, scheda del sottotipo, modello VERSI-O 0209-K1 HT / HK 1F, EN 14825 riscaldamento",
+    "accessDate": "2026-11-09",
+    "source": "certificato Keymark verificato sulla scheda web (coincide con hplib, riga 6156)"
+   },
+   "family": "VERSI 0209",
+   "variant": "VERSI-O 0209-K1 HT / HK 1F",
+   "csvRow": 6156,
+   "certificate": {
+    "name": "versi",
+    "subtype": 2833,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=7a2ede4eb514b04f7ccd8d5639a891ad&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2833",
+    "error": "Link al report non trovato",
+    "registration": "011-1W0519",
+    "revision": null,
+    "schemeRevision": null,
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report originale non acquisito (HTTP 500); registrazione dal registro pubblico, revisione e hash del PDF non verificati"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 3.26,
+      "pTh_W": 5710.0,
+      "pEl_W": 1752.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.21,
+      "pTh_W": 5380.0,
+      "pEl_W": 2434.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 5.25,
+      "pTh_W": 3740.0,
+      "pEl_W": 712.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.56,
+      "pTh_W": 3510.0,
+      "pEl_W": 986.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 5.55,
+      "pTh_W": 2270.0,
+      "pEl_W": 409.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.54,
+      "pTh_W": 2200.0,
+      "pEl_W": 485.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 6.65,
+      "pTh_W": 2360.0,
+      "pEl_W": 355.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 5.85,
+      "pTh_W": 2400.0,
+      "pEl_W": 410.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "18.01.2022",
+   "refrigerant": "R452B",
+   "ratedPowerLowT_kW": 6.4,
+   "ratedPowerMediumT_kW": 6.0,
+   "scop": 4.97,
+   "tol_C": -10.0,
+   "maxFlow_C": 67.0,
+   "pElRef_W": 2434.0,
+   "pThRef_W": 5380.0,
+   "pEl": [
+    -97.92093121353604,
+    0.0136632643320202,
+    -0.0507469822750831,
+    97.8747702067621
+   ],
+   "cop": [
+    -178.27120192258417,
+    -0.090696261693339,
+    7.363560482190298,
+    178.37488006951088
+   ],
+   "mape": {
+    "pTh": 7.7,
+    "pEl": 4.0,
+    "cop": 5.9
+   }
+  },
+  {
+   "id": "ait-deutschland-8",
+   "manufacturer": "ait-deutschland GmbH",
+   "model": "Helox 8",
+   "aux": {
+    "pOFF_W": 17,
+    "pTO_W": 21,
+    "pSB_W": 17,
+    "pCK_W": 0,
+    "page": "certificato Keymark Hybrox 8, p. 2",
+    "accessDate": "2026-11-09"
+   },
+   "family": "Hybrox 8",
+   "variant": "Helox 8",
+   "csvRow": 162,
+   "certificate": {
+    "name": "hybrox",
+    "subtype": 4195,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=acc8d0512678bf0a53fee2e2bb0eb153&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=4195",
+    "path": "keymark/hybrox-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=4195&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=53524e7b4c32af01a6ce2b40b1ba30c1",
+    "acquiredAt": "2026-10-28T15:59:06.224Z",
+    "sha256": "74c1f22715c7942f818870ba55df3443d00232f93e1d21aace8a971a8ef2b87c",
+    "bytes": 75324,
+    "registration": "041-K001-52",
+    "revision": "Non indicata nel report acquisito; copia identificata da data di esportazione e SHA256",
+    "schemeRevision": "Heat Pump Keymark Scheme Rules Rev v12",
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report acquisito; identità e metadati verificati, non una validazione della curva di capacità"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 3.04,
+      "pTh_W": 7340.0,
+      "pEl_W": 2414.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.3,
+      "pTh_W": 6540.0,
+      "pEl_W": 2843.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 4.64,
+      "pTh_W": 4460.0,
+      "pEl_W": 961.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.7,
+      "pTh_W": 4520.0,
+      "pEl_W": 1222.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 6.17,
+      "pTh_W": 3250.0,
+      "pEl_W": 527.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.93,
+      "pTh_W": 3050.0,
+      "pEl_W": 619.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 7.37,
+      "pTh_W": 3440.0,
+      "pEl_W": 467.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 6.13,
+      "pTh_W": 3400.0,
+      "pEl_W": 555.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "19.07.2023",
+   "refrigerant": "R290",
+   "ratedPowerLowT_kW": 8.6,
+   "ratedPowerMediumT_kW": 8.0,
+   "scop": 4.69,
+   "tol_C": -10.0,
+   "maxFlow_C": 65.0,
+   "pElRef_W": 2843.0,
+   "pThRef_W": 6540.0,
+   "pEl": [
+    -59.548037207566125,
+    0.0081576857145005,
+    0.1976981902428204,
+    59.49431249135724
+   ],
+   "cop": [
+    -142.51775258382455,
+    -0.0748622882056457,
+    6.823591415280324,
+    142.67055247086012
+   ],
+   "mape": {
+    "pTh": 8.0,
+    "pEl": 3.9,
+    "cop": 7.4
+   }
+  },
+  {
+   "id": "acond-pro-r",
+   "manufacturer": "Acond a.s.",
+   "model": "Acond PRO-R",
+   "aux": {
+    "pOFF_W": 16,
+    "pTO_W": 16,
+    "pSB_W": 16,
+    "pCK_W": 0,
+    "page": "certificato Keymark, p. 2",
+    "accessDate": "2026-11-09"
+   },
+   "family": "Acond PRO-R",
+   "variant": "Acond PRO-R",
+   "csvRow": 11,
+   "certificate": {
+    "name": "acond-r",
+    "subtype": 5667,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=26eaf8bf61ef5ae837e562db57c7e92e&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=5667",
+    "path": "keymark/acond-r-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=5667&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=df5508731a2e8fac1a74ae190eda3645",
+    "acquiredAt": "2026-10-28T15:58:59.677Z",
+    "sha256": "1ec2b5438c50e62ac67df897c165bbf248fc0444e087c108d755c61da074f3f2",
+    "bytes": 75900,
+    "registration": "037-0076-22",
+    "revision": "Non indicata nel report acquisito; copia identificata da data di esportazione e SHA256",
+    "schemeRevision": "HP Keymark scheme rules rev. no. 9",
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report acquisito; identità e metadati verificati, non una validazione della curva di capacità"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 3.24,
+      "pTh_W": 9230.0,
+      "pEl_W": 2849.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.5,
+      "pTh_W": 9000.0,
+      "pEl_W": 3600.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 5.03,
+      "pTh_W": 5460.0,
+      "pEl_W": 1085.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.87,
+      "pTh_W": 5530.0,
+      "pEl_W": 1429.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 6.33,
+      "pTh_W": 3810.0,
+      "pEl_W": 602.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.97,
+      "pTh_W": 3520.0,
+      "pEl_W": 708.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 7.42,
+      "pTh_W": 4050.0,
+      "pEl_W": 546.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 6.14,
+      "pTh_W": 3880.0,
+      "pEl_W": 632.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "17.03.2022",
+   "refrigerant": "R290",
+   "ratedPowerLowT_kW": 10.38,
+   "ratedPowerMediumT_kW": 10.17,
+   "scop": 5.05,
+   "tol_C": -22.0,
+   "maxFlow_C": 70.0,
+   "pElRef_W": 3600.0,
+   "pThRef_W": 9000.0,
+   "pEl": [
+    -71.55978917363649,
+    0.0104736389076088,
+    0.0772733891073769,
+    71.5072098433348
+   ],
+   "cop": [
+    248.37571556229543,
+    -0.0812104849000503,
+    7.247027479755549,
+    -248.23797742809475
+   ],
+   "mape": {
+    "pTh": 9.9,
+    "pEl": 5.9,
+    "cop": 7.1
+   }
+  },
+  {
+   "id": "bosch-or-t",
+   "manufacturer": "Bosch Thermotechnik GmbH",
+   "model": "CS3400iAWS 14 ORB-T",
+   "aux": {
+    "pOFF_W": 22,
+    "pTO_W": 0,
+    "pSB_W": 22,
+    "pCK_W": 0,
+    "page": "certificato Keymark Bosch Compress CS3400iAWS 10,12,14 OR-T, p. 35 (modello 14 ORB-T, clima medio), data/sources/keymark/bosch-2026-10-28.pdf",
+    "accessDate": "2026-11-09",
+    "source": "certificato Keymark verificato (coincide con hplib, riga 1961)"
+   },
+   "family": "Bosch Compress CS3400iAWS 10,12,14 OR-T",
+   "variant": "CS3400iAWS 14 ORB-T",
+   "csvRow": 1961,
+   "certificate": {
+    "name": "bosch",
+    "subtype": 2923,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=838e0762d3468c10bb1e66ea44e96fd1&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2923",
+    "path": "keymark/bosch-2026-10-28.pdf",
+    "url": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?tx_pskeymark_frontend%5Bsubtype%5D=2923&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Baction%5D=generatePdf&cHash=39bf0ad413eb5f62dcef47888c9af43e",
+    "acquiredAt": "2026-10-28T15:59:31.274Z",
+    "sha256": "9a9433ee8d0d6209f8290f8ff8d361a663e9e59305708dc7254ff173a7db014c",
+    "bytes": 194304,
+    "registration": "011-1W0536",
+    "revision": "Non indicata nel report acquisito; copia identificata da data di esportazione e SHA256",
+    "schemeRevision": "European KEYMARK Scheme for Heat Pumps Rev. 9 (as of 2021-03)",
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report acquisito; identità e metadati verificati, non una validazione della curva di capacità"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 2.73,
+      "pTh_W": 10980.0,
+      "pEl_W": 4022.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.1,
+      "pTh_W": 10260.0,
+      "pEl_W": 4886.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 4.71,
+      "pTh_W": 6710.0,
+      "pEl_W": 1425.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.59,
+      "pTh_W": 6600.0,
+      "pEl_W": 1838.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 5.4,
+      "pTh_W": 5260.0,
+      "pEl_W": 974.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.48,
+      "pTh_W": 5090.0,
+      "pEl_W": 1136.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 6.75,
+      "pTh_W": 6110.0,
+      "pEl_W": 905.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 5.6,
+      "pTh_W": 6060.0,
+      "pEl_W": 1082.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "10.06.2022",
+   "refrigerant": "R410A",
+   "ratedPowerLowT_kW": 12.0,
+   "ratedPowerMediumT_kW": 12.0,
+   "scop": 4.53,
+   "tol_C": -10.0,
+   "maxFlow_C": 60.0,
+   "pElRef_W": 4886.0,
+   "pThRef_W": 10260.0,
+   "pEl": [
+    224.1354898326332,
+    0.0089685933295069,
+    0.1254639813989286,
+    -224.1926999441924
+   ],
+   "cop": [
+    194.1655231257651,
+    -0.0684314422310992,
+    6.295256153687895,
+    -194.02921607598765
+   ],
+   "mape": {
+    "pTh": 7.5,
+    "pEl": 3.9,
+    "cop": 6.4
+   }
+  },
+  {
+   "id": "kronoterm-0724",
+   "manufacturer": "KRONOTERM d.o.o.",
+   "model": "ADAPT 0724-K3 HT / HK 3F",
+   "aux": {
+    "pOFF_W": 11,
+    "pTO_W": 11,
+    "pSB_W": 11,
+    "pCK_W": 11,
+    "page": "certificato Keymark ADAPT 0724 (reg. 011-1W0518), heatpumpkeymark.com, scheda del sottotipo, modello ADAPT 0724-K3 HT / HK 3F, EN 14825 riscaldamento",
+    "accessDate": "2026-11-09",
+    "source": "certificato Keymark verificato sulla scheda web (coincide con hplib, riga 6148)"
+   },
+   "family": "ADAPT 0724",
+   "variant": "ADAPT 0724-K3 HT / HK 3F",
+   "csvRow": 6148,
+   "certificate": {
+    "name": "adapt",
+    "subtype": 2832,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/?cHash=2fa94ff7c44a2cdf01434f3c4d3c987b&tx_pskeymark_frontend%5Baction%5D=showSubtype&tx_pskeymark_frontend%5Bcontroller%5D=Frontend&tx_pskeymark_frontend%5Bsubtype%5D=2832",
+    "error": "Link al report non trovato",
+    "registration": "011-1W0518",
+    "revision": null,
+    "schemeRevision": null,
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report originale non acquisito (HTTP 500); registrazione dal registro pubblico, revisione e hash del PDF non verificati"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 3.22,
+      "pTh_W": 13440.0,
+      "pEl_W": 4174.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.5,
+      "pTh_W": 13880.0,
+      "pEl_W": 5552.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 5.06,
+      "pTh_W": 8760.0,
+      "pEl_W": 1731.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.71,
+      "pTh_W": 8700.0,
+      "pEl_W": 2345.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 6.18,
+      "pTh_W": 5680.0,
+      "pEl_W": 919.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 5.05,
+      "pTh_W": 5650.0,
+      "pEl_W": 1119.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 7.34,
+      "pTh_W": 5870.0,
+      "pEl_W": 800.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 6.35,
+      "pTh_W": 6170.0,
+      "pEl_W": 972.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "18.01.2022",
+   "refrigerant": "R452B",
+   "ratedPowerLowT_kW": 15.6,
+   "ratedPowerMediumT_kW": 15.5,
+   "scop": 5.02,
+   "tol_C": -10.0,
+   "maxFlow_C": 67.0,
+   "pElRef_W": 5552.0,
+   "pThRef_W": 13880.0,
+   "pEl": [
+    128.0686874840623,
+    0.0123817538137021,
+    0.0151438200399218,
+    -128.1155937666785
+   ],
+   "cop": [
+    261.7046617648197,
+    -0.0782477684931277,
+    7.113972457544128,
+    -261.5612205269948
+   ],
+   "mape": {
+    "pTh": 7.9,
+    "pEl": 3.9,
+    "cop": 6.5
+   }
+  },
+  {
+   "id": "advantix",
+   "manufacturer": "Advantix S.p.A.",
+   "model": "i-32V5/KA/10",
+   "aux": {
+    "pOFF_W": 22,
+    "pTO_W": 22,
+    "pSB_W": 22,
+    "pCK_W": 0,
+    "page": "certificato Keymark i-32V5 10/12 (reg. ICIM-PDC-000073 / 01), heatpumpkeymark.com, scheda del sottotipo, modello i-32V5/KA/10, EN 14825 riscaldamento, clima medio",
+    "accessDate": "2026-11-09",
+    "source": "certificato Keymark verificato sulla scheda web; hplib (riga 44) riporta P_OFF e P_SB 19 W, il certificato 22 W"
+   },
+   "family": "i-32V5 10/12",
+   "variant": "i-32V5/KA/10",
+   "csvRow": 44,
+   "certificate": {
+    "name": "advantix",
+    "subtype": null,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/",
+    "error": "macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato",
+    "registration": null,
+    "revision": null,
+    "schemeRevision": null,
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report originale non acquisito: macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato; registrazione, revisione e hash non verificati"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 2.93,
+      "pTh_W": 8300.0,
+      "pEl_W": 2833.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.13,
+      "pTh_W": 8100.0,
+      "pEl_W": 3803.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 4.32,
+      "pTh_W": 5300.0,
+      "pEl_W": 1227.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.41,
+      "pTh_W": 5200.0,
+      "pEl_W": 1525.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 6.01,
+      "pTh_W": 4200.0,
+      "pEl_W": 699.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.3,
+      "pTh_W": 4100.0,
+      "pEl_W": 953.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 8.08,
+      "pTh_W": 4900.0,
+      "pEl_W": 606.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 6.36,
+      "pTh_W": 4800.0,
+      "pEl_W": 755.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "26.05.2020",
+   "refrigerant": "R32",
+   "ratedPowerLowT_kW": 9.0,
+   "ratedPowerMediumT_kW": 9.0,
+   "scop": 4.53,
+   "tol_C": -20.0,
+   "maxFlow_C": 60.0,
+   "pElRef_W": 3803.0,
+   "pThRef_W": 8100.0,
+   "pEl": [
+    246.71307970995184,
+    0.0118193373370105,
+    0.0314154996292977,
+    -246.76062571574369
+   ],
+   "cop": [
+    -2.5944198226415454,
+    -0.0896861991876839,
+    7.203657065478795,
+    2.7577929887821013
+   ],
+   "mape": {
+    "pTh": 12.0,
+    "pEl": 7.8,
+    "cop": 11.9
+   },
+   "eer": [
+    106.76009800516348,
+    0.2097267143064928,
+    10.477071316445532,
+    -107.03183102937328
+   ],
+   "pElC": [
+    56.2802660287554,
+    -0.0141736641052403,
+    -1.0842081113633633,
+    -56.21948430580238
+   ],
+   "pElCRef_W": 2390.0,
+   "eerRef": 3.15,
+   "mapeCooling": {
+    "eer": 9.5,
+    "pEl": 8.2
+   }
+  },
+  {
+   "id": "panasonic-tcap",
+   "manufacturer": "Panasonic Marketing Europe GmbH",
+   "model": "WH-ADC0316M9E82 / WH-WXG12ME8",
+   "aux": {
+    "pOFF_W": 11,
+    "pTO_W": 18,
+    "pSB_W": 11,
+    "pCK_W": 0,
+    "page": "certificato Keymark Aquarea T-CAP 9-12 kW (M Series) (reg. 011-1W0850), heatpumpkeymark.com, scheda del sottotipo, modello WH-ADC0316M9E82 / WH-WXG12ME8, EN 14825 riscaldamento",
+    "accessDate": "2026-11-09",
+    "source": "certificato Keymark verificato sulla scheda web (coincide con hplib, riga 7757)"
+   },
+   "family": "Aquarea T-CAP 9-12 kW (M Series)",
+   "variant": "WH-ADC0316M9E82 / WH-WXG12ME8",
+   "csvRow": 7757,
+   "certificate": {
+    "name": "panasonic-tcap",
+    "subtype": null,
+    "page": "https://www.heatpumpkeymark.com/en/nc/ps-keymark/certificate-holders/",
+    "error": "macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato",
+    "registration": null,
+    "revision": null,
+    "schemeRevision": null,
+    "standardsEdition": "EN 14511 / EN 14825, edizioni non specificate nel report acquisito; non attribuite automaticamente alle edizioni correnti",
+    "verification": "Report originale non acquisito: macchina aggiunta il 29/10/2026 per i dati di raffrescamento hplib, report Keymark non cercato; registrazione, revisione e hash non verificati"
+   },
+   "fitDomain": {
+    "points": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ]
+    ],
+    "copPoints": [
+     [
+      -7.0,
+      34.0
+     ],
+     [
+      -7.0,
+      52.0
+     ],
+     [
+      2.0,
+      30.0
+     ],
+     [
+      2.0,
+      42.0
+     ],
+     [
+      7.0,
+      27.0
+     ],
+     [
+      7.0,
+      36.0
+     ],
+     [
+      12.0,
+      24.0
+     ],
+     [
+      12.0,
+      30.0
+     ]
+    ],
+    "observations": [
+     {
+      "air": -7.0,
+      "flow": 34.0,
+      "cop": 2.79,
+      "pTh_W": 10600.0,
+      "pEl_W": 3799.0
+     },
+     {
+      "air": -7.0,
+      "flow": 52.0,
+      "cop": 2.22,
+      "pTh_W": 10600.0,
+      "pEl_W": 4775.0
+     },
+     {
+      "air": 2.0,
+      "flow": 30.0,
+      "cop": 4.65,
+      "pTh_W": 6500.0,
+      "pEl_W": 1398.0
+     },
+     {
+      "air": 2.0,
+      "flow": 42.0,
+      "cop": 3.65,
+      "pTh_W": 6500.0,
+      "pEl_W": 1781.0
+     },
+     {
+      "air": 7.0,
+      "flow": 27.0,
+      "cop": 6.25,
+      "pTh_W": 5300.0,
+      "pEl_W": 848.0
+     },
+     {
+      "air": 7.0,
+      "flow": 36.0,
+      "cop": 4.57,
+      "pTh_W": 4900.0,
+      "pEl_W": 1072.0
+     },
+     {
+      "air": 12.0,
+      "flow": 24.0,
+      "cop": 7.78,
+      "pTh_W": 6100.0,
+      "pEl_W": 784.0
+     },
+     {
+      "air": 12.0,
+      "flow": 30.0,
+      "cop": 5.84,
+      "pTh_W": 5700.0,
+      "pEl_W": 976.0
+     }
+    ],
+    "source": "hplib/hplib_database.py, calculate_fitting_parameters, righe 369–456; output/relative_error.csv, revisione 125c2ef6c3fc38043368daac1352557fd2a90106",
+    "conditions": "EN 14825, clima medio, aria/acqua regolata; COP: 8 punti, P_el: solo i 4 punti ad aria −7 e +2 °C. Mandate variabili 34/52, 30/42, 27/36, 24/30 °C assegnate dalla pipeline hplib. TOL e WTOL non delimitano il fit.",
+    "validationSha256": "443a59b5bda2a8f896aed3d614a445fe9d38de71eb3a045927233dc4b32f7bdb"
+   },
+   "extrapolationPolicy": "segnala",
+   "scopConditions": "EN 14825, bassa temperatura, clima medio (dato del CSV hplib)",
+   "keymarkDate": "22.07.2024",
+   "refrigerant": "R290",
+   "ratedPowerLowT_kW": 12.0,
+   "ratedPowerMediumT_kW": 12.0,
+   "scop": 4.73,
+   "tol_C": -10.0,
+   "maxFlow_C": 55.0,
+   "pElRef_W": 4775.0,
+   "pThRef_W": 10600.0,
+   "pEl": [
+    -14.696121135736243,
+    0.0099181044976762,
+    0.0859379698913963,
+    14.641066095447004
+   ],
+   "cop": [
+    212.8459270943165,
+    -0.0847672984537765,
+    7.095325520074422,
+    -212.69241301329663
+   ],
+   "mape": {
+    "pTh": 8.5,
+    "pEl": 5.1,
+    "cop": 11.0
+   },
+   "eer": [
+    203.72921842280675,
+    0.2140909090886037,
+    11.637859558486811,
+    -204.0118182705289
+   ],
+   "pElC": [
+    -84.63371755170975,
+    -0.0159719943113456,
+    -0.8843185102578307,
+    84.68782906369137
+   ],
+   "pElCRef_W": 2493.0,
+   "eerRef": 3.61,
+   "mapeCooling": {
+    "eer": 3.6,
+    "pEl": 18.5
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "098031",
+  "name": "Lodi",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.3138&lon=9.5024&outputformat=json",
+  "query": {
+    "lat": "45.3138",
+    "lon": "9.5024",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:43+00:00",
+  "sha256": "540f5d25f8e770c9df47e91ce86c52ef759be51be469139bd0a43c5fd6327ca7",
+  "bytes": 1269162,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44665"
+}

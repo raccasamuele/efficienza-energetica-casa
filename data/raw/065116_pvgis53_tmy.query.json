@@ -1,0 +1,15 @@
+{
+  "climateId": "065116",
+  "name": "Salerno",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.6804&lon=14.7595&outputformat=json",
+  "query": {
+    "lat": "40.6804",
+    "lon": "14.7595",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:12+00:00",
+  "sha256": "161aa9316e6c0ccda91e3bde26dd6d88ef8dcb08c690210894ac8eeb2dceaf8a",
+  "bytes": 1260571,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40671"
+}

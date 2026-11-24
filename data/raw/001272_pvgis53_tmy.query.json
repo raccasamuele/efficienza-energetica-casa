@@ -1,0 +1,15 @@
+{
+  "climateId": "001272",
+  "name": "Torino",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.0678&lon=7.6825&outputformat=json",
+  "query": {
+    "lat": "45.0678",
+    "lon": "7.6825",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:24+00:00",
+  "sha256": "8e7d62557fc6667010ca33ae961bfd4a71f86c470d18eb628e954e78db0784dd",
+  "bytes": 1262224,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43992"
+}

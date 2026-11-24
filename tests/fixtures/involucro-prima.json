@@ -1,0 +1,287 @@
+[
+  {
+    "name": "esempio",
+    "calibrationFactor": 0.9513247140595195,
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 2699.999999999839,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 2699.999999999839,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446
+      },
+      {
+        "id": "H",
+        "label": "Pompa di calore",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 6953.904100976097,
+        "investment": 13695,
+        "annualBenefit": 645.5169418990317,
+        "npv": -4091.3379248990423
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 1708.6356381494068,
+        "investment": 8580,
+        "annualBenefit": 677.3647851330832,
+        "npv": 439.2201831830632
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + PDC",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 6550.977101338346,
+        "investment": 26455,
+        "annualBenefit": 758.3365017976016,
+        "npv": -15172.867758740413
+      },
+      {
+        "id": "HP",
+        "label": "PDC + FV",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 5533.165771911876,
+        "investment": 22275,
+        "annualBenefit": 1400.16904113057,
+        "npv": -2531.6921939364706
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + PDC + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 5154.702827737139,
+        "investment": 35035,
+        "annualBenefit": 1508.585071045802,
+        "npv": -13676.872144187268
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 1708.6356381494068,
+        "investment": 21340,
+        "annualBenefit": 863.839459714359,
+        "npv": -9546.50753362239
+      }
+    ],
+    "homeValue": null
+  },
+  {
+    "name": "split",
+    "calibrationFactor": 0.9513247140595195,
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 3394.3491114144367,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 3399.956296644598,
+        "investment": 12760,
+        "annualBenefit": 184.90466271683044,
+        "npv": -10009.085528849351
+      },
+      {
+        "id": "H",
+        "label": "Pompa di calore",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 7648.253212390882,
+        "investment": 13695,
+        "annualBenefit": 645.516941898979,
+        "npv": -4091.337924899821
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 1976.8392890904415,
+        "investment": 8580,
+        "annualBenefit": 754.0709680183027,
+        "npv": 1569.6543819462372
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + PDC",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 7250.933397983277,
+        "investment": 26455,
+        "annualBenefit": 756.7664899331085,
+        "npv": -15196.225570785025
+      },
+      {
+        "id": "HP",
+        "label": "PDC + FV",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 5802.463625682367,
+        "investment": 22275,
+        "annualBenefit": 1476.6782675064865,
+        "npv": -1404.3159241274518
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + PDC + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 5427.569745472683,
+        "investment": 35035,
+        "annualBenefit": 1583.891147384992,
+        "npv": -12567.4047980369
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 1980.4025558849155,
+        "investment": 21340,
+        "annualBenefit": 939.3435360535559,
+        "npv": -8433.978997385608
+      }
+    ],
+    "homeValue": null
+  },
+  {
+    "name": "serramenti",
+    "calibrationFactor": 0.9513247140595195,
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 2699.999999999839,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 2699.999999999839,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446
+      },
+      {
+        "id": "H",
+        "label": "Pompa di calore",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 6953.904100976097,
+        "investment": 13695,
+        "annualBenefit": 645.5169418990317,
+        "npv": -4091.3379248990423
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 1708.6356381494068,
+        "investment": 8580,
+        "annualBenefit": 677.3647851330832,
+        "npv": 439.2201831830632
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + PDC",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 6550.977101338346,
+        "investment": 26455,
+        "annualBenefit": 758.3365017976016,
+        "npv": -15172.867758740413
+      },
+      {
+        "id": "HP",
+        "label": "PDC + FV",
+        "heatNeed_kWh": 15989.535197808718,
+        "peak_kW": 8.07987736582257,
+        "gasSmc": 190,
+        "import_kWh": 5533.165771911876,
+        "investment": 22275,
+        "annualBenefit": 1400.16904113057,
+        "npv": -2531.6921939364706
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + PDC + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 190,
+        "import_kWh": 5154.702827737139,
+        "investment": 35035,
+        "annualBenefit": 1508.585071045802,
+        "npv": -13676.872144187268
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "heatNeed_kWh": 14422.402032627675,
+        "peak_kW": 7.371612302943095,
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 1708.6356381494068,
+        "investment": 21340,
+        "annualBenefit": 863.839459714359,
+        "npv": -9546.50753362239
+      }
+    ],
+    "homeValue": null
+  }
+]

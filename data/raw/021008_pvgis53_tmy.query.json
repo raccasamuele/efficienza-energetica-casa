@@ -1,0 +1,15 @@
+{
+  "climateId": "021008",
+  "name": "Bolzano",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=46.4985&lon=11.3547&outputformat=json",
+  "query": {
+    "lat": "46.4985",
+    "lon": "11.3547",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:49+00:00",
+  "sha256": "6fe44bf65bcc36867583b799d834f968665ce0a25af62df82f73da6be427643b",
+  "bytes": 1258435,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/47207"
+}

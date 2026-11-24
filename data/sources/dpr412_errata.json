@@ -1,0 +1,23 @@
+{
+  "note": "Correzioni manuali alla lettura del PDF dell'Allegato A del DPR 412/1993. Ogni voce dichiara il motivo. I valori vanno ricontrollati sul testo ufficiale.",
+  "rows": [
+    {
+      "sigla": "TN",
+      "name": "Trento",
+      "zone": "E",
+      "gg": 2567,
+      "alt": 194,
+      "motivo": "La riga principale di Trento non è estratta dal PDF; la riga «TN F 3001 431 Trento (82)» è stata aggiunta dal DM 6/10/1997 per la porzione di territorio più elevata e non rappresenta il centro. Valori della riga principale come comunemente riportati dall'Allegato A."
+    }
+  ],
+  "aliases": {
+    "_motivo": "Refusi del testo estratto dal PDF (lettere scambiate) o comuni rinominati: chiave = sigla|nome nel PDF normalizzato, valore = nome ISTAT.",
+    "AV|musco": "Nusco",
+    "PZ|cestelluccioinferiore": "Castelluccio Inferiore",
+    "PZ|papolla": "Rapolla",
+    "BA|isoladibari": "Mola di Bari",
+    "PG|bastia": "Bastia Umbra",
+    "CA|santandreafriu": "Sant'Andrea Frius",
+    "AP|portosantepidio": "Porto Sant'Elpidio"
+  }
+}

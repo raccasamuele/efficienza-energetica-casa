@@ -1,0 +1,15 @@
+{
+  "climateId": "080063",
+  "name": "Reggio di Calabria",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=38.1035&lon=15.6398&outputformat=json",
+  "query": {
+    "lat": "38.1035",
+    "lon": "15.6398",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:08+00:00",
+  "sha256": "4d9dbb3da17a0b05e5614e218b9f2f660a626a17010fd91c9f01ab5b17cdfc85",
+  "bytes": 1265805,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39503"
+}

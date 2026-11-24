@@ -1,0 +1,15 @@
+{
+  "climateId": "110009",
+  "name": "Trani",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.2782&lon=16.4186&outputformat=json",
+  "query": {
+    "lat": "41.2782",
+    "lon": "16.4186",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:49+00:00",
+  "sha256": "89d2cb65259bf564292afb1c35a8c76c60371958021aa652230208e45a91aa90",
+  "bytes": 1272292,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41152"
+}

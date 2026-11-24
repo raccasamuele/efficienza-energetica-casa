@@ -1,0 +1,16 @@
+{
+  "name": "casa-pubblica",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "cf build",
+    "deploy": "cf deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "2.0.0-beta.sha-67fa336fd",
+    "cf": "1.0.0-beta.17",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}

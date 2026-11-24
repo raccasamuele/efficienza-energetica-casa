@@ -1,0 +1,15 @@
+{
+  "climateId": "049009",
+  "name": "Livorno",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.5507&lon=10.3091&outputformat=json",
+  "query": {
+    "lat": "43.5507",
+    "lon": "10.3091",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:24+00:00",
+  "sha256": "d204054d5b9cec9476d6261e12aab78197636368f15b53d96aabb047661553d9",
+  "bytes": 1269699,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42481"
+}

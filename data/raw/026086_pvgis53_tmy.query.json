@@ -1,0 +1,15 @@
+{
+  "climateId": "026086",
+  "name": "Treviso",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.6659&lon=12.2455&outputformat=json",
+  "query": {
+    "lat": "45.6659",
+    "lon": "12.2455",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:07+00:00",
+  "sha256": "35b488d46388430c7ba91f217000f68a370e3ee9270f8441781315518af0994d",
+  "bytes": 1268065,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45511"
+}

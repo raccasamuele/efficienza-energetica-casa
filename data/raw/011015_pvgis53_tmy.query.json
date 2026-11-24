@@ -1,0 +1,15 @@
+{
+  "climateId": "011015",
+  "name": "La Spezia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.1034&lon=9.8217&outputformat=json",
+  "query": {
+    "lat": "44.1034",
+    "lon": "9.8217",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:40+00:00",
+  "sha256": "852080a4fbca2c0accd7ab0957c76a97c1701a7eef1c84ca9705bfb52ff51ad2",
+  "bytes": 1267605,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42842"
+}

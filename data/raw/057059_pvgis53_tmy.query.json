@@ -1,0 +1,15 @@
+{
+  "climateId": "057059",
+  "name": "Rieti",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=42.4025&lon=12.8605&outputformat=json",
+  "query": {
+    "lat": "42.4025",
+    "lon": "12.8605",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:13+00:00",
+  "sha256": "9457611ced09dce9eadb4b4f88ec20a87fb542831d35d900975ed121c2e9a546",
+  "bytes": 1260445,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41957"
+}

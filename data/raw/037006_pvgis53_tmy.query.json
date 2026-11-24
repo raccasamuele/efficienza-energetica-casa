@@ -1,0 +1,15 @@
+{
+  "climateId": "037006",
+  "name": "Bologna",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.4938&lon=11.3426&outputformat=json",
+  "query": {
+    "lat": "44.4938",
+    "lon": "11.3426",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:55+00:00",
+  "sha256": "962f9e2a72320ac2407c0ed6f989a6d7ab82d9e985dd67e72751269901d6928a",
+  "bytes": 1264727,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43172"
+}

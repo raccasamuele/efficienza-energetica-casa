@@ -1,0 +1,651 @@
+[
+  {
+    "name": "gas-pdc",
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 2699.999999999839,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": null
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 2699.999999999839,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446,
+        "dhw": null
+      },
+      {
+        "id": "H",
+        "label": "Impianto (PDC, scaldacqua)",
+        "gasSmc": 40,
+        "import_kWh": 7347.209683877297,
+        "investment": 16695,
+        "annualBenefit": 685.3913786866956,
+        "npv": -6498.106994015749,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 393.3055829011708,
+          "heat_kWh": 1333.8308932428222,
+          "loss_kWh": 259.4558932428215,
+          "unmetHours": 0,
+          "cop": 3.3913347565625687
+        }
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 1708.6356381494068,
+        "investment": 8580,
+        "annualBenefit": 677.3647851330832,
+        "npv": 439.2201831830632,
+        "dhw": null
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + Impianto",
+        "gasSmc": 40,
+        "import_kWh": 6944.282684239555,
+        "investment": 29455,
+        "annualBenefit": 798.2109385852632,
+        "npv": -17579.636827857157,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 393.3055829011708,
+          "heat_kWh": 1333.8308932428222,
+          "loss_kWh": 259.4558932428215,
+          "unmetHours": 0,
+          "cop": 3.3913347565625687
+        }
+      },
+      {
+        "id": "HP",
+        "label": "Impianto + FV",
+        "gasSmc": 40,
+        "import_kWh": 5599.1997525435845,
+        "investment": 25275,
+        "annualBenefit": 1498.861666341896,
+        "npv": -4081.0528656961915,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 394.2125827495255,
+          "heat_kWh": 1338.4636443833447,
+          "loss_kWh": 264.68912077006695,
+          "unmetHours": 0,
+          "cop": 3.395283922821378
+        }
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + Impianto + FV",
+        "gasSmc": 40,
+        "import_kWh": 5218.4832846942745,
+        "investment": 38035,
+        "annualBenefit": 1607.6191270814238,
+        "npv": -15220.536253134936,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 394.85461712078927,
+          "heat_kWh": 1338.7301698737563,
+          "loss_kWh": 264.9215716517118,
+          "unmetHours": 0,
+          "cop": 3.390438181109678
+        }
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 1708.6356381494068,
+        "investment": 21340,
+        "annualBenefit": 863.839459714359,
+        "npv": -9546.50753362239,
+        "dhw": null
+      }
+    ]
+  },
+  {
+    "name": "gas-elettrico",
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 2699.999999999839,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": null
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 2699.999999999839,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446,
+        "dhw": null
+      },
+      {
+        "id": "H",
+        "label": "Impianto (PDC, scaldacqua)",
+        "gasSmc": 40,
+        "import_kWh": 8287.734994218983,
+        "investment": 16695,
+        "annualBenefit": 422.0442917910236,
+        "npv": -10416.0466588803,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1333.8308932428222,
+          "heat_kWh": 1333.8308932428222,
+          "loss_kWh": 259.4558932428215,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "gasSmc": 2092.610090172384,
+        "import_kWh": 1708.6356381494068,
+        "investment": 8580,
+        "annualBenefit": 677.3647851330832,
+        "npv": 439.2201831830632,
+        "dhw": null
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + Impianto",
+        "gasSmc": 40,
+        "import_kWh": 7884.807994581205,
+        "investment": 29455,
+        "annualBenefit": 534.8638516896012,
+        "npv": -21497.57649272156,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1333.8308932428222,
+          "heat_kWh": 1333.8308932428222,
+          "loss_kWh": 259.4558932428215,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "HP",
+        "label": "Impianto + FV",
+        "gasSmc": 40,
+        "import_kWh": 5873.152762320609,
+        "investment": 25275,
+        "annualBenefit": 1355.907541634518,
+        "npv": -6252.568367121271,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1330.6384122247534,
+          "heat_kWh": 1330.6384122247534,
+          "loss_kWh": 256.86388861147094,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + Impianto + FV",
+        "gasSmc": 40,
+        "import_kWh": 5493.127555215185,
+        "investment": 38035,
+        "annualBenefit": 1464.5908958962561,
+        "npv": -17392.754460600845,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1330.7772420349163,
+          "heat_kWh": 1330.7772420349163,
+          "loss_kWh": 257.00271842163386,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "gasSmc": 1906.1354155911083,
+        "import_kWh": 1708.6356381494068,
+        "investment": 21340,
+        "annualBenefit": 863.839459714359,
+        "npv": -9546.50753362239,
+        "dhw": null
+      }
+    ]
+  },
+  {
+    "name": "boiler-pdc",
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 2699.9999999998663,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 2699.9999999998663,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "H",
+        "label": "Scaldacqua a pompa di calore",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 1211.4390436183753,
+        "investment": 3000,
+        "annualBenefit": 416.7970677868175,
+        "npv": 3200.8878979099454,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 576.415552264631,
+          "heat_kWh": 1945.4138466413312,
+          "loss_kWh": 252.48171904165395,
+          "unmetHours": 0,
+          "cop": 3.37501970409737
+        }
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 1902.3189392481036,
+        "investment": 8580,
+        "annualBenefit": 642.5017909353053,
+        "npv": -82.10251041114446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + Scaldacqua",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 1211.4390436183753,
+        "investment": 15760,
+        "annualBenefit": 603.2717423680933,
+        "npv": -6784.839818895504,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 576.415552264631,
+          "heat_kWh": 1945.4138466413312,
+          "loss_kWh": 252.48171904165395,
+          "unmetHours": 0,
+          "cop": 3.37501970409737
+        }
+      },
+      {
+        "id": "HP",
+        "label": "Scaldacqua + FV",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 438.1950533108477,
+        "investment": 11580,
+        "annualBenefit": 1054.420681613783,
+        "npv": 3055.3851561918295,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 581.2105965486504,
+          "heat_kWh": 1955.169869459109,
+          "loss_kWh": 262.5983844627855,
+          "unmetHours": 0,
+          "cop": 3.363961154647278
+        }
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + Scaldacqua + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 438.1950533108477,
+        "investment": 24340,
+        "annualBenefit": 1240.8953561950589,
+        "npv": -6930.342560613619,
+        "dhw": {
+          "generator": "Scaldacqua a pompa di calore (COP di scheda 3 a 7 °C)",
+          "elec_kWh": 581.2105965486504,
+          "heat_kWh": 1955.169869459109,
+          "loss_kWh": 262.5983844627855,
+          "unmetHours": 0,
+          "cop": 3.363961154647278
+        }
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 1902.3189392481036,
+        "investment": 21340,
+        "annualBenefit": 828.9764655165811,
+        "npv": -10067.830227216593,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "boiler-elettrico",
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 2699.9999999998663,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 2699.9999999998663,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "H",
+        "label": "Boiler elettrico nuovo",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 2587.4541717038187,
+        "investment": 3000,
+        "annualBenefit": 31.512831922893383,
+        "npv": -2531.1686352853935,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1952.4306803502516,
+          "heat_kWh": 1952.4306803502516,
+          "loss_kWh": 259.60197069489874,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 1902.3189392481036,
+        "investment": 8580,
+        "annualBenefit": 642.5017909353053,
+        "npv": -82.10251041114446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + Scaldacqua",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 2587.4541717038187,
+        "investment": 15760,
+        "annualBenefit": 217.98750650416878,
+        "npv": -12516.896352090846,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1952.4306803502516,
+          "heat_kWh": 1952.4306803502516,
+          "loss_kWh": 259.60197069489874,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "HP",
+        "label": "Scaldacqua + FV",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 837.8181272015148,
+        "investment": 11580,
+        "annualBenefit": 846.2458743483933,
+        "npv": -95.56769909994631,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1943.6371361994559,
+          "heat_kWh": 1943.6371361994559,
+          "loss_kWh": 251.09972581192355,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + Scaldacqua + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 837.8181272015148,
+        "investment": 24340,
+        "annualBenefit": 1032.7205489296691,
+        "npv": -10081.295415905393,
+        "dhw": {
+          "generator": "Boiler elettrico nuovo",
+          "elec_kWh": 1943.6371361994559,
+          "heat_kWh": 1943.6371361994559,
+          "loss_kWh": 251.09972581192355,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 1902.3189392481036,
+        "investment": 21340,
+        "annualBenefit": 828.9764655165811,
+        "npv": -10067.830227216593,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "boiler-oggi",
+    "packages": [
+      {
+        "id": "base",
+        "label": "Situazione attuale",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 2699.9999999998663,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "W",
+        "label": "Serramenti",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 2699.9999999998663,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": -9985.727716805446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "H",
+        "label": "Impianto",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 2699.9999999998663,
+        "investment": 0,
+        "annualBenefit": 0,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "P",
+        "label": "Fotovoltaico",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 1902.3189392481036,
+        "investment": 8580,
+        "annualBenefit": 642.5017909353053,
+        "npv": -82.10251041114446,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WH",
+        "label": "Serramenti + Impianto",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 2699.9999999998663,
+        "investment": 12760,
+        "annualBenefit": 186.47467458127585,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "HP",
+        "label": "Impianto + FV",
+        "gasSmc": 1942.6100901723842,
+        "import_kWh": 1902.3189392481036,
+        "investment": 8580,
+        "annualBenefit": 642.5017909353053,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WHP",
+        "label": "Serramenti + Impianto + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 1902.3189392481036,
+        "investment": 21340,
+        "annualBenefit": 828.9764655165811,
+        "npv": null,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      },
+      {
+        "id": "WP",
+        "label": "Serramenti + FV",
+        "gasSmc": 1756.1354155911083,
+        "import_kWh": 1902.3189392481036,
+        "investment": 21340,
+        "annualBenefit": 828.9764655165811,
+        "npv": -10067.830227216593,
+        "dhw": {
+          "generator": "Boiler elettrico di oggi",
+          "elec_kWh": 2064.9765086463835,
+          "heat_kWh": 2064.9765086463835,
+          "loss_kWh": 371.35915248651787,
+          "unmetHours": 0,
+          "cop": 0
+        }
+      }
+    ]
+  }
+]

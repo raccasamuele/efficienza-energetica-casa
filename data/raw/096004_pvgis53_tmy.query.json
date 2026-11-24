@@ -1,0 +1,15 @@
+{
+  "climateId": "096004",
+  "name": "Biella",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.5664&lon=8.0543&outputformat=json",
+  "query": {
+    "lat": "45.5664",
+    "lon": "8.0543",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:58+00:00",
+  "sha256": "3aafcb40d790950e20878395fb7f278a429d9d1a0769abcdb4e66b702b159ef6",
+  "bytes": 1261997,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45293"
+}

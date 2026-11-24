@@ -1,0 +1,15 @@
+{
+  "climateId": "020030",
+  "name": "Mantova",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.1567&lon=10.7917&outputformat=json",
+  "query": {
+    "lat": "45.1567",
+    "lon": "10.7917",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:37+00:00",
+  "sha256": "29bf9ad213c7d5516abd2421f4160cd22f53445f87790d1b69c2651d77a78220",
+  "bytes": 1271003,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44232"
+}

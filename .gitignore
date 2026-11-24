@@ -1,0 +1,27 @@
+node_modules/
+dist/
+dist-mcp/
+.venv/
+__pycache__/
+*.log
+.npm-cache/
+.audit-b-work/
+.audit-c-work/
+*.tsbuildinfo
+vite.config.ts.timestamp-*.mjs
+# estratto da Limiti01012025_g.zip dallo script dell'anagrafe
+data/sources/limiti/
+.cloudflare/
+# validazione: dati privati delle case, clima EPW rigenerabile, uscite di EnergyPlus
+validazione/privato/
+validazione/energyplus/generati/*.epw
+validazione/energyplus/uscite/
+
+.verification/
+
+data/sources/arera-profili/*.zip
+
+# Documenti di terzi non ridistribuiti: URL, data e SHA256 nei manifest (tabula-source.json, keymark/certificates-source.json)
+data/sources/tabula_it_brochure.pdf
+data/sources/tabula_it.txt
+data/sources/keymark/*.pdf

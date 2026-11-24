@@ -1,0 +1,15 @@
+{
+  "climateId": "109006",
+  "name": "Fermo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.1616&lon=13.7182&outputformat=json",
+  "query": {
+    "lat": "43.1616",
+    "lon": "13.7182",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:07+00:00",
+  "sha256": "76d076c2577df5a5ad4ff410a4d0a7091ed51d2e709cf8e13d12c63ce1b1b7e0",
+  "bytes": 1266534,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42331"
+}

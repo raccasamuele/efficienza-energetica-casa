@@ -1,0 +1,15 @@
+{
+  "climateId": "085004",
+  "name": "Caltanissetta",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=37.4903&lon=14.0633&outputformat=json",
+  "query": {
+    "lat": "37.4903",
+    "lon": "14.0633",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:35+00:00",
+  "sha256": "9f11ec00fe23d1d1f705f32e54888117ca094dabcd3eec70926e066dcefc815d",
+  "bytes": 1264383,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39221"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "081021",
+  "name": "Trapani",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=38.0174&lon=12.5160&outputformat=json",
+  "query": {
+    "lat": "38.0174",
+    "lon": "12.5160",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:19:20+00:00",
+  "sha256": "312b31dbc8fa5bb66e63f08306cf3f55400c6a86794f346fc5d53c0a6830ee08",
+  "bytes": 1273782,
+  "coordinateSource": "OpenStreetMap/Nominatim (nodo place=city; il confine comunale cadeva in collina)",
+  "osm": "node/67253724"
+}

@@ -1,0 +1,16 @@
+# Intestazioni di sicurezza per tutti i file del sito, applicate dagli static assets di Cloudflare
+# (https://developers.cloudflare.com/workers/static-assets/headers/). Rapporto: docs/sicurezza/TEST-2026-11-23.md, punto 3.
+# - CSP: script, worker del motore, worker di pdf.js, caratteri e dati del clima vengono solo dal sito stesso.
+#   L'hash in style-src è quello del blocco <style> di privacy.html, uguale in crediti.html: se quel blocco cambia, va rifatto
+#   (lo controlla tests/intestazioni.test.ts).
+# - Il sito non si può mettere dentro la pagina di un altro sito (frame-ancestors, X-Frame-Options).
+# - HSTS: il browser che ha già visto Casa in HTTPS ci torna sempre in HTTPS, per un anno. Solo questo sito:
+#   niente includeSubDomains e niente preload, che toccherebbero gli altri siti del dominio.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'sha256-1TtOdPqDFdlUy64CjNjBAyQkLskPpdEQm9E/x5hbdlo='; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000

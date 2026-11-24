@@ -1,0 +1,15 @@
+{
+  "climateId": "005005",
+  "name": "Asti",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.9005&lon=8.2069&outputformat=json",
+  "query": {
+    "lat": "44.9005",
+    "lon": "8.2069",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:45+00:00",
+  "sha256": "061d3a0fdb6c2b163fc0ec5eb28230b703e5669b200394a9bf839443ec958494",
+  "bytes": 1265010,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43724"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "008031",
+  "name": "Imperia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.8862&lon=8.0286&outputformat=json",
+  "query": {
+    "lat": "43.8862",
+    "lon": "8.0286",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:31+00:00",
+  "sha256": "63fa54e4d674b97b491778ba4a6ddf4bf1da95bcfb0122d4bb458065487c5d41",
+  "bytes": 1260367,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42708"
+}

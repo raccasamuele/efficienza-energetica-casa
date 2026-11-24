@@ -1,0 +1,140 @@
+{
+ "versione": "26.2",
+ "clima": "015146",
+ "sopra": "piano",
+ "unita": "kWh nella stagione; irraggiamento in kWh/m²",
+ "casi": {
+  "anni70_oggi": {
+   "sole": {
+    "fabbisogno": 4059.8,
+    "netto_vetri": 2203.2,
+    "trasmesso": 4278.2,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "senzasole": {
+    "fabbisogno": 10139.6,
+    "netto_vetri": -2343.5,
+    "trasmesso": 0.0,
+    "incidente_N": 0.0,
+    "incidente_E": 0.0,
+    "incidente_S": 0.0,
+    "incidente_O": 0.0
+   },
+   "sole_vetri_soli": {
+    "fabbisogno": 5585.8,
+    "netto_vetri": 2283.5,
+    "trasmesso": 4278.2,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "guadagno_solare_totale": 4546.7,
+   "effetto_sole_vetri": 4553.7,
+   "effetto_sole_pareti": 1526.0,
+   "sole_sui_vetri": 6946.1
+  },
+  "anni70_nuovi": {
+   "sole": {
+    "fabbisogno": 3716.5,
+    "netto_vetri": 2451.7,
+    "trasmesso": 3268.5,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "senzasole": {
+    "fabbisogno": 9011.1,
+    "netto_vetri": -1242.9,
+    "trasmesso": 0.0,
+    "incidente_N": 0.0,
+    "incidente_E": 0.0,
+    "incidente_S": 0.0,
+    "incidente_O": 0.0
+   },
+   "sole_vetri_soli": {
+    "fabbisogno": 5291.4,
+    "netto_vetri": 2494.1,
+    "trasmesso": 3268.5,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "guadagno_solare_totale": 3694.6,
+   "effetto_sole_vetri": 3719.7,
+   "effetto_sole_pareti": 1574.9,
+   "sole_sui_vetri": 6946.1
+  },
+  "dopo2010_oggi": {
+   "sole": {
+    "fabbisogno": 123.0,
+    "netto_vetri": 2030.8,
+    "trasmesso": 3268.5,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "senzasole": {
+    "fabbisogno": 2752.4,
+    "netto_vetri": -1259.0,
+    "trasmesso": 0.0,
+    "incidente_N": 0.0,
+    "incidente_E": 0.0,
+    "incidente_S": 0.0,
+    "incidente_O": 0.0
+   },
+   "sole_vetri_soli": {
+    "fabbisogno": 195.8,
+    "netto_vetri": 2122.7,
+    "trasmesso": 3268.5,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "guadagno_solare_totale": 3289.8,
+   "effetto_sole_vetri": 2556.6,
+   "effetto_sole_pareti": 72.9,
+   "sole_sui_vetri": 6946.1
+  },
+  "dopo2010_nuovi": {
+   "sole": {
+    "fabbisogno": 117.6,
+    "netto_vetri": 1931.9,
+    "trasmesso": 2608.7,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "senzasole": {
+    "fabbisogno": 2386.0,
+    "netto_vetri": -908.6,
+    "trasmesso": 0.0,
+    "incidente_N": 0.0,
+    "incidente_E": 0.0,
+    "incidente_S": 0.0,
+    "incidente_O": 0.0
+   },
+   "sole_vetri_soli": {
+    "fabbisogno": 206.3,
+    "netto_vetri": 1999.8,
+    "trasmesso": 2608.7,
+    "incidente_N": 119.7,
+    "incidente_E": 253.2,
+    "incidente_S": 618.4,
+    "incidente_O": 333.3
+   },
+   "guadagno_solare_totale": 2840.4,
+   "effetto_sole_vetri": 2179.7,
+   "effetto_sole_pareti": 88.7,
+   "sole_sui_vetri": 6946.1
+  }
+ }
+}

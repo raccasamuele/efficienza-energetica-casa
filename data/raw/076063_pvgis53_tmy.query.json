@@ -1,0 +1,15 @@
+{
+  "climateId": "076063",
+  "name": "Potenza",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.6384&lon=15.8022&outputformat=json",
+  "query": {
+    "lat": "40.6384",
+    "lon": "15.8022",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:52+00:00",
+  "sha256": "b40039504844e8a7586c6eca038e9179461311304ebf05496dc6550fd6f6a597",
+  "bytes": 1262606,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40613"
+}

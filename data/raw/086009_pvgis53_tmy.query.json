@@ -1,0 +1,15 @@
+{
+  "climateId": "086009",
+  "name": "Enna",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=37.5668&lon=14.2807&outputformat=json",
+  "query": {
+    "lat": "37.5668",
+    "lon": "14.2807",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:38+00:00",
+  "sha256": "409f5cdf17634c171f612b111894f53d4930b8e19d4325e578786f1b95d24174",
+  "bytes": 1264166,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39245"
+}

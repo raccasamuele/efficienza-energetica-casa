@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "scope": "Ricerca puntuale dei quattro conflitti della copia locale. Non è un censimento completo degli atti modificativi.",
+  "rows": [
+    {
+      "name": "Caprese Michelangelo",
+      "status": "da verificare",
+      "note": "La copia istituzionale MEF riporta la discordanza E/1641. Non reperito un atto correttivo puntuale: conservati GG e quota della copia locale, senza inferire 2641 dalle soglie.",
+      "url": "https://def.finanze.it/DocTribFrontend/executePrintArticolo.do?articolo=Allegato+A&codiceOrdinamento=60A+++++0000000&id=%7B0E4DC3BD-3B00-45E2-9CA6-B4DECB631C36%7D"
+    },
+    {
+      "name": "Cunico",
+      "status": "da verificare",
+      "note": "Il documento pubblicato dal Comune di Giaveno conserva F/2698. Non reperito l'atto che risolva la discordanza; nessuna promozione automatica a E.",
+      "url": "https://www.comune.giaveno.to.it/it-it/download/zone-climatiche-comuni-piemonte-450229-4-1010-90e0c5fcfeb7c7f78eec495ec5a42724"
+    },
+    {
+      "name": "Mongiana",
+      "status": "da verificare",
+      "note": "La copia istituzionale MEF riporta la discordanza E/1779. Non reperito un atto correttivo puntuale: nessuna deduzione di 2779 dalle sole soglie.",
+      "url": "https://def.finanze.it/DocTribFrontend/executePrintArticolo.do?articolo=Allegato+A&codiceOrdinamento=60A+++++0000000&id=%7B0E4DC3BD-3B00-45E2-9CA6-B4DECB631C36%7D"
+    },
+    {
+      "name": "Vito d'Asio",
+      "status": "da verificare",
+      "note": "Il DUP comunale 2023–2025 riporta F/2962 e richiama il DM 27/12/2002 (GU 36 del 13/02/2003). Il DM 20/12/2012, GU 57 del 08/03/2013, p. 3, richiama il passaggio E→F. Individuata una modifica di zona: il testo integrale dell'atto 2002 e la catena completa non sono stati acquisiti; non si cambia il GG per forzare la soglia.",
+      "url": "https://www.comune.vitodasio.pn.it/media/files/093049/attachment/Dup_2023-2025.pdf",
+      "crossReference": "https://www.gazzettaufficiale.it/eli/gu/2013/03/08/57/sg/pdf"
+    }
+  ]
+}

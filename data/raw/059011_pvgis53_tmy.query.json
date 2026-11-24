@@ -1,0 +1,15 @@
+{
+  "climateId": "059011",
+  "name": "Latina",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.4673&lon=12.9038&outputformat=json",
+  "query": {
+    "lat": "41.4673",
+    "lon": "12.9038",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:21+00:00",
+  "sha256": "fa6ac650d5e0b1f9fd7f01df7189deeae9ec95a92b6c7993897016d252c5c870",
+  "bytes": 1274176,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41289"
+}

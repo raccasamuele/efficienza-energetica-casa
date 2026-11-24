@@ -1,0 +1,15 @@
+{
+  "climateId": "069022",
+  "name": "Chieti",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=42.3447&lon=14.1660&outputformat=json",
+  "query": {
+    "lat": "42.3447",
+    "lon": "14.1660",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:38+00:00",
+  "sha256": "e72040f69a5b4a7e59be59dade9f8d77136b45ac6a9d13a5c10dd2fc9a11e6df",
+  "bytes": 1263652,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41961"
+}

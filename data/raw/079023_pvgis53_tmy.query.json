@@ -1,0 +1,15 @@
+{
+  "climateId": "079023",
+  "name": "Catanzaro",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=38.9076&lon=16.5960&outputformat=json",
+  "query": {
+    "lat": "38.9076",
+    "lon": "16.5960",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:05+00:00",
+  "sha256": "cbe7311bfffacd7b94fce19f28b46fab0a58b7e8caa47cf110b2503ce04bbb36",
+  "bytes": 1267931,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39727"
+}

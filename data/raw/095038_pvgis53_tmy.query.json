@@ -1,0 +1,15 @@
+{
+  "climateId": "095038",
+  "name": "Oristano",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=39.9059&lon=8.5916&outputformat=json",
+  "query": {
+    "lat": "39.9059",
+    "lon": "8.5916",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:18:06+00:00",
+  "sha256": "31a44ae6991a68e52ca7f81f2d595893fa9fd4de6f7582b8d9cd6dd926c82297",
+  "bytes": 1273836,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40125"
+}

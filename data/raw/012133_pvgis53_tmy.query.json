@@ -1,0 +1,15 @@
+{
+  "climateId": "012133",
+  "name": "Varese",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.8175&lon=8.8264&outputformat=json",
+  "query": {
+    "lat": "45.8175",
+    "lon": "8.8264",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:09+00:00",
+  "sha256": "b2c594270e0b6436470782ea8aab1e4010e184b39d8fc93583636a523e4927a5",
+  "bytes": 1260668,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46116"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "087015",
+  "name": "Catania",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=37.5024&lon=15.0874&outputformat=json",
+  "query": {
+    "lat": "37.5024",
+    "lon": "15.0874",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:41+00:00",
+  "sha256": "4f350fb584566461c65862836059213d33342fda579f2c140be5ba5cb5dbe0e1",
+  "bytes": 1276466,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39230"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "028060",
+  "name": "Padova",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4077&lon=11.8734&outputformat=json",
+  "query": {
+    "lat": "45.4077",
+    "lon": "11.8734",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:13+00:00",
+  "sha256": "0623803c686149ff2ab55015e9dcf8eaad8e7ab97d2591f18992ce445da05ec8",
+  "bytes": 1269347,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "node/406747508"
+}

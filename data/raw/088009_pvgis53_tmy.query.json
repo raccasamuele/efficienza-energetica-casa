@@ -1,0 +1,15 @@
+{
+  "climateId": "088009",
+  "name": "Ragusa",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=36.9257&lon=14.7308&outputformat=json",
+  "query": {
+    "lat": "36.9257",
+    "lon": "14.7308",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:49+00:00",
+  "sha256": "ec74e7406b126d65667e684bd988453810170b513a70ee94a6fb13438f15a430",
+  "bytes": 1267098,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39162"
+}

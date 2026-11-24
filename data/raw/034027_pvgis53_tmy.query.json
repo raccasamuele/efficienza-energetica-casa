@@ -1,0 +1,15 @@
+{
+  "climateId": "034027",
+  "name": "Parma",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.8015&lon=10.3280&outputformat=json",
+  "query": {
+    "lat": "44.8015",
+    "lon": "10.3280",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:46+00:00",
+  "sha256": "b15711613b0fe440ba67954d21738bcba7a745886e2eff74ec8676b8ec5b1391",
+  "bytes": 1270773,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43452"
+}

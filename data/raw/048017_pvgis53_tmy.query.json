@@ -1,0 +1,15 @@
+{
+  "climateId": "048017",
+  "name": "Firenze",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.7698&lon=11.2556&outputformat=json",
+  "query": {
+    "lat": "43.7698",
+    "lon": "11.2556",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:21+00:00",
+  "sha256": "99ce3cafa5d1942a32312d21056992a9442cf45c390d227b175249ab6cffb1ac",
+  "bytes": 1262850,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42602"
+}

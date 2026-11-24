@@ -1,0 +1,15 @@
+{
+  "climateId": "084001",
+  "name": "Agrigento",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=37.3123&lon=13.5747&outputformat=json",
+  "query": {
+    "lat": "37.3123",
+    "lon": "13.5747",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:31+00:00",
+  "sha256": "1eebb8124f45016fa2daf5f538cac96cf52dc90d3928e82cbe34aaf3f4472565",
+  "bytes": 1266484,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39202"
+}

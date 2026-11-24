@@ -1,0 +1,15 @@
+{
+  "climateId": "025006",
+  "name": "Belluno",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=46.1375&lon=12.2182&outputformat=json",
+  "query": {
+    "lat": "46.1375",
+    "lon": "12.2182",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:04+00:00",
+  "sha256": "cb328a51327071b904863ec47926e6e3da56bf684fd261f7cf739bb7fb150b36",
+  "bytes": 1260550,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46834"
+}

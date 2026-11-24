@@ -1,0 +1,15 @@
+{
+  "climateId": "100005",
+  "name": "Prato",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.8806&lon=11.0969&outputformat=json",
+  "query": {
+    "lat": "43.8806",
+    "lon": "11.0969",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:42+00:00",
+  "sha256": "0f9728255ad9f8d9500d6793c563397e0990629a04128dbed59ad43348f04b59",
+  "bytes": 1262858,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/280245"
+}

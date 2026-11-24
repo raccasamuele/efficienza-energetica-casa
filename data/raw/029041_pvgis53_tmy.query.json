@@ -1,0 +1,15 @@
+{
+  "climateId": "029041",
+  "name": "Rovigo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.0698&lon=11.7888&outputformat=json",
+  "query": {
+    "lat": "45.0698",
+    "lon": "11.7888",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:16+00:00",
+  "sha256": "7d25ee78b0226d7f541307dd7f4f049d580d3a8c58535d0861d88afae93a4e20",
+  "bytes": 1270252,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44024"
+}

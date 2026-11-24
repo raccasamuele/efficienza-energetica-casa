@@ -1,0 +1,15 @@
+{
+  "climateId": "064008",
+  "name": "Avellino",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.9142&lon=14.7889&outputformat=json",
+  "query": {
+    "lat": "40.9142",
+    "lon": "14.7889",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:05+00:00",
+  "sha256": "23efac191477831c3f5f02f043b31fa9e365e51c8746910fe5c0a104204c39fe",
+  "bytes": 1261020,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40857"
+}

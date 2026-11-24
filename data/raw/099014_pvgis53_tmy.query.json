@@ -1,0 +1,15 @@
+{
+  "climateId": "099014",
+  "name": "Rimini",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.0594&lon=12.5684&outputformat=json",
+  "query": {
+    "lat": "44.0594",
+    "lon": "12.5684",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:09+00:00",
+  "sha256": "c8cad4398d01754f1aa802f2df3db0fefe02730ae790c1af6450a0e37fbdb9ae",
+  "bytes": 1270346,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42791"
+}

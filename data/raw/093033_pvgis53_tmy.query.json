@@ -1,0 +1,15 @@
+{
+  "climateId": "093033",
+  "name": "Pordenone",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.9563&lon=12.6597&outputformat=json",
+  "query": {
+    "lat": "45.9563",
+    "lon": "12.6597",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:29+00:00",
+  "sha256": "6ccc8286150099f9f5c9020687f8307eec07d2223a5e6750b314c71eb746afe8",
+  "bytes": 1270752,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/179205"
+}

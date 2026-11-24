@@ -1,0 +1,6 @@
+
+# righe con zona e gradi giorno incoerenti (CONSERVATE, da verificare):
+AT F 2698 257 Cunico
+PN F 2962 320 Vito d'Asio
+AR E 1641 653 Caprese Michelangelo
+CZ E 1779 922 Mongiana

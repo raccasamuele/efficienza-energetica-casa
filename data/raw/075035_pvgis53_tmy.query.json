@@ -1,0 +1,15 @@
+{
+  "climateId": "075035",
+  "name": "Lecce",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.3570&lon=18.1718&outputformat=json",
+  "query": {
+    "lat": "40.3570",
+    "lon": "18.1718",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:34+00:00",
+  "sha256": "70adc4bed605f49ccf0b0bd78cd930c502f204fddeeb44f5b5af7b2f70e92987",
+  "bytes": 1274461,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40442"
+}

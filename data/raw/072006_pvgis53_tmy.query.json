@@ -1,0 +1,15 @@
+{
+  "climateId": "072006",
+  "name": "Bari",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.1258&lon=16.8620&outputformat=json",
+  "query": {
+    "lat": "41.1258",
+    "lon": "16.8620",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:22+00:00",
+  "sha256": "62d2d4b108549a80292a4d4f9621b7ec3f88f724cf192e25e761909a5d7572a1",
+  "bytes": 1274177,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41038"
+}

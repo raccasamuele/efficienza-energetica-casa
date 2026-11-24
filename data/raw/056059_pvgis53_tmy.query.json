@@ -1,0 +1,15 @@
+{
+  "climateId": "056059",
+  "name": "Viterbo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=42.4168&lon=12.1051&outputformat=json",
+  "query": {
+    "lat": "42.4168",
+    "lon": "12.1051",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:10+00:00",
+  "sha256": "561dd2531caba55ad232f553ee9283b6e852bb087962f8eaeb5f6dc1c04e3a07",
+  "bytes": 1262076,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41946"
+}

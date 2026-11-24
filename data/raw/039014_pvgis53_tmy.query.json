@@ -1,0 +1,15 @@
+{
+  "climateId": "039014",
+  "name": "Ravenna",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.4161&lon=12.2018&outputformat=json",
+  "query": {
+    "lat": "44.4161",
+    "lon": "12.2018",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:01+00:00",
+  "sha256": "3a13edf4177e41d29737216c7f0761be9709bc46cf0d0a6bb752a3fc71a06d97",
+  "bytes": 1271459,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42955"
+}

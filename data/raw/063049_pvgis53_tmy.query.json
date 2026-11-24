@@ -1,0 +1,15 @@
+{
+  "climateId": "063049",
+  "name": "Napoli",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.8359&lon=14.2488&outputformat=json",
+  "query": {
+    "lat": "40.8359",
+    "lon": "14.2488",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:00+00:00",
+  "sha256": "6eea45644a2fcabd5ac52a3615b7c1544f4d62b520b12f44826937867267307f",
+  "bytes": 1262818,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40767"
+}

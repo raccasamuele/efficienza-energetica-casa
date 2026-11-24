@@ -1,0 +1,15 @@
+{
+  "climateId": "016024",
+  "name": "Bergamo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.6945&lon=9.6699&outputformat=json",
+  "query": {
+    "lat": "45.6945",
+    "lon": "9.6699",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:25+00:00",
+  "sha256": "64f0dacad00f58204ea141100cb48decdb1f7787295a7ec8e87a8f38d7c2f252",
+  "bytes": 1262001,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/45681"
+}

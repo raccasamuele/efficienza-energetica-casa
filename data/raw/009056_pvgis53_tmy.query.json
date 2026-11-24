@@ -1,0 +1,15 @@
+{
+  "climateId": "009056",
+  "name": "Savona",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.3080&lon=8.4810&outputformat=json",
+  "query": {
+    "lat": "44.3080",
+    "lon": "8.4810",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:34+00:00",
+  "sha256": "a19f92f09b5ca31d99735c68951bedf225587159a606adc4f24ee455fbc59c8c",
+  "bytes": 1262315,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43007"
+}

@@ -1,0 +1,15 @@
+{
+  "climateId": "040012",
+  "name": "Forlì",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.2227&lon=12.0413&outputformat=json",
+  "query": {
+    "lat": "44.2227",
+    "lon": "12.0413",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:05+00:00",
+  "sha256": "301b6cab5b8803b7fb5cc68f16fb83598af865902884fe513ff3fa6bb390d291",
+  "bytes": 1269243,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42907"
+}

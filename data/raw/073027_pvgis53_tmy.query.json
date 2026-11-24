@@ -1,0 +1,15 @@
+{
+  "climateId": "073027",
+  "name": "Taranto",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.4712&lon=17.2432&outputformat=json",
+  "query": {
+    "lat": "40.4712",
+    "lon": "17.2432",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:27+00:00",
+  "sha256": "f9e19386785e29c9fbae2626a4b82137aa09917deaa173b523d8dd66d0be18c0",
+  "bytes": 1275056,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40452"
+}

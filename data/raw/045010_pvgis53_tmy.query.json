@@ -1,0 +1,15 @@
+{
+  "climateId": "045010",
+  "name": "Massa",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.0359&lon=10.1396&outputformat=json",
+  "query": {
+    "lat": "44.0359",
+    "lon": "10.1396",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:12+00:00",
+  "sha256": "40616e47c78fcf675d7c0e7ad9912b272fe6e972c5556aaab667aae85b8667b4",
+  "bytes": 1261821,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42813"
+}

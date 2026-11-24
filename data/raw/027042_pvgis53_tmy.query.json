@@ -1,0 +1,15 @@
+{
+  "climateId": "027042",
+  "name": "Venezia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4372&lon=12.3346&outputformat=json",
+  "query": {
+    "lat": "45.4372",
+    "lon": "12.3346",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:10+00:00",
+  "sha256": "0158d33c4690eb771aedd8376f1969b166186b578e5c17dabcef11d062c8c356",
+  "bytes": 1258478,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44741"
+}

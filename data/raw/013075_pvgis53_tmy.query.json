@@ -1,0 +1,15 @@
+{
+  "climateId": "013075",
+  "name": "Como",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.8116&lon=9.0830&outputformat=json",
+  "query": {
+    "lat": "45.8116",
+    "lon": "9.0830",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:12+00:00",
+  "sha256": "fe131599a8ed0985d25a03ececdcbe186fd49092b39a5bb60ce7ff92749dce50",
+  "bytes": 1259042,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46085"
+}

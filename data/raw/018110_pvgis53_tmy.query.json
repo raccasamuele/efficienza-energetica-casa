@@ -1,0 +1,15 @@
+{
+  "climateId": "018110",
+  "name": "Pavia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.1860&lon=9.1546&outputformat=json",
+  "query": {
+    "lat": "45.1860",
+    "lon": "9.1546",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:31+00:00",
+  "sha256": "3debc1a1cac67f8e9c6f0b2e3c620cee7cbb7ce34c43b8020afa22b52707992d",
+  "bytes": 1269290,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44383"
+}

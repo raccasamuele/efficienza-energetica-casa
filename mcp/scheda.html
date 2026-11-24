@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa</title>
+<!--
+  Scheda di Casa nella chat (MCP Apps, guida: docs/ecosistema/GUIDA-MCP.md §5). Un solo file, senza risorse esterne: il
+  client la mostra in un riquadro isolato e le passa il risultato dello strumento con postMessage (JSON-RPC 2.0).
+  Mostra solo quello che lo strumento ha già detto all'agente: niente calcoli qui, niente rete.
+-->
+<style>
+  :root {
+    --bg: var(--color-background-primary, #ffffff);
+    --bg2: var(--color-background-secondary, #f4f5f8);
+    --fg: var(--color-text-primary, #1d1f27);
+    --fg2: var(--color-text-secondary, #5b6070);
+    --line: var(--color-border-primary, #e2e4ea);
+    --accent: #5b3fd6;
+    --ok: #1f7a4d; --ok-bg: #e6f4ec;
+    --warn: #8a5a00; --warn-bg: #fdf3dc;
+    --bad: #a12a2a; --bad-bg: #fbe8e8;
+    --radius: var(--border-radius-md, 10px);
+    font-family: var(--font-sans, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: var(--color-background-primary, #1f2028);
+    --bg2: var(--color-background-secondary, #2a2c36);
+    --fg: var(--color-text-primary, #eceef4);
+    --fg2: var(--color-text-secondary, #a7acbb);
+    --line: var(--color-border-primary, #3a3d4a);
+    --accent: #a594f9;
+    --ok: #7fd3a6; --ok-bg: #1d3328;
+    --warn: #f0c46a; --warn-bg: #3a3020;
+    --bad: #f19a9a; --bad-bg: #3d2323;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: transparent; }
+  body { color: var(--fg); font-size: 14px; line-height: 1.45; }
+  .card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+  .top { display: flex; justify-content: space-between; gap: 8px; color: var(--fg2); font-size: 12px; }
+  h1 { font-size: 17px; margin: 4px 0 12px; line-height: 1.3; }
+  h2 { font-size: 13px; margin: 16px 0 6px; color: var(--fg2); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+  .verdetto { border-left: 4px solid var(--accent); background: var(--bg2); padding: 10px 12px; border-radius: 6px; }
+  .verdetto.mancano-dati { border-color: var(--warn); background: var(--warn-bg); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; }
+  .tile { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  .tile .k { font-size: 12px; color: var(--fg2); }
+  .tile .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tile .s { font-size: 12px; color: var(--fg2); }
+  .pos { color: var(--ok); } .neg { color: var(--bad); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--fg2); font-weight: 500; font-size: 12px; }
+  details summary { cursor: pointer; }
+  th.n { text-align: right; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
+  .chip.tuo { background: var(--ok-bg); color: var(--ok); }
+  .chip.ipotesi { background: var(--bg2); color: var(--fg2); }
+  .chip.manca { background: var(--warn-bg); color: var(--warn); }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 2px 0; }
+  .muted { color: var(--fg2); font-size: 12px; }
+  .errori { background: var(--bad-bg); color: var(--bad); padding: 10px 12px; border-radius: 6px; }
+  .azioni { margin-top: 14px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button { font: inherit; font-weight: 600; border: 0; border-radius: 8px; padding: 8px 14px; background: var(--accent); color: #fff; cursor: pointer; }
+  :root[data-theme="dark"] button { color: #16121f; }
+  button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+  .link { font-size: 12px; word-break: break-all; color: var(--fg2); }
+  .attesa { color: var(--fg2); padding: 8px 0; }
+  .piede { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .piede p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="card" id="scheda"><div class="attesa">Sto aspettando i risultati di Casa…</div></div>
+<script>
+(() => {
+  "use strict";
+  const root = document.getElementById("scheda");
+  const parent = window.parent;
+  let nextId = 1;
+  const waiting = new Map();
+
+  // --- postMessage JSON-RPC verso il client ------------------------------------------------------------------
+  function send(msg) { parent.postMessage(Object.assign({ jsonrpc: "2.0" }, msg), "*"); }
+  function request(method, params) {
+    const id = nextId++;
+    send({ id, method, params: params || {} });
+    return new Promise((resolve, reject) => {
+      waiting.set(id, { resolve, reject });
+      setTimeout(() => { if (waiting.delete(id)) reject(new Error("nessuna risposta")); }, 10000);
+    });
+  }
+  const notify = (method, params) => send({ method, params: params || {} });
+
+  window.addEventListener("message", (event) => {
+    if (event.source !== parent) return;
+    const m = event.data;
+    if (!m || m.jsonrpc !== "2.0") return;
+    if (m.id !== undefined && !m.method) {
+      const w = waiting.get(m.id);
+      if (!w) return;
+      waiting.delete(m.id);
+      if (m.error) w.reject(new Error(m.error.message || "errore")); else w.resolve(m.result || {});
+      return;
+    }
+    switch (m.method) {
+      case "ui/notifications/tool-input": if (!shown) root.replaceChildren(el("div", "attesa", "Casa sta calcolando…")); break;
+      case "ui/notifications/tool-result": render(m.params || {}); break;
+      case "ui/notifications/tool-cancelled": if (!shown) root.replaceChildren(el("div", "attesa", "Calcolo annullato.")); break;
+      case "ui/notifications/host-context-changed": applyContext(m.params || {}); break;
+      case "ui/resource-teardown": if (m.id !== undefined) send({ id: m.id, result: {} }); break;
+      case "ping": if (m.id !== undefined) send({ id: m.id, result: {} }); break;
+      default: if (m.id !== undefined) send({ id: m.id, error: { code: -32601, message: "Metodo non supportato" } });
+    }
+  });
+
+  function applyContext(ctx) {
+    if (ctx.theme === "dark" || ctx.theme === "light") document.documentElement.dataset.theme = ctx.theme;
+    const vars = ctx.styles && ctx.styles.variables;
+    if (vars && typeof vars === "object") {
+      for (const [k, v] of Object.entries(vars)) if (/^--[\w-]+$/.test(k) && typeof v === "string") document.documentElement.style.setProperty(k, v);
+    }
+  }
+
+  // --- dimensione: il client adatta l'altezza del riquadro ---------------------------------------------------
+  let lastH = 0;
+  function reportSize() {
+    const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    if (h === lastH) return;
+    lastH = h;
+    notify("ui/notifications/size-changed", { width: Math.ceil(document.documentElement.scrollWidth), height: h });
+  }
+  if ("ResizeObserver" in window) new ResizeObserver(reportSize).observe(document.documentElement);
+
+  // --- disegno ---------------------------------------------------------------------------------------------
+  // Solo textContent: i testi vengono dal progetto e non diventano mai HTML.
+  function el(tag, cls, text) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = String(text);
+    return n;
+  }
+  const num = (v) => typeof v === "number" && Number.isFinite(v);
+  const euro = (v) => num(v) ? new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(v) : "—";
+  const segno = (v) => num(v) ? (v > 0 ? "+" : "") + euro(v) : "—";
+  const segnoCls = (v) => num(v) ? (v >= 0 ? "pos" : "neg") : "";
+  function tile(k, v, s, cls) {
+    const t = el("div", "tile");
+    t.append(el("div", "k", k), el("div", "v " + (cls || ""), v));
+    if (s) t.append(el("div", "s", s));
+    return t;
+  }
+  function section(title, ...children) {
+    const f = document.createDocumentFragment();
+    f.append(el("h2", null, title), ...children);
+    return f;
+  }
+  function list(items) { const u = el("ul"); for (const i of items) u.append(el("li", null, i)); return u; }
+  /** Celle: testo, oppure { text, cls, sotto } con una riga piccola sotto. */
+  function table(headers, rows) {
+    const t = el("table");
+    const h = el("tr");
+    // L'intestazione si allinea come le celle: a destra le colonne di numeri.
+    const numerica = (i) => rows.length > 0 && rows.every((r) => r[i] && typeof r[i] === "object" && /\bn\b/.test(r[i].cls || ""));
+    headers.forEach((c, i) => h.append(el("th", numerica(i) ? "n" : null, c)));
+    t.append(h);
+    for (const row of rows) {
+      const tr = el("tr");
+      for (const cell of row) {
+        const c = cell && typeof cell === "object" ? cell : { text: cell };
+        const td = el("td", c.cls || null, c.text);
+        if (c.sotto) td.append(el("div", "muted", c.sotto));
+        tr.append(td);
+      }
+      t.append(tr);
+    }
+    return t;
+  }
+  /** Un elenco lungo, chiuso: si apre con un clic. */
+  function chiuso(titolo, contenuto) {
+    const det = el("details", "muted");
+    det.append(el("summary", null, titolo), contenuto);
+    det.addEventListener("toggle", reportSize);
+    return det;
+  }
+  const valore = (v, u) => num(v) ? new Intl.NumberFormat("it-IT", { maximumFractionDigits: Math.abs(v) < 10 && !Number.isInteger(v) ? 2 : 1 }).format(v) + (u ? " " + u : "") : "—";
+
+  let shown = false;
+  function datiDa(result) {
+    if (result.structuredContent && typeof result.structuredContent === "object") return result.structuredContent;
+    // Client con protocollo vecchio: il JSON è il secondo testo.
+    const testi = Array.isArray(result.content) ? result.content.filter((c) => c && c.type === "text") : [];
+    for (const t of testi.slice(1)) { try { return JSON.parse(t.text); } catch (e) { /* non JSON */ } }
+    return { testo: testi[0] ? testi[0].text : "" };
+  }
+
+  function render(result) {
+    shown = true;
+    const d = datiDa(result);
+    const out = [];
+    const top = el("div", "top");
+    top.append(el("span", null, "Casa · stima del modello"), el("span", null, d.motore ? "motore " + d.motore : ""));
+    out.push(top);
+
+    if (result.isError || (Array.isArray(d.errori) && d.errori.length && !d.domanda)) {
+      out.push(el("h1", null, "Casa non ha potuto rispondere"));
+      const box = el("div", "errori");
+      box.append(list(Array.isArray(d.errori) && d.errori.length ? d.errori : [d.testo || "Errore sconosciuto."]));
+      out.push(box);
+      root.replaceChildren(...out);
+      return;
+    }
+
+    out.push(el("h1", null, d.domanda || "Risultato di Casa"));
+
+    const v = d.verdetto;
+    // Frase in cima per gli strumenti che non hanno il verdetto completo: sensibilità (testo), piano, variante.
+    const frase = typeof v === "string" ? v : d.frase || d.verdetto_dopo || (d.disponibile === false ? d.motivo : null);
+    if (!(v && v.frase) && frase) {
+      const box = el("div", "verdetto");
+      if (d.verdetto_dopo) box.append(el("div", "muted", "Con la variante"));
+      box.append(el("div", null, frase));
+      if (d.verdetto_prima) box.append(el("div", "muted", "Prima: " + d.verdetto_prima));
+      if (d.stabilita_del_verdetto) box.append(el("div", "muted", d.stabilita_del_verdetto));
+      out.push(box);
+    }
+    if (v && v.frase) {
+      const box = el("div", "verdetto " + (v.caso || ""));
+      box.append(el("div", null, v.frase));
+      if (v.stabilita) box.append(el("div", "muted", v.stabilita));
+      out.push(box);
+      if (v.caso !== "mancano-dati" && (num(v.spesa_annua_oggi_euro) || num(v.van_euro))) {
+        const tiles = el("div", "tiles");
+        if (num(v.spesa_annua_oggi_euro)) tiles.append(tile("Spesa all'anno", euro(v.spesa_annua_oggi_euro) + " → " + euro(v.spesa_annua_dopo_euro), "oggi → dopo l'intervento"));
+        if (num(v.van_euro)) tiles.append(tile("VAN" + (num(d.orizzonte_anni) ? " in " + d.orizzonte_anni + " anni" : ""), segno(v.van_euro), v.pacchetto || "", segnoCls(v.van_euro)));
+        if (v.rate_incentivo || v.rientro) tiles.append(tile(v.rate_incentivo ? "Rate dell'incentivo" : "Rientro", v.rate_incentivo || v.rientro));
+        out.push(tiles);
+      }
+    } else if (Array.isArray(d.errori) && d.errori.length) {
+      const box = el("div", "errori");
+      box.append(el("div", null, "Prima dei risultati vanno corretti questi errori:"), list(d.errori.map((e) => typeof e === "string" ? e : (e.sezione ? e.sezione + ": " : "") + (e.messaggio || ""))));
+      out.push(box);
+    }
+
+    // sensibilita: gli intervalli di VAN per pacchetto
+    const sensibilita = Array.isArray(d.pacchetti) && d.pacchetti.some((p) => "van_min_euro" in p);
+    if (sensibilita) {
+      if (num(d.resta_primo_pct)) {
+        const tiles = el("div", "tiles");
+        tiles.append(tile("Primo per VAN", d.primo_per_van || "nessuno", d.graduatoria_certa ? "graduatoria certa" : "graduatoria non certa"));
+        tiles.append(tile("Resta primo", d.resta_primo_pct + "%", "delle " + d.varianti_calcolate + " varianti calcolate"));
+        out.push(tiles);
+      }
+      out.push(section("VAN fra le varianti", table(["Pacchetto", "VAN min … max", "Esito"], d.pacchetti.filter((p) => p.id !== "base").map((p) => [
+        p.nome,
+        { text: num(p.van_min_euro) ? euro(p.van_min_euro) + " … " + euro(p.van_max_euro) : "—", cls: "n" },
+        Array.isArray(p.esito) ? p.esito.join(", ") : "",
+      ]))));
+      const cambia = Array.isArray(d.varianti_in_cui_cambia_il_primo) ? d.varianti_in_cui_cambia_il_primo : [];
+      if (cambia.length) out.push(chiuso("Varianti in cui il primo cambia (" + cambia.length + ")", list(cambia.map((x) => x.variante + ": " + x.primo_per_van))));
+    }
+
+    // prova_variante: le modifiche e il VAN prima → dopo
+    if (Array.isArray(d.modifiche) && d.modifiche.length) {
+      out.push(section("Modifiche provate", list(d.modifiche.map((m) => m.applicata === false
+        // Taglia indicativa: il modello sceglie la taglia, quella chiesta si legge dalla curva sotto.
+        ? m.nome + ": chiesta " + valore(m.dopo, m.unita) + "; taglia scelta dal modello " + (num(m.prima) ? valore(m.prima, m.unita) : "diversa per pacchetto") + (m.motivo ? " · " + m.motivo : "")
+        : m.nome + ": " + valore(m.prima, m.unita) + " → " + valore(m.dopo, m.unita) + (m.motivo ? " · " + m.motivo : "")))));
+    }
+    if (Array.isArray(d.confronto) && d.confronto.length) {
+      out.push(section("VAN prima → dopo", table(["Pacchetto", "Prima", "Dopo", "Differenza"], d.confronto.map((r) => [
+        r.nome,
+        { text: segno(r.van_prima_euro), cls: "n" },
+        { text: segno(r.van_dopo_euro), cls: "n " + segnoCls(r.van_dopo_euro) },
+        { text: segno(r.differenza_euro), cls: "n " + segnoCls(r.differenza_euro) },
+      ]))));
+    }
+    if (Array.isArray(d.dalla_curva) && d.dalla_curva.length) {
+      out.push(section("Dalla curva della taglia indicativa", list(d.dalla_curva.map((x) => (x.nome || x.pacchetto) + ": " + (x.trovata
+        ? valore(x.fotovoltaico_kwp, "kWp") + (x.batteria_kwh ? " e " + valore(x.batteria_kwh, "kWh") : "") + ", VAN " + segno(x.van_euro)
+        : "taglia non trovata nella curva" + (x.motivo ? " (" + x.motivo + ")" : ""))))));
+    }
+
+    // piano_nel_tempo: i percorsi
+    if (Array.isArray(d.percorsi) && d.percorsi.length) {
+      out.push(section("Percorsi", table(["Percorso", "Quando", "VAN", "Rientro"], d.percorsi.map((x) => [
+        { text: x.etichetta, sotto: x.percorso + (x.stabilita ? " · " + x.stabilita : "") },
+        x.quando ? "involucro " + x.quando.involucro + "; impianto " + x.quando.impianto + "; FV e batteria " + x.quando.fotovoltaico_e_batteria : "",
+        { text: segno(x.van_euro), cls: "n " + segnoCls(x.van_euro) },
+        { text: x.rientro || "—", cls: "n" },
+      ]))));
+    }
+
+    // confronta_preventivi
+    if (Array.isArray(d.confronti)) {
+      if (!d.confronti.length) out.push(el("p", "muted", "Nel file non ci sono più preventivi per lo stesso intervento da confrontare."));
+      for (const c of d.confronti) {
+        out.push(section(c.intervento, table(["Preventivo", "Offerta", "Costo", "VAN", "Rientro"], (c.preventivi || []).map((r) => [
+          { text: r.preventivo + (r.in_uso ? " (in uso)" : ""), sotto: Array.isArray(r.voci_da_chiarire) && r.voci_da_chiarire.length ? "Da chiedere: " + r.voci_da_chiarire.join(", ") : "" },
+          r.offerta || "",
+          { text: euro(r.costo_euro) + (r.costo_completo === false ? " (incompleto)" : ""), cls: "n" },
+          { text: segno(r.van_euro), cls: "n " + segnoCls(r.van_euro) },
+          { text: r.rientro || "—", cls: "n" },
+        ]))));
+        if (Array.isArray(c.differenze) && c.differenze.length) out.push(list(c.differenze));
+      }
+    }
+
+    // controlla_progetto
+    if (d.file_valido === true) {
+      const ok = d.risultati_calcolabili ? "Il progetto si apre e i risultati si possono calcolare." : "Il progetto si apre, ma prima dei risultati vanno corretti degli errori.";
+      out.push(el("div", "verdetto" + (d.risultati_calcolabili ? "" : " mancano-dati"), ok));
+      if (Array.isArray(d.da_documentare) && d.da_documentare.length) out.push(chiuso("Dati da misurare o documentare (" + d.da_documentare.length + ")", list(d.da_documentare.map((e) => (e.sezione ? e.sezione + ": " : "") + (e.messaggio || "")))));
+    }
+
+    // scrivi_profilo: il file non si mostra, solo che cosa contiene
+    if (d.nome_file) {
+      const box = el("div", "verdetto");
+      box.append(el("div", null, "Profilo energetico pronto: " + d.nome_file));
+      if (Array.isArray(d.contiene)) box.append(el("div", "muted", "Contiene: " + d.contiene.join(", ") + "."));
+      if (Array.isArray(d.esclusi) && d.esclusi.length) box.append(el("div", "muted", "Non contiene: " + d.esclusi.join(", ") + "."));
+      out.push(box);
+      if (d.avviso) out.push(el("p", "muted", d.avviso));
+    }
+
+    // valuta_progetto: i pacchetti
+    const pacchetti = !sensibilita && Array.isArray(d.pacchetti) ? d.pacchetti.filter((p) => p.id !== "base") : [];
+    if (pacchetti.length) {
+      const t = el("table");
+      const h = el("tr");
+      for (const c of ["Pacchetto", "Investimento", "VAN", "Rientro"]) h.append(el("th", c === "Pacchetto" ? null : "n", c));
+      t.append(h);
+      for (const p of pacchetti) {
+        const r = el("tr");
+        const nome = el("td", null, p.nome);
+        if (!p.calcolabile && Array.isArray(p.perche_no) && p.perche_no.length) nome.append(el("div", "muted", "Non calcolabile: " + p.perche_no.join("; ")));
+        else if (Array.isArray(p.mancano) && p.mancano.length) {
+          // L'elenco dei costi mancanti è lungo: chiuso, si apre con un clic.
+          const det = el("details", "muted");
+          det.append(el("summary", null, "Costi da completare"), el("div", null, p.mancano.join("; ")));
+          det.addEventListener("toggle", reportSize);
+          nome.append(det);
+        }
+        r.append(nome, el("td", "n", p.investimento || "—"), el("td", "n " + segnoCls(p.van_euro), segno(p.van_euro)), el("td", "n", p.rientro || "—"));
+        t.append(r);
+      }
+      out.push(section("Pacchetti" + (num(d.orizzonte_anni) ? " · " + d.orizzonte_anni + " anni" : ""), t));
+    }
+
+    // crea_progetto: la scheda della casa
+    if (Array.isArray(d.scheda) && d.scheda.length) {
+      const t = el("table");
+      const cls = { "dato tuo": "tuo", "ipotesi dall'esempio": "ipotesi", "da completare": "manca" };
+      for (const r of d.scheda) {
+        const tr = el("tr");
+        const stato = el("td", "n");
+        stato.append(el("span", "chip " + (cls[r.stato] || "ipotesi"), r.stato));
+        tr.append(el("td", null, r.voce), el("td", null, r.valore), stato);
+        t.append(tr);
+      }
+      out.push(section("La casa", t));
+    }
+    if (Array.isArray(d.prossimi_dati) && d.prossimi_dati.length) {
+      out.push(section("Dati da completare", list(d.prossimi_dati.map((a) => a.cosa + (a.perche ? " — " + a.perche : "")))));
+    }
+    const avvisi = [].concat(Array.isArray(d.avvisi) ? d.avvisi : [], Array.isArray(d.avvisi_apertura) ? d.avvisi_apertura : [], Array.isArray(d.note) ? d.note : []);
+    // Le note di controlla_progetto sono { sezione, messaggio }; le altre sono testo.
+    if (avvisi.length) out.push(section("Avvisi", list(avvisi.map((x) => typeof x === "string" ? x : (x && x.sezione ? x.sezione + ": " : "") + (x && x.messaggio ? x.messaggio : "")))));
+
+    // Sempre: stato dei dati, limiti, avvertenza (regola degli strumenti di Casa).
+    const piede = el("div", "piede");
+    const s = d.stato_dei_dati;
+    if (s) piede.append(el("p", "muted", "Dati: " + s.documentati + " documentati, " + s.misurati + " misurati, " + s.ipotizzati + " ipotizzati, " + s.sconosciuti + " sconosciuti. " + (s.nota || "")));
+    if (d.limiti) piede.append(el("p", "muted", "Limiti del modello: " + d.limiti));
+    if (d.avvertenza) piede.append(el("p", "muted", d.avvertenza + (d.clima ? " Clima di " + d.clima.capoluogo + " (zona " + d.clima.zona + ")." : "")));
+    if (piede.childNodes.length) out.push(piede);
+
+    if (typeof d.link_apri_in_casa === "string" && /^https:\/\//.test(d.link_apri_in_casa)) {
+      const az = el("div", "azioni");
+      const b = el("button", null, "Apri in Casa");
+      b.type = "button";
+      const nota = el("span", "muted", "Il sito ricrea il progetto da queste risposte, che restano nel tuo browser.");
+      b.addEventListener("click", () => {
+        request("ui/open-link", { url: d.link_apri_in_casa }).catch(() => {
+          // Il client non apre link: si mostra l'indirizzo da copiare.
+          if (!az.querySelector(".link")) az.append(el("div", "link", d.link_apri_in_casa));
+        });
+      });
+      az.append(b, nota);
+      out.push(az);
+    }
+
+    root.replaceChildren(...out);
+    reportSize();
+  }
+
+  // --- avvio: ui/initialize, poi ui/notifications/initialized ----------------------------------------------------
+  request("ui/initialize", {
+    protocolVersion: "2026-01-26",
+    appInfo: { name: "casa-scheda", version: "1" },
+    appCapabilities: { availableDisplayModes: ["inline"] },
+  }).then((r) => {
+    if (r && r.hostContext) applyContext(r.hostContext);
+  }).catch(() => { /* client senza risposta: si prova comunque */ }).then(() => {
+    notify("ui/notifications/initialized", {});
+    reportSize();
+  });
+})();
+</script>
+</body>
+</html>

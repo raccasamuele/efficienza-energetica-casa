@@ -1,0 +1,15 @@
+{
+  "climateId": "019036",
+  "name": "Cremona",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.1335&lon=10.0249&outputformat=json",
+  "query": {
+    "lat": "45.1335",
+    "lon": "10.0249",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:34+00:00",
+  "sha256": "e3b40b6f621c3d1d5e0619ee78ae1f458d89cc4246246be16bb7a3a2f8479e49",
+  "bytes": 1270615,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/44189"
+}

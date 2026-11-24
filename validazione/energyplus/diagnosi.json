@@ -1,0 +1,99 @@
+{
+ "versione": "26.2",
+ "clima": "015146",
+ "gradi_ora_kKh": 60.8,
+ "casi": {
+  "anni70_oggi": {
+   "sole": {
+    "fabbisogno_kWh": 12168,
+    "solare_dai_vetri_stagione_kWh": 4278
+   },
+   "sole_vetri_soli": {
+    "fabbisogno_kWh": 17669,
+    "solare_dai_vetri_stagione_kWh": 4278
+   },
+   "senza_sole": {
+    "fabbisogno_kWh": 22179,
+    "perdita_vetri_kWh": 2260,
+    "U_efficace_vetri": 2.32,
+    "perdita_pareti_kWh": 6054,
+    "U_efficace_pareti": 1.08,
+    "perdita_copertura_kWh": 12001
+   },
+   "scomposizione_kWh": {
+    "effetto_sole_vetri_energyplus": 4510,
+    "effetto_sole_opachi_energyplus": 5501,
+    "effetto_sole_motore": 8211
+   }
+  },
+  "anni70_nuovi": {
+   "sole": {
+    "fabbisogno_kWh": 11876,
+    "solare_dai_vetri_stagione_kWh": 3268
+   },
+   "sole_vetri_soli": {
+    "fabbisogno_kWh": 17451,
+    "solare_dai_vetri_stagione_kWh": 3268
+   },
+   "senza_sole": {
+    "fabbisogno_kWh": 21108,
+    "perdita_vetri_kWh": 1194,
+    "U_efficace_vetri": 1.23,
+    "perdita_pareti_kWh": 6058,
+    "U_efficace_pareti": 1.08,
+    "perdita_copertura_kWh": 12020
+   },
+   "scomposizione_kWh": {
+    "effetto_sole_vetri_energyplus": 3657,
+    "effetto_sole_opachi_energyplus": 5575,
+    "effetto_sole_motore": 7509
+   }
+  },
+  "dopo2010_oggi": {
+   "sole": {
+    "fabbisogno_kWh": 798,
+    "solare_dai_vetri_stagione_kWh": 3268
+   },
+   "sole_vetri_soli": {
+    "fabbisogno_kWh": 1289,
+    "solare_dai_vetri_stagione_kWh": 3268
+   },
+   "senza_sole": {
+    "fabbisogno_kWh": 4562,
+    "perdita_vetri_kWh": 1248,
+    "U_efficace_vetri": 1.28,
+    "perdita_pareti_kWh": 1418,
+    "U_efficace_pareti": 0.25,
+    "perdita_copertura_kWh": 1770
+   },
+   "scomposizione_kWh": {
+    "effetto_sole_vetri_energyplus": 3273,
+    "effetto_sole_opachi_energyplus": 491,
+    "effetto_sole_motore": 3330
+   }
+  },
+  "dopo2010_nuovi": {
+   "sole": {
+    "fabbisogno_kWh": 858,
+    "solare_dai_vetri_stagione_kWh": 2609
+   },
+   "sole_vetri_soli": {
+    "fabbisogno_kWh": 1383,
+    "solare_dai_vetri_stagione_kWh": 2609
+   },
+   "senza_sole": {
+    "fabbisogno_kWh": 4204,
+    "perdita_vetri_kWh": 900,
+    "U_efficace_vetri": 0.93,
+    "perdita_pareti_kWh": 1418,
+    "U_efficace_pareti": 0.25,
+    "perdita_copertura_kWh": 1771
+   },
+   "scomposizione_kWh": {
+    "effetto_sole_vetri_energyplus": 2821,
+    "effetto_sole_opachi_energyplus": 525,
+    "effetto_sole_motore": 2923
+   }
+  }
+ }
+}

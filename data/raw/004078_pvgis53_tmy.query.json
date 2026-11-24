@@ -1,0 +1,15 @@
+{
+  "climateId": "004078",
+  "name": "Cuneo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=44.3896&lon=7.5479&outputformat=json",
+  "query": {
+    "lat": "44.3896",
+    "lon": "7.5479",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:38+00:00",
+  "sha256": "7bd098866bbd3de5ca6dd9c1cd7611ece710ce5e4881fee4d5578ec5f2242ec8",
+  "bytes": 1262982,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/43083"
+}

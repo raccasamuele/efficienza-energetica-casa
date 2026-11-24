@@ -1,0 +1,15 @@
+{
+  "climateId": "110001",
+  "name": "Andria",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.2276&lon=16.2955&outputformat=json",
+  "query": {
+    "lat": "41.2276",
+    "lon": "16.2955",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:16:37+00:00",
+  "sha256": "5f32c65c241937f52c1b7648097b1ccfed8f8d0d72f79aa980fc229858956cd1",
+  "bytes": 1266033,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41034"
+}

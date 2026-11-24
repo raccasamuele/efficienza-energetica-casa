@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Crediti e licenze · Casa</title>
+    <meta name="description" content="Da dove vengono i dati e il software usati da casa.raccasamuele.it, con autori e licenze." />
+    <style>
+      :root { color-scheme: light; --bg: #f3f2f9; --surface: #ffffff; --text: #1f1d2b; --muted: #5f5c73; --accent: #6230b8; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif; font-size: 1rem; line-height: 1.7; }
+      a { color: var(--accent); text-underline-offset: 4px; overflow-wrap: anywhere; }
+      a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+      .skip-link { position: absolute; left: -9999px; }
+      .skip-link:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px 12px; }
+      main { width: min(760px, 100% - 32px); margin: 32px auto; background: var(--surface); border-radius: 18px; padding: clamp(20px, 5vw, 48px); }
+      main:focus { outline: none; }
+      h1 { font-size: clamp(2rem, 6vw, 2.75rem); font-weight: 600; line-height: 1.2; margin: 16px 0 0; }
+      h2 { font-size: 1.2rem; font-weight: 600; line-height: 1.3; margin: 32px 0 0; }
+      p { color: var(--muted); font-size: 0.9375rem; margin: 10px 0 0; }
+      .intro { color: var(--text); font-size: 1.0625rem; margin-top: 16px; }
+      .back { font-size: 0.9375rem; }
+      .date { font-size: 0.8125rem; margin-top: 36px; }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <main id="contenuto" tabindex="-1">
+      <a class="back" href="./">← Torna al simulatore</a>
+      <h1>Crediti e licenze</h1>
+      <p class="intro">Casa usa dati pubblici e software scritti da altri. Qui trovi chi li ha fatti e con quale licenza. Il codice di Casa ha licenza MIT, © 2026 Samuele Racca: vale solo per il codice scritto per Casa, non per i dati e il software di altri.</p>
+
+      <h2>Clima</h2>
+      <p><strong>PVGIS TMY 5.3</strong>: anno tipico del clima dei 109 capoluoghi. © Unione Europea, Joint Research Centre. Riuso con riconoscimento della fonte secondo le <a href="https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/general-information/usage-conditions-data-protection_en">condizioni d’uso di PVGIS</a>. Casa elabora le serie con pvlib: non sono la produzione calcolata dal servizio di PVGIS.</p>
+      <p><strong>Open-Meteo</strong>: temperature giornaliere dal 2015, per i gradi giorno osservati. Dati di <a href="https://open-meteo.com/">Open-Meteo.com</a>, modello «Best match» (IFS HRES, ERA5 ed ERA5-Land), <a href="https://open-meteo.com/en/licence">licenza CC BY 4.0</a>. Contiene informazioni modificate del Copernicus Climate Change Service.</p>
+
+      <h2>Comuni e mappe</h2>
+      <p><strong>ISTAT</strong>: <a href="https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.xlsx">Elenco dei comuni italiani al 21/02/2026</a> e confini generalizzati al 01/01/2025. Licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it">CC BY 4.0</a>. I centri dei comuni nati da fusioni sono elaborazioni di Casa, non coordinate rilevate.</p>
+      <p><strong>OpenStreetMap</strong>: coordinate del centro dei capoluoghi, tramite Nominatim. © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, licenza <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>.</p>
+      <p><strong>DPR 26 agosto 1993, n. 412, allegato A</strong>: zona climatica, gradi giorno e altitudine dei comuni. Atto normativo pubblico.</p>
+
+      <h2>Consumi elettrici</h2>
+      <p><strong>Profili elettrici medi ARERA</strong>: ARERA, «Analisi dei consumi dei clienti domestici», dati regionali 2025, clienti residenti, tutti i mercati (<a href="https://www.arera.it/dati-e-statistiche/dettaglio/analisi-dei-consumi-dei-clienti-domestici">pagina dei dati</a>, acquisiti il 17/11/2026). Licenza <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC BY-SA 4.0</a>, secondo i <a href="https://www.arera.it/termini-e-condizioni-uso-del-sito">termini d’uso di ARERA</a>.</p>
+      <p>Casa ha trasformato i dati: forme regionali divise per la propria media, poi media semplice delle regioni per Nord, Centro e Sud con isole, per mese, tipo di giorno e ora. Il file trasformato ha la stessa licenza CC BY-SA 4.0, con attribuzione ad ARERA, e puoi scaricarlo: <a href="./data/profili-arera.json" download>profili-arera.json</a>.</p>
+
+      <h2>Pompe di calore e case tipo</h2>
+      <p><strong>hplib</strong>: database delle pompe di calore, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it">CC BY 4.0</a>. Autori: Tjarko Tjaden, Hauke Hoops, Kai Rösken e contributori di hplib; dati di origine HP Keymark. <a href="https://github.com/FZJ-IEK3-VSA/hplib/tree/125c2ef6c3fc38043368daac1352557fd2a90106">Revisione usata</a>. Casa ha trasformato i dati per il proprio catalogo. I punti di prova del catalogo vengono anche dal file di validazione di hplib (<code>relative_error.csv</code>), che ha la licenza MIT del codice di hplib.</p>
+      <p><strong>TABULA, Building Typology Brochure Italy</strong> (Corrado, Ballarini, Corgnati, Talà; Politecnico di Torino, 2011; progetto IEE TABULA): trasmittanze tipiche per tipo di costruzione ed epoca, usate come valori proposti.</p>
+
+      <h2>Software e caratteri del sito</h2>
+      <p>Il sito contiene, in forma compilata:</p>
+      <ul>
+        <li>React e React DOM 18.3.1, con scheduler 0.23.2: licenza MIT, © Facebook, Inc. and its affiliates.</li>
+        <li>lucide-react 0.453.0 (icone): licenza ISC, © Lucide Contributors 2022; parti © Cole Bemis 2013-2022, da Feather (MIT).</li>
+        <li>Carattere Poppins, da @fontsource/poppins 5.1.0: SIL Open Font License 1.1, © 2020 The Poppins Project Authors.</li>
+        <li>pdf.js, da pdfjs-dist 6.4.299 (lettura delle bollette in PDF nel browser): licenza Apache 2.0, © 2024 Mozilla Foundation.</li>
+      </ul>
+      <p>I testi completi di queste licenze sono in <a href="./licenze-terze-parti.txt">licenze-terze-parti.txt</a>.</p>
+
+      <p class="date">Ultimo aggiornamento: 23 novembre 2026.</p>
+    </main>
+  </body>
+</html>

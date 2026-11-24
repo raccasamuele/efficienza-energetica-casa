@@ -1,0 +1,15 @@
+{
+  "climateId": "061022",
+  "name": "Caserta",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.0721&lon=14.3313&outputformat=json",
+  "query": {
+    "lat": "41.0721",
+    "lon": "14.3313",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:52+00:00",
+  "sha256": "a67e2cbe6aa19b593f6b15c979e08454d171fa06df4602fb12e9289611fd0f8d",
+  "bytes": 1265311,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41056"
+}

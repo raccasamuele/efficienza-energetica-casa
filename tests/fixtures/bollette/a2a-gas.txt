@@ -1,0 +1,12 @@
+a2a energia BOLLETTA GAS NATURALE
+A2A Energia S.p.A. Codice Cliente 1111111 MARIO ESEMPIO
+PDR 00000000000000 VIA ESEMPIO 1 00000 CITTÀ XX
+Periodo di fatturazione: dal 01/08/2026 al 30/09/2026
+Consumo totale fatturato del periodo 38 Smc
+Consumo da inizio fornitura 290 Smc dal 01/02/2026 al 30/09/2026
+Tipologia offerta: a prezzo fisso
+QUOTA PER CONSUMI 38 Smc 0,950000 €/Smc 36,10 €
+QUOTA FISSA 2 mesi 9,000000 €/mese 18,00 €
+Potere calorifico superiore 0,038520 GJ/Smc Coefficiente C 1,018
+Autolettura 31/08/2026 2.410
+Lettura rilevata 30/09/2026 2.429

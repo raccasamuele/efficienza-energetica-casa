@@ -1,0 +1,15 @@
+{
+  "climateId": "044007",
+  "name": "Ascoli Piceno",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=42.8510&lon=13.6170&outputformat=json",
+  "query": {
+    "lat": "42.8510",
+    "lon": "13.6170",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:03+00:00",
+  "sha256": "65fdf2b062947cfecba4f031f7697f1bd45b9968119886ef497845b43f71ae37",
+  "bytes": 1263859,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42176"
+}

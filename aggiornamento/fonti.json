@@ -1,0 +1,288 @@
+{
+  "versione": 1,
+  "progetto": "casa",
+  "frequenza_routine_mesi": 3,
+  "nota": "Inventario dei dati che invecchiano. La routine trimestrale controlla le voci che scadono (ultimo_controllo + frequenza_mesi) prima della routine successiva e segue aggiornamento/ISTRUZIONI.md. «valori» deve coincidere con il codice: lo verifica tests/aggiornamento.test.ts.",
+  "fonti": [
+    {
+      "id": "piano-induzione-costo",
+      "descrizione": "Stima media italiana del piano a induzione e della posa, preimpostata quando si sceglie il passaggio all'induzione",
+      "dove": [
+        "src/engine/example.ts",
+        "NOTICE.md",
+        "docs/validazione/CORREZIONE-MOTORE.md"
+      ],
+      "valori": [
+        {
+          "percorso": "cooking.hobCost.value",
+          "valore": 825,
+          "unita": "€ IVA inclusa: piano 675 € + posa 150 €, pentole escluse"
+        }
+      ],
+      "fonte": "Altroconsumo, Guida all'acquisto del piano cottura (27/11/2024): prezzo medio dei piani a induzione 675 €; Cronoshare, Quanto costa installare forno e piano cottura (02/02/2026): prezzo medio nazionale 100-200 €",
+      "url": "https://www.altroconsumo.it/casa-energia/pulizie/speciali/piani-cottura-guida-all-acquisto",
+      "ultimo_controllo": "2026-11-17",
+      "frequenza_mesi": 12,
+      "come_controllare": "Rileggere il prezzo medio dei piani a induzione nella guida di Altroconsumo (o in un'indagine più recente) e il prezzo medio di installazione; aggiornare il valore se cambia di oltre il 10%.",
+      "se_cambia": "Aggiornare cooking.hobCost in src/engine/example.ts con fonte e data, NOTICE.md, CORREZIONE-MOTORE §19.2 e il test che controlla 825.",
+      "automatico": false
+    },
+    {
+      "id": "chiusura-contatore-gas",
+      "descrizione": "Contributo del distributore per chiudere il contatore del gas (disattivazione su richiesta del cliente, D01), preimpostato quando si sceglie il passaggio all'induzione",
+      "dove": [
+        "src/engine/example.ts",
+        "src/ui/interventions.tsx",
+        "NOTICE.md",
+        "docs/validazione/CORREZIONE-MOTORE.md"
+      ],
+      "valori": [
+        {
+          "percorso": "cooking.meterClosureCost.value",
+          "valore": 30,
+          "unita": "€ IVA esclusa, contatori fino alla classe G6; esclusi contributo del venditore e rimozione dell'allacciamento"
+        }
+      ],
+      "fonte": "Contributo regolato da ARERA (RTDG, allegato A della delibera 570/2019/R/gas, art. 87): 30 € fino a G6, 45 € oltre; uguale nei listini di 2i Rete Gas (01/05/2025), Italgas Reti (01/01/2024) e AS Retigas (2026)",
+      "url": "https://www.italgas.it/wp-content/uploads/sites/2/2025/07/2iRETE_GAS_SpA_Listino_prezzi_in_vigore_1_05_2025.pdf",
+      "ultimo_controllo": "2026-11-18",
+      "frequenza_mesi": 12,
+      "come_controllare": "Rileggere la voce D01 (disattivazione della fornitura su richiesta del cliente finale, fino a G6) nel listino più recente di 2i Rete Gas o Italgas Reti, e il testo vigente della RTDG di ARERA.",
+      "se_cambia": "Aggiornare cooking.meterClosureCost in src/engine/example.ts (fonte e data), il suggerimento in src/ui/interventions.tsx, NOTICE.md, CORREZIONE-MOTORE §19.2 e il test che controlla 30.",
+      "automatico": false
+    },
+    {
+      "id": "arera-profili-elettrici",
+      "descrizione": "Forme medie degli altri usi elettrici per mese, tipo di giorno, area e classe di potenza",
+      "dove": [
+        "src/engine/data/profili-arera.json",
+        "scripts/data/build_profili_elettrici.py",
+        "data/sources/arera-profili/arera-profili-source.json",
+        "NOTICE.md"
+      ],
+      "valori": [],
+      "fonte": "ARERA, Analisi dei consumi dei clienti domestici, dati regionali 2025 (clienti residenti, tutti i mercati)",
+      "url": "https://www.arera.it/dati-e-statistiche/dettaglio/analisi-dei-consumi-dei-clienti-domestici",
+      "ultimo_controllo": "2026-11-17",
+      "frequenza_mesi": 12,
+      "come_controllare": "Verificare l'ultimo anno completo ARERA e la licenza; acquisire lo ZIP regionale e il manifest con hash, poi ricostruire i profili residenti per le due classi e le tre aree con lo script offline.",
+      "se_cambia": "Aggiornare manifest e dati derivati, NOTICE.md, anno e limiti dichiarati; rieseguire pipeline e prove dei profili. I dati derivati restano CC BY-SA 4.0.",
+      "automatico": false,
+      "licenza": "CC BY-SA 4.0"
+    },
+    {
+      "id": "incentivi-detrazioni-casa",
+      "descrizione": "Detrazioni fiscali preimpostate per lavori pagati nel 2026 e 2027",
+      "dove": [
+        "src/engine/incentivi.ts",
+        "NOTICE.md"
+      ],
+      "valori": [
+        {
+          "percorso": "incentivi.detrazione-2026-principale.pct",
+          "valore": 50,
+          "unita": "%"
+        },
+        {
+          "percorso": "incentivi.detrazione-2026-principale.years",
+          "valore": 10,
+          "unita": "rate annue uguali"
+        },
+        {
+          "percorso": "incentivi.detrazione-2026-principale.spendingCap",
+          "valore": 96000,
+          "unita": "€ per unità immobiliare"
+        },
+        {
+          "percorso": "incentivi.detrazione-2026-altra.pct",
+          "valore": 36,
+          "unita": "%"
+        },
+        {
+          "percorso": "incentivi.detrazione-2026-altra.years",
+          "valore": 10,
+          "unita": "rate annue uguali"
+        },
+        {
+          "percorso": "incentivi.detrazione-2026-altra.spendingCap",
+          "valore": 96000,
+          "unita": "€ per unità immobiliare"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-principale.pct",
+          "valore": 36,
+          "unita": "%"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-principale.years",
+          "valore": 10,
+          "unita": "rate annue uguali"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-principale.spendingCap",
+          "valore": 96000,
+          "unita": "€ per unità immobiliare"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-altra.pct",
+          "valore": 30,
+          "unita": "%"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-altra.years",
+          "valore": 10,
+          "unita": "rate annue uguali"
+        },
+        {
+          "percorso": "incentivi.detrazione-2027-altra.spendingCap",
+          "valore": 96000,
+          "unita": "€ per unità immobiliare"
+        }
+      ],
+      "fonte": "Agenzia delle Entrate, Agevolazioni per le ristrutturazioni edilizie",
+      "url": "https://www.agenziaentrate.gov.it/portale/web/guest/aree-tematiche/casa/agevolazioni/agevolazioni-per-le-ristrutturazioni-edilizie",
+      "ultimo_controllo": "2026-11-12",
+      "frequenza_mesi": 3,
+      "come_controllare": "Rileggere la pagina dell'Agenzia delle Entrate e la legge di bilancio dell'anno; aggiungere le regole dell'anno nuovo e togliere quelle di anni passati.",
+      "se_cambia": "Aggiornare src/engine/incentivi.ts, NOTICE.md e i test.",
+      "automatico": false
+    },
+    {
+      "id": "fv-prezzo-residenziale",
+      "descrizione": "Prezzo tipico del FV residenziale chiavi in mano, usato per la taglia indicativa",
+      "dove": ["src/engine/example.ts", "NOTICE.md"],
+      "valori": [{ "percorso": "pv.pricePerKwp.value", "valore": 1530, "unita": "€/kWp IVA 10% compresa" }],
+      "fonte": "IEA PVPS, National Survey Report of PV Power Applications in Italy 2024 (indagine GSE), tabella 11",
+      "url": "https://iea-pvps.org/national-survey-reports/",
+      "ultimo_controllo": "2026-11-03",
+      "frequenza_mesi": 12,
+      "come_controllare": "Cercare l'edizione più recente del rapporto sull'Italia; tabella dei costi di un impianto residenziale sotto 10 kW, totale con IVA. Usare la media, non una singola offerta.",
+      "se_cambia": "Aggiornare valore, sorgente (testo IEA in example.ts) e NOTICE.md con edizione e tabella; rieseguire i test delle taglie.",
+      "soglia_pct": 25,
+      "automatico": true
+    },
+    {
+      "id": "batteria-scenari-costo",
+      "descrizione": "Scenari di costo della batteria senza preventivo (non prezzi medi verificati)",
+      "dove": ["src/engine/example.ts", "src/engine/sensitivity.ts", "NOTICE.md"],
+      "valori": [
+        { "percorso": "battery.pricePerKwh.value", "valore": 600, "unita": "€/kWh, scenario centrale" },
+        { "percorso": "battery.fixedCost.value", "valore": 700, "unita": "€ con FV nuovo" },
+        { "percorso": "battery.retrofitFixedCost.value", "valore": 1500, "unita": "€ su FV esistente" },
+        { "percorso": "battery.replacementPerKwh.value", "valore": 450, "unita": "€/kWh alla sostituzione" },
+        { "percorso": "battery.replacementFixed.value", "valore": 300, "unita": "€ alla sostituzione" }
+      ],
+      "fonte": "Scenari dichiarati come ipotesi: al 3/11/2026 nessuna rilevazione italiana affidabile dei prezzi delle batterie domestiche",
+      "url": "",
+      "ultimo_controllo": "2026-11-03",
+      "frequenza_mesi": 6,
+      "come_controllare": "Cercare una rilevazione italiana pubblica e datata dei prezzi installati delle batterie domestiche (GSE, ENEA, RSE, ARERA, associazioni di settore). Blog e promozioni di operatori non bastano. Se non c'è, lasciare gli scenari e aggiornare solo la data del controllo.",
+      "se_cambia": "Solo con una fonte seria: proporre i nuovi valori centrali e gli scenari 400/600/900 della sensibilità (sensitivity.ts), con fonte e data in example.ts e NOTICE.md.",
+      "soglia_pct": 30,
+      "automatico": false
+    },
+    {
+      "id": "batteria-schede-tecniche",
+      "descrizione": "Valori tipici delle schede di batterie domestiche: rendimento, potenza, garanzia, cicli",
+      "dove": ["src/engine/example.ts", "NOTICE.md"],
+      "valori": [
+        { "percorso": "battery.roundTripPct.value", "valore": 90, "unita": "%" },
+        { "percorso": "battery.powerKw.value", "valore": 5, "unita": "kW" },
+        { "percorso": "battery.warrantyYears.value", "valore": 10, "unita": "anni" },
+        { "percorso": "battery.lifeCycles.value", "valore": 6000, "unita": "cicli" }
+      ],
+      "fonte": "Scheda Tesla Powerwall 2 AC (italiano), garanzia Tesla Powerwall EMEA, scheda Pylontech US5000",
+      "url": "https://digitalassets.tesla.com/tesla-contents/image/upload/powerwall-2-ac-datasheet-it-it.pdf",
+      "ultimo_controllo": "2026-11-03",
+      "frequenza_mesi": 12,
+      "come_controllare": "Verificare che le schede citate esistano ancora e riportino gli stessi valori; se un modello è fuori produzione, cercare una scheda equivalente diffusa e citarla.",
+      "se_cambia": "Aggiornare valori e testi delle fonti in example.ts e NOTICE.md.",
+      "soglia_pct": 15,
+      "automatico": true
+    },
+    {
+      "id": "batteria-degrado-vita",
+      "descrizione": "Scenari di degrado e vita operativa della batteria (distinti dalla garanzia)",
+      "dove": ["src/engine/example.ts", "src/engine/sensitivity.ts"],
+      "valori": [
+        { "percorso": "battery.fadePctPerYear.value", "valore": 2, "unita": "%/anno, scenario" },
+        { "percorso": "battery.lifeYears.value", "valore": 15, "unita": "anni, scenario" }
+      ],
+      "fonte": "Ipotesi di scenario; varianti 1/3% e 10/20 anni nella sensibilità",
+      "url": "",
+      "ultimo_controllo": "2026-11-03",
+      "frequenza_mesi": 12,
+      "come_controllare": "Cercare studi pubblici con dati di campo sul degrado delle batterie domestiche al litio ferro fosfato. Cambiare solo se una fonte seria indica valori diversi; la garanzia non è una misura del degrado.",
+      "se_cambia": "Proporre i nuovi scenari con fonte; aggiornare le varianti della sensibilità se cambia l'intervallo.",
+      "soglia_pct": 30,
+      "automatico": false
+    },
+    {
+      "id": "modulo-superficie",
+      "descrizione": "Superficie di tetto per kWp, da un modulo diffuso",
+      "dove": ["src/engine/example.ts", "NOTICE.md"],
+      "valori": [{ "percorso": "pv.areaPerKwp.value", "valore": 5.5, "unita": "m²/kWp con margine" }],
+      "fonte": "Modulo JA Solar JAM54D40 da 430 W, 1,722 × 1,134 m (schede dei rivenditori), più margine ipotizzato",
+      "url": "",
+      "ultimo_controllo": "2026-11-03",
+      "frequenza_mesi": 24,
+      "come_controllare": "Controllare la potenza per m² dei moduli residenziali più venduti; il margine per distanze e bordi resta un'ipotesi.",
+      "se_cambia": "Aggiornare valore e fonte se la superficie per kWp dei moduli comuni cambia di oltre il 10%.",
+      "soglia_pct": 10,
+      "automatico": true
+    },
+    {
+      "id": "catalogo-pdc",
+      "descrizione": "Catalogo delle pompe di calore (dati Keymark tramite hplib)",
+      "dove": ["src/engine/data/heatpumps.json", "data/sources/keymark/hplib-source.json", "NOTICE.md"],
+      "valori": [],
+      "fonte": "hplib, revisione 125c2ef6c3fc38043368daac1352557fd2a90106; HP Keymark",
+      "url": "https://github.com/FZJ-IEK3-VSA/hplib",
+      "ultimo_controllo": "2026-10-28",
+      "frequenza_mesi": 12,
+      "come_controllare": "Controllare se hplib ha una revisione più recente del database e se i certificati Keymark delle macchine del catalogo sono cambiati.",
+      "se_cambia": "Non rigenerare: serve scripts/data/build_hp_catalog.py con il Python di .venv. Aprire la pull request con il solo rapporto e le istruzioni per rigenerare in locale.",
+      "automatico": false
+    },
+    {
+      "id": "anagrafe-comuni",
+      "descrizione": "Elenco ISTAT dei comuni con zona climatica e gradi giorno",
+      "dove": ["public/data/comuni.json", "data/sources/istat-source.json", "NOTICE.md"],
+      "valori": [],
+      "fonte": "ISTAT, Elenco dei comuni italiani al 21/02/2026",
+      "url": "https://www.istat.it/classificazione/codici-dei-comuni-delle-province-e-delle-regioni/",
+      "ultimo_controllo": "2026-10-28",
+      "frequenza_mesi": 6,
+      "come_controllare": "Controllare la data dell'elenco ISTAT più recente e le variazioni (fusioni, nuovi comuni) dopo il 21/02/2026.",
+      "se_cambia": "Non rigenerare: serve scripts/data/build_comuni.py con il Python di .venv. Rapporto con l'elenco delle variazioni e le istruzioni.",
+      "automatico": false
+    },
+    {
+      "id": "pvgis-tmy",
+      "descrizione": "Anni tipici PVGIS 5.3 dei 109 capoluoghi",
+      "dove": ["public/data/packages/", "data/raw/"],
+      "valori": [],
+      "fonte": "JRC, PVGIS 5.3, TMY",
+      "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/release-notes_en",
+      "ultimo_controllo": "2026-10-28",
+      "frequenza_mesi": 12,
+      "come_controllare": "Leggere le note di rilascio di PVGIS: nuova versione, nuovi dati di radiazione, ritiro della 5.3.",
+      "se_cambia": "Non migrare in automatico (piano generale §7): solo rapporto. I pacchetti si rigenerano in locale con gli script di scripts/climate.",
+      "automatico": false
+    },
+    {
+      "id": "gradi-giorno-osservati",
+      "descrizione": "Gradi giorno mensili osservati ERA5 per i 109 capoluoghi e anno tipico TMY",
+      "dove": ["public/data/gradi-giorno.json", "data/raw/gradi-giorno/", "scripts/climate/fetch_gradi_giorno.py"],
+      "valori": [],
+      "fonte": "Open-Meteo Historical Weather API, ERA5; temperatura media giornaliera a 2 m; base 20 °C. Attribuzione: Dati di temperatura: Open-Meteo.com (ERA5, Copernicus), CC BY 4.0",
+      "url": "https://archive-api.open-meteo.com/v1/archive",
+      "ultimo_controllo": "2026-11-10",
+      "frequenza_mesi": 3,
+      "come_controllare": "Eseguire .venv/Scripts/python scripts/climate/fetch_gradi_giorno.py. Scarica gennaio 2015 all?ultimo mese completo per ogni capoluogo e ricalcola i gradi giorno del TMY dalle serie orarie locali.",
+      "se_cambia": "Rigenerare il file e i grezzi con lo script; confrontare l?integrit? SHA-256, la copertura mensile e la media osservata 2015?2024 con il TMY.",
+      "soglia_pct": 10,
+      "automatico": true
+    }
+  ]
+}

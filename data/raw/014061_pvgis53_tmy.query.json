@@ -1,0 +1,15 @@
+{
+  "climateId": "014061",
+  "name": "Sondrio",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=46.1712&lon=9.8716&outputformat=json",
+  "query": {
+    "lat": "46.1712",
+    "lon": "9.8716",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:15+00:00",
+  "sha256": "f1ffde02c7da4db7e61ac785a3eedd75f1f6d3ce12485dcbb6fc4da778b85583",
+  "bytes": 1257316,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46963"
+}

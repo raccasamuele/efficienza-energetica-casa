@@ -1,0 +1,21 @@
+{
+  "nota": "Documenti non inclusi nel repository dal 21/11/2026: si scaricano dalla scheda e si controllano con lo SHA256.",
+  "titolo": "Building Typology Brochure – Italy. Fascicolo sulla Tipologia Edilizia Italiana",
+  "autori": "Corrado V., Ballarini I., Corgnati S.P., Talà N.",
+  "editore": "Politecnico di Torino, 2011 (progetto IEE TABULA), edizione di dicembre 2011, tabelle 4–5, pp. 19–24",
+  "page": "https://iris.polito.it/handle/11583/2465779",
+  "acquiredAt": "2026-10-28",
+  "files": [
+    {
+      "path": "tabula_it_brochure.pdf",
+      "sha256": "5e062e5fd702385ac18bcfab621ee830e952c63344eeeffe2834b5dd0486634d",
+      "bytes": 4795310
+    },
+    {
+      "path": "tabula_it.txt",
+      "sha256": "db53e2464c792ffd482c9403f067a603e5f46ea530da37ebb97ec6afe7e0c455",
+      "bytes": 305311,
+      "derivato": "testo estratto dal PDF, pagina per pagina"
+    }
+  ]
+}

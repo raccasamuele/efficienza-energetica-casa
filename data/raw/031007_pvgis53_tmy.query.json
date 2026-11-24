@@ -1,0 +1,15 @@
+{
+  "climateId": "031007",
+  "name": "Gorizia",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.9441&lon=13.6252&outputformat=json",
+  "query": {
+    "lat": "45.9441",
+    "lon": "13.6252",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:13:22+00:00",
+  "sha256": "fc364896ea4b784c39b089e6948ebc6c92dfffc0ce3ef971c41d690be436f42a",
+  "bytes": 1258177,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/179075"
+}

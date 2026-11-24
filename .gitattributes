@@ -1,0 +1,5 @@
+# Codice e documenti con fine riga LF in ogni sistema
+* text=auto eol=lf
+# Dati e fonti byte per byte: gli sha256 registrati devono restare validi
+data/** -text
+public/data/** -text

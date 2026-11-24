@@ -1,0 +1,15 @@
+{
+  "climateId": "060038",
+  "name": "Frosinone",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.6407&lon=13.3509&outputformat=json",
+  "query": {
+    "lat": "41.6407",
+    "lon": "13.3509",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:24+00:00",
+  "sha256": "5474a938934ec4c40a4feef0c23f55dbfaf233edb2bc1c08ae9bde95546933b4",
+  "bytes": 1260998,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41419"
+}

@@ -1,0 +1,115 @@
+{
+  "description": "Casa d’esempio a Milano; baseline 0.12.0 dal pacchetto in Git, 0.13.0 dai pacchetti rigenerati.",
+  "before": {
+    "base": {
+      "heatNeed_kWh": 15989.535197808718,
+      "coolNeed_kWh": 3536.5748049950957
+    },
+    "W": {
+      "heatNeed_kWh": 14422.402032627675,
+      "coolNeed_kWh": 3480.779761548912
+    },
+    "H": {
+      "heatNeed_kWh": 15989.535197808718,
+      "coolNeed_kWh": 3536.5748049950957
+    },
+    "P": {
+      "heatNeed_kWh": 15989.535197808718,
+      "coolNeed_kWh": 3536.5748049950957
+    },
+    "WH": {
+      "heatNeed_kWh": 14422.402032627675,
+      "coolNeed_kWh": 3480.779761548912
+    },
+    "HP": {
+      "heatNeed_kWh": 15989.535197808718,
+      "coolNeed_kWh": 3536.5748049950957
+    },
+    "WHP": {
+      "heatNeed_kWh": 14422.402032627675,
+      "coolNeed_kWh": 3480.779761548912
+    },
+    "WP": {
+      "heatNeed_kWh": 14422.402032627675,
+      "coolNeed_kWh": 3480.779761548912
+    }
+  },
+  "after": {
+    "base": {
+      "heatNeed_kWh": 15942.022845119396,
+      "coolNeed_kWh": 3516.459929111633
+    },
+    "W": {
+      "heatNeed_kWh": 14384.345313717307,
+      "coolNeed_kWh": 3464.353267756302
+    },
+    "H": {
+      "heatNeed_kWh": 15942.022845119396,
+      "coolNeed_kWh": 3516.459929111633
+    },
+    "P": {
+      "heatNeed_kWh": 15942.022845119396,
+      "coolNeed_kWh": 3516.459929111633
+    },
+    "WH": {
+      "heatNeed_kWh": 14384.345313717307,
+      "coolNeed_kWh": 3464.353267756302
+    },
+    "HP": {
+      "heatNeed_kWh": 15942.022845119396,
+      "coolNeed_kWh": 3516.459929111633
+    },
+    "WHP": {
+      "heatNeed_kWh": 14384.345313717307,
+      "coolNeed_kWh": 3464.353267756302
+    },
+    "WP": {
+      "heatNeed_kWh": 14384.345313717307,
+      "coolNeed_kWh": 3464.353267756302
+    }
+  },
+  "difference": {
+    "base": {
+      "heatNeed_kWh": -47.51235268932214,
+      "coolNeed_kWh": -20.1148758834629
+    },
+    "W": {
+      "heatNeed_kWh": -38.056718910367636,
+      "coolNeed_kWh": -16.426493792610017
+    },
+    "H": {
+      "heatNeed_kWh": -47.51235268932214,
+      "coolNeed_kWh": -20.1148758834629
+    },
+    "P": {
+      "heatNeed_kWh": -47.51235268932214,
+      "coolNeed_kWh": -20.1148758834629
+    },
+    "WH": {
+      "heatNeed_kWh": -38.056718910367636,
+      "coolNeed_kWh": -16.426493792610017
+    },
+    "HP": {
+      "heatNeed_kWh": -47.51235268932214,
+      "coolNeed_kWh": -20.1148758834629
+    },
+    "WHP": {
+      "heatNeed_kWh": -38.056718910367636,
+      "coolNeed_kWh": -16.426493792610017
+    },
+    "WP": {
+      "heatNeed_kWh": -38.056718910367636,
+      "coolNeed_kWh": -16.426493792610017
+    }
+  },
+  "windowsSaving": {
+    "heat_kWh": {
+      "before": 1567.1331651810433,
+      "after": 1557.6775314020888
+    },
+    "cool_kWh": {
+      "before": 55.79504344618363,
+      "after": 52.10666135533074
+    }
+  }
+}

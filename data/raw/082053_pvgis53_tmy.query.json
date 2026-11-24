@@ -1,0 +1,15 @@
+{
+  "climateId": "082053",
+  "name": "Palermo",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=38.1112&lon=13.3524&outputformat=json",
+  "query": {
+    "lat": "38.1112",
+    "lon": "13.3524",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:24+00:00",
+  "sha256": "cd3ce390e353bf9f1010202124ee5c2d823371ef63b42c63b6e812569eadac4a",
+  "bytes": 1265373,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39513"
+}

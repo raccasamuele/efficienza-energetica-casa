@@ -1,0 +1,15 @@
+{
+  "climateId": "091051",
+  "name": "Nuoro",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=40.3211&lon=9.3297&outputformat=json",
+  "query": {
+    "lat": "40.3211",
+    "lon": "9.3297",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:17:59+00:00",
+  "sha256": "3f640d011dedcbef562a9c5188cbb8c2da1af08e6ce783790e1eb9615ef5f6b8",
+  "bytes": 1264977,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/40387"
+}

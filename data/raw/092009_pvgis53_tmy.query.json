@@ -1,0 +1,15 @@
+{
+  "climateId": "092009",
+  "name": "Cagliari",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=39.2172&lon=9.1133&outputformat=json",
+  "query": {
+    "lat": "39.2172",
+    "lon": "9.1133",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:18:02+00:00",
+  "sha256": "ee6c4d883fa201fc1180d3f549b3f7c9143bae5b209f13de60b0d67f3b70a0f7",
+  "bytes": 1263844,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/39837"
+}

@@ -1,0 +1,18 @@
+{
+  "page": "https://www.arera.it/dati-e-statistiche/dettaglio/analisi-dei-consumi-dei-clienti-domestici",
+  "url": "https://www.arera.it/fileadmin/allegati/dati/monitoraggioretail/Dati_regione_2025.zip",
+  "path": "Dati_regione_2025.zip",
+  "acquiredAt": "2026-11-17",
+  "sha256": "2b7e5b4dc5d61f60ad7a1935c113aafbb26d8a1b5b6a371f73dc084806e1603c",
+  "bytes": 50436647,
+  "licence": "CC BY-SA 4.0 (https://www.arera.it/termini-e-condizioni-uso-del-sito)",
+  "filters": {
+    "anno": 2025,
+    "mercato": "Tutti",
+    "residenza": "Residente",
+    "classi": [
+      "1.5<potenza_impegnata<=3",
+      "3<potenza_impegnata<=4.5"
+    ]
+  }
+}

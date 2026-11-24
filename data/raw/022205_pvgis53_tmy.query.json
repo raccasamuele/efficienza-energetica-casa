@@ -1,0 +1,15 @@
+{
+  "climateId": "022205",
+  "name": "Trento",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=46.0664&lon=11.1258&outputformat=json",
+  "query": {
+    "lat": "46.0664",
+    "lon": "11.1258",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:12:56+00:00",
+  "sha256": "8782055c7cb0bc6611e093a7b630907c1b38139cbe1a015a86aed7471bd1dc43",
+  "bytes": 1258267,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/46663"
+}

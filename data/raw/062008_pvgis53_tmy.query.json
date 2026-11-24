@@ -1,0 +1,15 @@
+{
+  "climateId": "062008",
+  "name": "Benevento",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.1296&lon=14.7825&outputformat=json",
+  "query": {
+    "lat": "41.1296",
+    "lon": "14.7825",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:57+00:00",
+  "sha256": "215ae3dc4b8f67f4081b522ecf5f8811512d732f6be99b58175840ddc19f760c",
+  "bytes": 1262041,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41099"
+}

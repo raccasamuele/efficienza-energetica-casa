@@ -1,0 +1,126 @@
+[
+ {
+  "code": "005051",
+  "name": "Cunico",
+  "region": "Piemonte",
+  "sigla": "AT",
+  "capoluogo": false,
+  "previousCodes": [],
+  "boundaryCodes": [
+   "005051"
+  ],
+  "registryDate": "2026-02-21",
+  "boundaryChanged": false,
+  "coordinateSource": "Centroide da confini ISTAT 01/01/2025",
+  "lat": 45.04147,
+  "lon": 8.09083,
+  "zone": "F",
+  "gg": 2698,
+  "alt": 257,
+  "fonte": "DPR412-conflitto",
+  "donor": {
+   "name": "Cunico",
+   "sigla": "AT",
+   "zone": "F",
+   "gg": 2698,
+   "alt": 257
+  },
+  "reference": "DPR 412/1993 Allegato A, copia locale, pagina PDF 18, riga AT F 2698 257 Cunico",
+  "conflict": "Zona F discordante dai 2698 GG secondo le soglie dell'art. 2; da verificare con atto correttivo",
+  "verification": "da verificare",
+  "nota": "Il documento pubblicato dal Comune di Giaveno conserva F/2698. Non reperito l'atto che risolva la discordanza; nessuna promozione automatica a E. Fonte della verifica: https://www.comune.giaveno.to.it/it-it/download/zone-climatiche-comuni-piemonte-450229-4-1010-90e0c5fcfeb7c7f78eec495ec5a42724"
+ },
+ {
+  "code": "051007",
+  "name": "Caprese Michelangelo",
+  "region": "Toscana",
+  "sigla": "AR",
+  "capoluogo": false,
+  "previousCodes": [],
+  "boundaryCodes": [
+   "051007"
+  ],
+  "registryDate": "2026-02-21",
+  "boundaryChanged": false,
+  "coordinateSource": "Centroide da confini ISTAT 01/01/2025",
+  "lat": 43.63974,
+  "lon": 11.98144,
+  "zone": "E",
+  "gg": 1641,
+  "alt": 653,
+  "fonte": "DPR412-conflitto",
+  "donor": {
+   "name": "Caprese Michelangelo",
+   "sigla": "AR",
+   "zone": "E",
+   "gg": 1641,
+   "alt": 653
+  },
+  "reference": "DPR 412/1993 Allegato A, copia locale, pagina PDF 88, riga AR E 1641 653 Caprese Michelangelo",
+  "conflict": "Zona E discordante dai 1641 GG secondo le soglie dell'art. 2; da verificare con atto correttivo",
+  "verification": "da verificare",
+  "nota": "La copia istituzionale MEF riporta la discordanza E/1641. Non reperito un atto correttivo puntuale: conservati GG e quota della copia locale, senza inferire 2641 dalle soglie. Fonte della verifica: https://def.finanze.it/DocTribFrontend/executePrintArticolo.do?articolo=Allegato+A&codiceOrdinamento=60A+++++0000000&id=%7B0E4DC3BD-3B00-45E2-9CA6-B4DECB631C36%7D"
+ },
+ {
+  "code": "093049",
+  "name": "Vito d'Asio",
+  "region": "Friuli-Venezia Giulia",
+  "sigla": "PN",
+  "capoluogo": false,
+  "previousCodes": [],
+  "boundaryCodes": [
+   "093049"
+  ],
+  "registryDate": "2026-02-21",
+  "boundaryChanged": false,
+  "coordinateSource": "Centroide da confini ISTAT 01/01/2025",
+  "lat": 46.27825,
+  "lon": 12.94393,
+  "zone": "F",
+  "gg": 2962,
+  "alt": 320,
+  "fonte": "DPR412-conflitto",
+  "donor": {
+   "name": "Vito d'Asio",
+   "sigla": "PN",
+   "zone": "F",
+   "gg": 2962,
+   "alt": 320
+  },
+  "reference": "DPR 412/1993 Allegato A, copia locale, pagina PDF 72, riga PN F 2962 320 Vito d'Asio",
+  "conflict": "Zona F discordante dai 2962 GG secondo le soglie dell'art. 2; da verificare con atto correttivo",
+  "verification": "da verificare",
+  "nota": "Il DUP comunale 2023–2025 riporta F/2962 e richiama il DM 27/12/2002 (GU 36 del 13/02/2003). Il DM 20/12/2012, GU 57 del 08/03/2013, p. 3, richiama il passaggio E→F. Individuata una modifica di zona: il testo integrale dell'atto 2002 e la catena completa non sono stati acquisiti; non si cambia il GG per forzare la soglia. Fonte della verifica: https://www.comune.vitodasio.pn.it/media/files/093049/attachment/Dup_2023-2025.pdf"
+ },
+ {
+  "code": "102022",
+  "name": "Mongiana",
+  "region": "Calabria",
+  "sigla": "VV",
+  "capoluogo": false,
+  "previousCodes": [],
+  "boundaryCodes": [
+   "102022"
+  ],
+  "registryDate": "2026-02-21",
+  "boundaryChanged": false,
+  "coordinateSource": "Centroide da confini ISTAT 01/01/2025",
+  "lat": 38.50541,
+  "lon": 16.32451,
+  "zone": "E",
+  "gg": 1779,
+  "alt": 922,
+  "fonte": "DPR412-conflitto",
+  "donor": {
+   "name": "Mongiana",
+   "sigla": "CZ",
+   "zone": "E",
+   "gg": 1779,
+   "alt": 922
+  },
+  "reference": "DPR 412/1993 Allegato A, copia locale, pagina PDF 133, riga CZ E 1779 922 Mongiana",
+  "conflict": "Zona E discordante dai 1779 GG secondo le soglie dell'art. 2; da verificare con atto correttivo",
+  "verification": "da verificare",
+  "nota": "La copia istituzionale MEF riporta la discordanza E/1779. Non reperito un atto correttivo puntuale: nessuna deduzione di 2779 dalle sole soglie. Fonte della verifica: https://def.finanze.it/DocTribFrontend/executePrintArticolo.do?articolo=Allegato+A&codiceOrdinamento=60A+++++0000000&id=%7B0E4DC3BD-3B00-45E2-9CA6-B4DECB631C36%7D"
+ }
+]

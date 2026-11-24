@@ -1,0 +1,84 @@
+{
+  "descrizione": "Confronto con EnergyPlus (livello B del piano, docs/validazione/PIANO.md §3). Box di una stanza, riscaldamento ideale, pavimento adiabatico; sopra una copertura piana esposta, un sottotetto non riscaldato o un piano riscaldato. Unica fonte dei dati per lo script del motore e per il generatore degli IDF.",
+  "climi": [
+    { "id": "004078", "nome": "Cuneo", "zona": "F" },
+    { "id": "015146", "nome": "Milano", "zona": "E" },
+    { "id": "072006", "nome": "Bari", "zona": "C", "nota": "al posto di Napoli: nel TMY PVGIS di Napoli l'infrarosso del cielo IR(h) è quasi sempre 0 W/m² (difetto del dato, comune a 12 capoluoghi costieri); EnergyPlus lo usa, il motore no" }
+  ],
+  "box": {
+    "lato_m": 10,
+    "altezza_netta_m": 2.7,
+    "finestre_m2": { "N": 2, "E": 3, "S": 8, "O": 3 },
+    "setpoint_C": 20,
+    "apporti_interni_W_m2": 4,
+    "nota": "Dimensioni interne. Finestre senza telaio (solo vetro), nessuna ombra, nessuna schermatura. Apporti interni solo convettivi."
+  },
+  "materiali": {
+    "intonaco_est": { "spessore": 0.02, "lambda": 0.9, "rho": 1800, "c": 1000 },
+    "intonaco_int": { "spessore": 0.015, "lambda": 0.7, "rho": 1400, "c": 1000 },
+    "laterizio_25": { "spessore": 0.25, "lambda": 0.36, "rho": 800, "c": 840 },
+    "eps_12": { "spessore": 0.12, "lambda": 0.035, "rho": 20, "c": 1450 },
+    "cls_5": { "spessore": 0.05, "lambda": 1.4, "rho": 2200, "c": 1000 },
+    "laterocemento_20": { "spessore": 0.2, "lambda": 0.5, "rho": 1100, "c": 840 },
+    "xps_14": { "spessore": 0.14, "lambda": 0.034, "rho": 35, "c": 1450 },
+    "tegole_2": { "spessore": 0.02, "lambda": 1.0, "rho": 2000, "c": 800 },
+    "tavelle_4": { "spessore": 0.04, "lambda": 0.5, "rho": 1000, "c": 840 }
+  },
+  "sopra": [
+    { "id": "piana", "nome": "Copertura piana esposta", "nota": "box dei giri 1 e 2; id dei casi senza suffisso" },
+    {
+      "id": "sottotetto",
+      "nome": "Sottotetto non riscaldato",
+      "tetto": ["tegole_2", "tavelle_4"],
+      "pendenza_gradi": 30,
+      "colmo": "E-O (falde a sud e a nord)",
+      "timpani": ["intonaco_est", "laterizio_25"],
+      "ricambi_h": 2,
+      "nota_ricambi": "ipotesi: tetto in tegole su tavelle senza guaina continua; stesso valore nei due modelli",
+      "soffitto": "strati della copertura dell'involucro (dal sottotetto alla stanza); per l'involucro ben isolato l'isolante sta sul solaio, il tetto non è isolato",
+      "b_motore": "UNI EN ISO 13789: b = Hue / (Hiu + Hue), con Hue di falde, timpani e ricambi del sottotetto e Hiu del solaio; per informazione anche b = 0,9, il valore preimpostato del motore (fuori dalle soglie)"
+    },
+    { "id": "piano", "nome": "Piano riscaldato sopra", "soffitto": "strati del pavimento dell'involucro, adiabatico come il pavimento" }
+  ],
+  "involucri": [
+    {
+      "id": "anni70",
+      "nome": "Poco isolato (anni '60-'70)",
+      "parete": ["intonaco_est", "laterizio_25", "intonaco_int"],
+      "copertura": ["cls_5", "laterocemento_20", "intonaco_int"],
+      "pavimento": ["cls_5", "laterocemento_20", "intonaco_int"],
+      "ricambi_h": 0.5,
+      "serramenti_oggi": { "U": 2.8, "g": 0.75 },
+      "serramenti_nuovi": { "U": 1.3, "g": 0.6 }
+    },
+    {
+      "id": "dopo2010",
+      "nome": "Ben isolato (dopo il 2010)",
+      "parete": ["intonaco_est", "eps_12", "laterizio_25", "intonaco_int"],
+      "copertura": ["cls_5", "xps_14", "laterocemento_20", "intonaco_int"],
+      "pavimento": ["cls_5", "laterocemento_20", "intonaco_int"],
+      "ricambi_h": 0.3,
+      "serramenti_oggi": { "U": 1.3, "g": 0.6 },
+      "serramenti_nuovi": { "U": 0.9, "g": 0.5 }
+    }
+  ],
+  "interventi_010": {
+    "isolamento_solaio_sottotetto": { "uFinale_W_m2K": 0.25, "serramenti": "oggi", "sopra": "sottotetto", "climi": "tutti", "sole": [true, false] }
+  },
+  "convenzioni": {
+    "strati": "dall'esterno all'interno; per il pavimento dall'alto (lato stanza) al basso è l'ordine inverso, vedi genera_idf.py",
+    "U_motore": "UNI EN ISO 6946: Rse 0,04; Rsi 0,13 per pareti, 0,10 per la copertura (flusso verso l'alto); solaio verso il sottotetto con Rsi = Rse = 0,10 (ambiente non riscaldato)",
+    "capacita_motore": "regola dei 10 cm (UNI EN ISO 13786, metodo semplificato): per ogni superficie interna si somma rho·c·d degli strati fino a 10 cm dal lato interno o fino al primo isolante (lambda < 0,1); somma pesata sulle aree, divisa per la superficie del pavimento",
+    "ricambi": "uguali prima e dopo i serramenti nuovi: il confronto misura solo l'effetto di U e g",
+    "termostato": "EnergyPlus regola la temperatura operante (frazione radiante 0,5), come il nodo unico del motore; nel primo giro regolava l'aria (docs/validazione/LOG.md)",
+    "stagione": "SEASON_BY_ZONE del motore; la maschera oraria del motore è passata a EnergyPlus come Schedule:File, così i giorni coincidono",
+    "tempo": "pacchetti clima in UTC; EnergyPlus in ora solare locale (UTC+1), senza ora legale: la riga UTC i va nell'ora locale [i+1, i+2)",
+    "senza_sole": "irraggiamento a zero sia nel file EPW (globale, diretta, diffusa) sia nelle facciate del motore; l'infrarosso del cielo resta"
+  },
+  "soglie": {
+    "errore_annuo_max": 0.2,
+    "errore_risparmio_quota_risparmio": 0.2,
+    "errore_risparmio_quota_base": 0.05,
+    "fonte": "docs/validazione/PIANO.md §3"
+  }
+}

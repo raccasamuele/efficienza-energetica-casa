@@ -1,0 +1,12 @@
+{
+  "climateId": "milano",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.4642&lon=9.1900&outputformat=json",
+  "query": {
+    "lat": "45.4642",
+    "lon": "9.1900",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-27T23:47:32+00:00",
+  "sha256": "8649623946ba97f11238ad8374438bfa0925f6a44361717d5e2c794a8b929ffa",
+  "bytes": 1269321
+}

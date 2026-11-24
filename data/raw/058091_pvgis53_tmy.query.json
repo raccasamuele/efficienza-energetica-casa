@@ -1,0 +1,15 @@
+{
+  "climateId": "058091",
+  "name": "Roma",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=41.8933&lon=12.4829&outputformat=json",
+  "query": {
+    "lat": "41.8933",
+    "lon": "12.4829",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:15:18+00:00",
+  "sha256": "06ba8c6ddd38c2cee00b3a885c1867b8da429bf4b18e9aad72ac1cdfdd1cbd1c",
+  "bytes": 1269327,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/41485"
+}

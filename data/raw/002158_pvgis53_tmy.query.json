@@ -1,0 +1,15 @@
+{
+  "climateId": "002158",
+  "name": "Vercelli",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=45.3252&lon=8.4228&outputformat=json",
+  "query": {
+    "lat": "45.3252",
+    "lon": "8.4228",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:11:28+00:00",
+  "sha256": "d6fc546bbc3c609f31515c0e0c467c4d3bcc64aa713ef0606320933fc7f503a2",
+  "bytes": 1266835,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/1552703"
+}

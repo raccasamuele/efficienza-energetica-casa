@@ -1,0 +1,15 @@
+{
+  "climateId": "043023",
+  "name": "Macerata",
+  "url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy?lat=43.3007&lon=13.4536&outputformat=json",
+  "query": {
+    "lat": "43.3007",
+    "lon": "13.4536",
+    "outputformat": "json"
+  },
+  "acquiredAt": "2026-10-28T09:14:59+00:00",
+  "sha256": "f83da579d46f7c7e0c6549920968132083e6e7a226d52a17505a3d665dff9a98",
+  "bytes": 1268294,
+  "coordinateSource": "OpenStreetMap/Nominatim",
+  "osm": "relation/42394"
+}

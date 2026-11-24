@@ -1,0 +1,20 @@
+{
+  "date": "2026-02-21",
+  "boundariesDate": "2025-01-01",
+  "files": [
+    {
+      "path": "istat-2026-02-21.xlsx",
+      "url": "https://www.istat.it/storage/codici-unita-amministrative/Elenco-comuni-italiani.xlsx",
+      "acquiredAt": "2026-10-28T16:02:45.140Z",
+      "sha256": "83842076860450f7e482daecea6b7a769f5f93d0bf5b0d48802b44896d7a26d5",
+      "bytes": 1229843
+    },
+    {
+      "path": "istat-novita-2026.pdf",
+      "url": "https://www.istat.it/wp-content/uploads/2026/02/Novita-2026-2017-26febbraio2026.pdf",
+      "acquiredAt": "2026-10-28T16:02:45.220Z",
+      "sha256": "29c70c71a93fd68e4f039e9b730d222b954020cd6f2f70f5b248461ab5500f2c",
+      "bytes": 106802
+    }
+  ]
+}
