@@ -1,4 +1,4 @@
-# Casa — simulatore di interventi energetici per la casa
+# Casa - simulatore di interventi energetici per la casa
 
 **Casa** confronta, sulla stessa casa e nello stesso anno climatico tipico calcolato ora per ora, la situazione di
 oggi con gli interventi possibili. Risponde a domande concrete, in italiano:
