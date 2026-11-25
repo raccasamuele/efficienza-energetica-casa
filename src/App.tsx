@@ -18,6 +18,7 @@ import {
   QUOTE_KINDS,
   type ClimateIndexEntry,
   type ClimatePackage,
+  type EnergyProfile,
   type Comune,
   type Evaluation,
   type ResultDetails,
@@ -37,6 +38,8 @@ const Report = lazy(() => import("./ui/report").then((m) => ({ default: m.Report
 import { Results } from "./ui/results";
 import { DetailsContext } from "./ui/dettagli";
 import { Logo } from "./ui/illustrations";
+import { BarraFamiglia } from "./ui/famiglia";
+import { indirizzoPerLaCer } from "./ui/ponte-cer";
 import { SensitivityView } from "./ui/sensitivity";
 import { FormContext } from "./ui/fields";
 import { FIELDS, fieldId, focusControl, focusField, sectionStep } from "./ui/metadata";
@@ -292,18 +295,35 @@ export default function App() {
     setScheda(null); setSchedaDirty(false); setSchedaClimateId(null); setStarted(scheda.returnStarted); setHousePage(true);
     setMessages([{ kind: "info", text: "Casa salvata." }]);
   }
-  async function downloadCasaProfile() {
-    if (!housesRef.current.attiva) return;
+  /** Il profilo energetico della casa in uso, oppure null con l'errore da mostrare. */
+  async function casaProfile(): Promise<{ profilo: EnergyProfile; comune: string } | null> {
+    if (!housesRef.current.attiva) return null;
     const home = housesRef.current.attiva;
     try {
       let pkg = climate?.manifest.climateId === home.climateId ? climate : null;
       if (!pkg) { const response = await fetch(`./data/packages/${encodeURIComponent(home.climateId)}.json`); if (!response.ok) throw new Error("clima non disponibile"); pkg = unpackClimate(await response.json()) as ClimatePackage; }
       const climateIssues = validateClimate(pkg); if (climateIssues.length) throw new Error(`Pacchetto clima non valido: ${climateIssues.slice(0, 3).join("; ")}`);
       const result = profiloCasa(home, pkg);
-      if ("errore" in result) { setProfileError(result.errore); return; }
-      const blob = new Blob([JSON.stringify(result)], { type: "application/json" }), a = document.createElement("a");
-      a.href = URL.createObjectURL(blob); a.download = nomeFileProfilo(home.location.name); a.click(); window.setTimeout(() => URL.revokeObjectURL(a.href), 1000); setProfileError(null);
-    } catch (e) { setProfileError(e instanceof Error ? e.message : "Per scaricare il profilo completa i dati della casa: comune e consumi."); }
+      if ("errore" in result) { setProfileError(result.errore); return null; }
+      setProfileError(null);
+      return { profilo: result, comune: home.location.name };
+    } catch (e) { setProfileError(e instanceof Error ? e.message : "Per scaricare il profilo completa i dati della casa: comune e consumi."); return null; }
+  }
+  async function downloadCasaProfile() {
+    const r = await casaProfile(); if (!r) return;
+    const blob = new Blob([JSON.stringify(r.profilo)], { type: "application/json" }), a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = nomeFileProfilo(r.comune); a.click(); window.setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  /** «Porta nella CER»: la scheda si apre subito, perché dopo il calcolo il browser la bloccherebbe; poi riceve l'indirizzo. */
+  async function bringToCer() {
+    const tab = window.open("", "_blank");
+    if (tab) tab.opener = null;
+    const r = await casaProfile();
+    if (!r) { tab?.close(); return; }
+    try {
+      const url = await indirizzoPerLaCer(r.profilo);
+      if (tab) tab.location.href = url; else window.location.assign(url);
+    } catch (e) { tab?.close(); setProfileError(e instanceof Error ? e.message : "Il profilo non è partito: scaricalo e caricalo nel simulatore."); }
   }
   function addHouse() {
     openHouseSheet("nuova");
@@ -415,7 +435,7 @@ export default function App() {
   const sensGoal = sensitivityForGoal(sens, resultProject.goal, resultProject);
   // Solo i dettagli dello stesso progetto mostrato; altrimenti «in arrivo».
   const detailsValue = { details: details && details.project === resultProject ? details.value : null };
-  const caseListElement = <CaseList value={houses} onUse={useHouse} onDuplicate={duplicateHouse} onRename={renameHouse} onDelete={deleteHouse} onAdd={addHouse} onImport={() => fileRef.current?.click()} onProfile={downloadCasaProfile} profileError={profileError} onCompare={() => { setHousePage(false); setComparePage(true); void runComparison(compareGoal); }} onEdit={(id) => openHouseSheet(id ?? "attiva")} />;
+  const caseListElement = <CaseList value={houses} onUse={useHouse} onDuplicate={duplicateHouse} onRename={renameHouse} onDelete={deleteHouse} onAdd={addHouse} onImport={() => fileRef.current?.click()} onProfile={downloadCasaProfile} onBringToCer={() => void bringToCer()} profileError={profileError} onCompare={() => { setHousePage(false); setComparePage(true); void runComparison(compareGoal); }} onEdit={(id) => openHouseSheet(id ?? "attiva")} />;
 
   function canLeaveDraft() {
     if (!draftErrors.size) return true;
@@ -611,6 +631,7 @@ export default function App() {
       }, 0);
     }}>
       <aside className="sidebar no-print" aria-label="Navigazione">
+        <BarraFamiglia corrente="casa" />
         <div className="logo">
           <Logo />
           <div>

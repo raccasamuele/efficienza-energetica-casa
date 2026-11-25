@@ -117,7 +117,8 @@ describe("Case indipendenti", () => {
   });
 
   it("7.1-7.3 mostra badge, lista case e azioni attese", () => {
-    const empty = appMarkup(); expect(empty).toContain("Le mie case"); expect(empty).toContain("Nessuna casa salvata"); expect(empty).toContain('aria-label="Navigazione"'); expect(empty).not.toContain("cer.raccasamuele.it"); expect(empty).not.toContain("Importa un progetto o un profilo");
+    const empty = appMarkup(); expect(empty).toContain("Le mie case"); expect(empty).toContain("Nessuna casa salvata"); expect(empty).toContain('aria-label="Navigazione"'); expect(empty.slice(empty.indexOf('<div class="main">'))).not.toContain("cer.raccasamuele.it"); expect(empty).not.toContain("Importa un progetto o un profilo");
+    expect(empty).toContain('aria-label="Energia in chiaro"'); // la barra comune con la CER sta nella barra laterale
     const draft = appMarkup(inputCase("Ripresa")); expect(draft).toContain("Riprendi"); expect(draft).toContain("Le mie case");
     const p = inputCase("Attiva"), a = inputCase("Altra"), b = inputCase("Terza"), value: Case = { attiva: p, altre: [{ id: "a", savedAt: "", input: a }, { id: "b", savedAt: "", input: b }] };
     const props = { value, onUse: () => {}, onDuplicate: () => {}, onRename: () => {}, onDelete: () => {}, onAdd: () => {}, onImport: () => {}, onProfile: () => {}, onCompare: () => {}, onEdit: () => {} };
