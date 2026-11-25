@@ -420,7 +420,7 @@ export function createTools(data: Data, options: { sito?: string } = {}): ToolDe
     {
       name: "scrivi_profilo",
       title: "Profilo energetico della casa per la comunità energetica",
-      description: "Scrive il profilo energetico della casa com'è oggi (consumi elettrici di un anno tipico, fotovoltaico già installato), lo stesso file che il sito scarica per il simulatore della comunità energetica. Non scrive file: restituisce il testo e il nome suggerito; salvalo solo se l'utente lo chiede. A differenza degli altri strumenti la risposta contiene il comune e la curva dei consumi: dillo all'utente.",
+      description: "Scrive il profilo energetico della casa com'è oggi (consumi elettrici di un anno tipico, fotovoltaico già installato), lo stesso file che il sito scarica per il simulatore della comunità energetica. Non scrive file: restituisce il testo e il nome suggerito; salvalo solo se l'utente lo chiede. A differenza degli altri strumenti la risposta contiene il comune, la curva dei consumi e il prezzo variabile dell'elettricità: dillo all'utente.",
       inputSchema: INPUT_SCHEMA,
       annotations: { ...ANNOTATIONS, title: "Profilo energetico della casa per la comunità energetica" },
       run: (args) => withProject(data, store, args, profilo, true),

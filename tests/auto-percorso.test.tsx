@@ -39,7 +39,7 @@ describe("percorso auto elettrica, tappa 5 bis", () => {
           rows.forEach((row, i) => expect(row.marginalCost).toBeCloseTo(expected.packages.find((x: any) => x.id === original.id).evStrategies[i].marginalCost, 6));
         } else expect(result.ev).toBeUndefined();
       }
-      expect(exportEnergyProfile(p, climate, actual.packages, new Date("2026-11-05T00:00:00Z"))).toEqual({ ...expected.profile, motore: `casa-1R1C ${ENGINE_VERSION}` });
+      expect(exportEnergyProfile(p, climate, actual.packages, new Date("2026-11-05T00:00:00Z"))).toEqual({ ...expected.profile, motore: `casa-1R1C ${ENGINE_VERSION}`, versione: 2, bolletta: { eur_kwh: p.tariffs.elecPrice.value, stato: p.tariffs.elecPrice.status } });
     }
   });
   it("calcola una somma semplice, rivendita e pareggio", () => {

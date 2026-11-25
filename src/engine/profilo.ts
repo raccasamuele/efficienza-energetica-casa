@@ -36,9 +36,17 @@ export interface ProfileScenario {
   stima?: { immissioni_kwh?: number; autoconsumo_kwh?: number };
 }
 
+/** Prezzo dell'elettricità nella bolletta della casa, €/kWh con le imposte (versione 2 del formato). */
+export interface ProfileBill {
+  eur_kwh: number;
+  stato: DataStatus;
+  fasce?: { F1: number; F2: number; F3: number };
+}
+
 export interface EnergyProfile {
   formato: "profilo-energetico";
-  versione: 1;
+  /** 2 solo se c'è `bolletta`: senza, il file resta leggibile dai lettori della versione 1. */
+  versione: 1 | 2;
   fonte: string;
   motore?: string | null;
   data: string;
@@ -46,6 +54,7 @@ export interface EnergyProfile {
   comune: { codice_istat: string; nome: string; lat: number; lon: number } | null;
   scenari: ProfileScenario[];
   esclusi: string[];
+  bolletta?: ProfileBill;
 }
 
 export const PROFILE_FORMAT = "profilo-energetico";
@@ -147,9 +156,13 @@ export function exportEnergyProfile(p: ProjectInput, climate: ClimatePackage, pa
   const valid = packages.filter((r) => r.valid);
   if (!valid.length) throw new Error("Nessun pacchetto valido: il profilo non ha scenari da portare.");
   const loc = p.location;
+  const price = p.tariffs.elecPrice;
+  // Il prezzo variabile del progetto, imposte comprese: alla CER serve per il risparmio in bolletta dell'autoconsumo.
+  const bolletta: ProfileBill | null = price.status !== "sconosciuto" && isNum(price.value) && price.value >= 0 && price.value <= 1
+    ? { eur_kwh: price.value, stato: price.status } : null;
   return {
     formato: PROFILE_FORMAT,
-    versione: 1,
+    versione: bolletta ? 2 : 1,
     fonte: "simulatore-casa",
     motore: `casa-1R1C ${ENGINE_VERSION}`,
     data: today.toISOString().slice(0, 10),
@@ -157,6 +170,7 @@ export function exportEnergyProfile(p: ProjectInput, climate: ClimatePackage, pa
     comune: /^\d{6}$/.test(loc.code) ? { codice_istat: loc.code, nome: loc.name, lat: loc.lat, lon: loc.lon } : null,
     scenari: valid.map((r) => profileScenario(p, climate, r)),
     esclusi: [...PROFILE_EXCLUDED],
+    ...(bolletta ? { bolletta } : {}),
   };
 }
 
@@ -192,7 +206,7 @@ export function parseEnergyProfile(text: string): { profile?: EnergyProfile; err
     return { errors: ["Il file non è JSON valido."] };
   }
   if (!isObj(d) || d.formato !== PROFILE_FORMAT) return { errors: ["Non è un profilo energetico."] };
-  if (d.versione !== 1) return { errors: [`Versione ${String(d.versione)} del profilo non supportata: questo simulatore legge la 1.`] };
+  if (d.versione !== 1 && d.versione !== 2) return { errors: [`Versione ${String(d.versione)} del profilo non supportata: questo simulatore legge la 1 e la 2.`] };
   if (!Array.isArray(d.scenari) || d.scenari.length < 1 || d.scenari.length > 20) return { errors: ["Il profilo deve avere da 1 a 20 scenari."] };
   const errors: string[] = [];
   for (const [i, s] of (d.scenari as unknown[]).entries()) {
@@ -201,6 +215,7 @@ export function parseEnergyProfile(text: string): { profile?: EnergyProfile; err
     else if (!isNum(c.kwh_annui) || c.kwh_annui < 0 || !Array.isArray(c.ore) || c.ore.length !== CURVE_CELLS || !c.ore.every((v) => isNum(v) && v >= 0)) errors.push(`Scenario «${s.nome}»: consumi annui e ${CURVE_CELLS} valori orari finiti e non negativi.`);
     else if (!STATUSES.includes(c.stato as DataStatus)) errors.push(`Scenario «${s.nome}»: stato dei consumi non valido.`);
   }
+  if (d.bolletta !== undefined && (d.versione !== 2 || !isObj(d.bolletta) || !isNum(d.bolletta.eur_kwh) || d.bolletta.eur_kwh < 0 || d.bolletta.eur_kwh > 1 || !STATUSES.includes(d.bolletta.stato as DataStatus))) errors.push("Prezzo della bolletta non valido: serve la versione 2, un prezzo tra 0 e 1 €/kWh e il suo stato.");
   if (d.comune !== null && !(isObj(d.comune) && typeof d.comune.codice_istat === "string" && typeof d.comune.nome === "string")) errors.push("Comune non valido.");
   return errors.length ? { errors } : { profile: d as unknown as EnergyProfile, errors };
 }
@@ -252,6 +267,9 @@ export function projectFromProfile(text: string, base: ProjectInput, comuni?: re
     if (PLANE[plane].inclinazione !== fv.inclinazione || PLANE[plane].orientamento !== fv.orientamento)
       warnings.push(`Falda del FV approssimata a ${plane}: Casa usa inclinazioni di 20° o 35° verso est, sud o ovest.`);
   }
+  // prezzo variabile dell'elettricità
+  const bill = profile.bolletta;
+  if (bill && bill.stato !== "sconosciuto") p.tariffs.elecPrice = q(bill.eur_kwh, bill.stato, "Prezzo variabile dell'elettricità");
   if (s.batteria) warnings.push("Il profilo ha una batteria nella situazione attuale: Casa non rappresenta una batteria già installata, la valuta solo come intervento.");
   if (!profile.scenari.some((x) => x.attuale && x.consumi.natura === "misurato")) warnings.push("Consumi del profilo calcolati, non misurati: se hai la curva del contatore caricala nel passo Consumi.");
   warnings.push("Edificio, impianto e interventi partono dalle ipotesi di un progetto nuovo: completali nei passi.");
