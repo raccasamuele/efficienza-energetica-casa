@@ -1,6 +1,6 @@
 {
  "formato": "profilo-energetico",
- "versione": 1,
+ "versione": 2,
  "fonte": "simulatore-casa",
  "motore": "casa-1R1C 0.15.0",
  "data": "2026-11-03",
@@ -14083,5 +14083,9 @@
   "codice cliente",
   "letture del contatore con le date",
   "importi"
- ]
+ ],
+ "bolletta": {
+  "eur_kwh": 0.28,
+  "stato": "ipotizzato"
+ }
 }

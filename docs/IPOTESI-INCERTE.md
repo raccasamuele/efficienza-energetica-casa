@@ -81,7 +81,7 @@ CC BY-SA 4.0; [pagina dei dati](https://www.arera.it/dati-e-statistiche/dettagli
 | Il file delle immissioni ha per ipotesi lo stesso formato di quello dei prelievi | 3A | medio | file vero di immissioni |
 | Una bolletta alla volta; niente foto né scansioni | 3B | basso | più PDF insieme; lettura di immagini (OCR) |
 | Diagnosi sulla forma media della curva, non sui singoli apparecchi | 3C | basso | — |
-| Profilo energetico come forma media su 864 celle; non porta preventivi né la batteria già installata | 1B | basso | profilo v2, se serve alla CER |
+| Profilo energetico come forma media su 864 celle; non porta preventivi né la batteria già installata. Dalla versione 2 porta il prezzo variabile dell'elettricità (un solo prezzo, non le fasce) | 1B | basso | fasce F1/F2/F3 nel profilo se Casa le chiederà per la bolletta attuale |
 | Con FV esistente da bolletta lo scorporo del boiler è annuo | 4B | basso | scorporo dalla curva |
 
 ## Piano nel tempo

@@ -80,6 +80,17 @@ prof.motore = "casa-1R1C 0.15.0";
     for (const forbidden of ["Mario", "Rossi", "@", "IT001E"]) expect(text).not.toContain(forbidden);
   });
 
+  it("prezzo della bolletta: versione 2 se il prezzo variabile è noto, altrimenti versione 1 senza prezzo", () => {
+    expect(prof.versione).toBe(2);
+    expect(prof.bolletta).toEqual({ eur_kwh: p.tariffs.elecPrice.value, stato: p.tariffs.elecPrice.status });
+    const ignoto = withPvAndBattery();
+    ignoto.tariffs.elecPrice = { value: 0, status: "sconosciuto" };
+    // con il prezzo sconosciuto i pacchetti non sono validi: qui si riusano quelli calcolati con il prezzo
+    const senza = exportEnergyProfile(ignoto, milano, ev.packages, new Date("2026-11-03T10:00:00Z"));
+    expect(senza.versione).toBe(1);
+    expect(senza).not.toHaveProperty("bolletta");
+  });
+
   it("perdite: quelle del clima più le ombre, e ritorno", () => {
     expect(pvgisLoss(0)).toBe(14);
     expect(pvgisLoss(10)).toBe(22.6);
@@ -139,6 +150,17 @@ describe("Profilo energetico: lettura in un progetto nuovo", () => {
     expect(a.location).toEqual(b.location);
     expect(a.consumption.electricityKwh.value).toBe(b.consumption.electricityKwh.value);
     expect(a.existingPv).toEqual(b.existingPv);
+    // il prezzo della bolletta va e torna: diventa il prezzo variabile del progetto nuovo
+    expect(tornato.bolletta).toEqual(originale.bolletta);
+    expect(a.tariffs.elecPrice.value).toBe(originale.bolletta.eur_kwh);
+    expect(a.tariffs.elecPrice.source).toContain("profilo energetico");
+  });
+
+  it("prezzo della bolletta non valido o nella versione 1", () => {
+    const prof = profileOf(exampleProject());
+    for (const rotto of [{ ...prof, versione: 1 }, { ...prof, bolletta: { eur_kwh: 3, stato: "documentato" } }, { ...prof, bolletta: { eur_kwh: 0.3 } }])
+      expect(projectFromProfile(JSON.stringify(rotto), base()).errors[0]).toContain("Prezzo della bolletta");
+    expect(projectFromProfile(JSON.stringify({ ...prof, versione: 3 }), base()).errors[0]).toContain("legge la 1 e la 2");
   });
 
   it("curva misurata dalla CER e file non validi", () => {

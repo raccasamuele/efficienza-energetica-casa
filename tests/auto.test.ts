@@ -23,6 +23,9 @@ function closeTree(actual: unknown, expected: unknown) {
   else expect(actual).toEqual(expected);
 }
 
+/** I profili delle fixture sono della versione 1: dalla 2 Casa aggiunge il prezzo variabile dell'elettricità. */
+const conBolletta = (p: ProjectInput) => ({ versione: 2, bolletta: { eur_kwh: p.tariffs.elecPrice.value, stato: p.tariffs.elecPrice.status } });
+
 describe("Auto elettrica: compatibilità", () => {
   for (const old of before) it(`spenta: ${old.name}, pacchetti e profilo originali`, () => {
     const p = fixtureProject(old.name); expect(p.ev.enabled).toBe(false);
@@ -32,7 +35,7 @@ describe("Auto elettrica: compatibilità", () => {
       closeTree({ id: r.id, npv: r.cash?.npv ?? null, bill: r.costs.total, import_kWh: r.elec.import_kWh, export_kWh: r.elec.export_kWh, investment: r.investment, pvKwp: r.pvKwp, batteryKwh: r.battery?.capacity_kWh ?? null }, ref);
       expect(r.ev).toBeUndefined();
     }
-    closeTree(exportEnergyProfile(p, climate, ev.packages, new Date("2026-11-05T00:00:00Z")), { ...old.profile, motore: `casa-1R1C ${ENGINE_VERSION}` });
+    closeTree(exportEnergyProfile(p, climate, ev.packages, new Date("2026-11-05T00:00:00Z")), { ...old.profile, motore: `casa-1R1C ${ENGINE_VERSION}`, ...conBolletta(p) });
   });
   it("salvataggio senza input.ev: nessun avviso né cambiamento", () => {
     const p = exampleProject(), f = toProjectFile(p, climate);
@@ -149,9 +152,10 @@ describe("Integrazione nei pacchetti", () => {
     expect(r.otherUses_kWh).toBeCloseTo(10000 - api.evNeed(p.ev).home_kWh * 1.05, 6);
     p.consumption.electricityKwh = q(100); expect(evaluate(p, climate).ok).toBe(false);
   });
-  it("profilo v1: auto negli altri usi senza chiavi nuove", () => {
+  it("profilo: auto negli altri usi senza chiavi nuove negli scenari", () => {
     const p = on(), ev = evaluate(p, climate), profile = exportEnergyProfile(p, climate, ev.packages);
-    expect(profile.versione).toBe(1);
+    expect(profile.versione).toBe(2); // la 2 aggiunge solo il prezzo della bolletta
+    profile.scenari.forEach((s) => expect(Object.keys(s.consumi.usi!).every((k) => ["altri_usi_kwh", "pompa_di_calore_kwh", "raffrescamento_kwh"].includes(k))).toBe(true));
     profile.scenari.forEach((s, i) => expect(s.consumi.usi!.altri_usi_kwh).toBeCloseTo(Math.round((ev.packages[i].otherUses_kWh + ev.packages[i].ev!.home_kWh) * 10) / 10, 6));
     for (const r of ev.packages) expect(packageConsumptionCurve(p, climate, r).kwh_annui).toBeCloseTo(Math.round(r.elec.import_kWh * 10) / 10, 6);
   });
