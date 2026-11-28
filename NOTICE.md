@@ -58,7 +58,7 @@
 
 - **pvlib-python** 0.11.1 — BSD-3-Clause; **pandas**, **numpy** — BSD-3-Clause; **pypdf** — BSD-3-Clause; **pyshp** — MIT; **pyproj** — MIT (solo preparazione offline dei dati).
 - **React** 18.3.1 — MIT; **lucide-react** 0.453.0 — ISC; **@fontsource/poppins** 5.1.0 — font Poppins, SIL Open Font License 1.1.
-- **Vite** 5.4.21, **Vitest** 2.1.9, **TypeScript** 5.6.3 — MIT / Apache-2.0 (strumenti di sviluppo). Registro raggiungibile e lockfile aggiornato. `npm audit` del 23/11/2026: avvisi solo negli strumenti di sviluppo, 0 nelle dipendenze di esecuzione ([test di sicurezza](docs/sicurezza/TEST-2026-11-23.md), punto 2).
+- **Vite** 8.4.0, **Vitest** 5.1.2, **@vitejs/plugin-react** 6.3.0, **TypeScript** 5.6.3 — MIT / Apache-2.0 (strumenti di sviluppo). Registro raggiungibile e lockfile aggiornato. `npm audit` del 28/11/2026 nella radice: 0 avvisi (il 23/11/2026 c'erano avvisi solo negli strumenti di sviluppo, [test di sicurezza](docs/sicurezza/TEST-2026-11-23.md), punto 2).
 
 - **pdfjs-dist** 6.4.299 — Apache-2.0 (lettura delle bollette PDF nel browser).
 

@@ -1,5 +1,7 @@
 # Casa - simulatore di interventi energetici per la casa
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/raccasamuele-efficienza-energetica-casa-wgfxj7?v=f5b1e321655d2d5ef728606e5bb0b6c5)](https://m8ven.ai/mcp/raccasamuele-efficienza-energetica-casa-wgfxj7?s=readme)
+
 **Casa** confronta, sulla stessa casa e nello stesso anno climatico tipico calcolato ora per ora, la situazione di
 oggi con gli interventi possibili. Risponde a domande concrete, in italiano:
 
@@ -132,7 +134,7 @@ L'archivio storico TMY, query e hash in `data/raw/` è in sola lettura. La cache
 - Il confronto con EnergyPlus (livello B della validazione) esiste: risultati in [RISULTATI-B.md](docs/validazione/RISULTATI-B.md) e analisi in [ANALISI-B.md](docs/validazione/ANALISI-B.md), con esiti e limiti. Mancano ancora i confronti con case reali (livello E): i numeri non hanno un'accuratezza dimostrata su case reali.
 - I prezzi d'esempio non sono prezzi attuali.
 - Con la curva del contatore e gli split, il consumo estivo dei condizionatori è già nella curva e il modello lo aggiunge di nuovo: i consumi elettrici risultano più alti. Il sito lo avverte; la correzione è da fare.
-- `npm audit` segnala avvisi solo negli strumenti di sviluppo (Vite 5, Vitest 2, CLI `cf`), non nelle dipendenze del sito e del server MCP (controllo del 23/11/2026, [test di sicurezza](docs/sicurezza/TEST-2026-11-23.md)). Gli aggiornamenti cambiano versione principale e sono da fare.
+- Vite e Vitest sono aggiornati (Vite 8, Vitest 5): `npm audit` nella radice non segnala avvisi (controllo del 28/11/2026). Restano avvisi nella CLI `cf` di `pubblica/`, usata solo per pubblicare. Il 23/11/2026 gli avvisi erano solo negli strumenti di sviluppo, non nelle dipendenze del sito e del server MCP ([test di sicurezza](docs/sicurezza/TEST-2026-11-23.md)).
 
 ## Sicurezza
 
