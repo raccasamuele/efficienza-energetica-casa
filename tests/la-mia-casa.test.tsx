@@ -8,7 +8,7 @@ import App from "../src/App";
 import { Entry } from "../src/App";
 import { ConsumptionForm } from "../src/ui/forms";
 import { FormContext } from "../src/ui/fields";
-import { loadMilanoLegacy } from "./helpers";
+import { expectFixtureValue, loadMilanoLegacy } from "./helpers";
 
 afterEach(() => vi.unstubAllGlobals());
 const clone = <T,>(v: T): T => structuredClone(v);
@@ -17,22 +17,6 @@ const equalExceptQuestion = (a: ProjectInput, b: ProjectInput) => {
   for (const p of [x, y]) { delete p.goal; delete p.mode; delete p.battery.enabled; delete p.ev.pvPlan; }
   expect(y).toEqual(x);
 };
-function expectFixtureValue(actual: unknown, expected: unknown): void {
-  if (typeof actual === "number" && typeof expected === "number") {
-    expect(Math.abs(actual - expected)).toBeLessThanOrEqual(Math.max(1e-9, Math.abs(expected) * 1e-9));
-  } else if (Array.isArray(actual) && Array.isArray(expected)) {
-    expect(actual).toHaveLength(expected.length);
-    actual.forEach((value, i) => expectFixtureValue(value, expected[i]));
-  } else if (actual !== null && expected !== null && typeof actual === "object" && typeof expected === "object") {
-    const actualRecord = actual as Record<string, unknown>;
-    const expectedRecord = expected as Record<string, unknown>;
-    expect(Object.keys(actualRecord).sort()).toEqual(Object.keys(expectedRecord).sort());
-    for (const key of Object.keys(expectedRecord)) expectFixtureValue(actualRecord[key], expectedRecord[key]);
-  } else {
-    expect(actual).toBe(expected);
-  }
-}
-
 describe("La mia casa", () => {
   it("conserva i calcoli originali della fixture annuale", () => {
     const expected = require("./fixtures/casa-prima.json") as any[];
