@@ -25,3 +25,7 @@ data/sources/arera-profili/*.zip
 data/sources/tabula_it_brochure.pdf
 data/sources/tabula_it.txt
 data/sources/keymark/*.pdf
+
+# Configurazione locale degli strumenti e appunti di lavoro
+.claude/
+docs/aziende/
