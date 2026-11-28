@@ -1,3 +1,4 @@
+import { expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { HOURS, unpackClimate, type ClimatePackage } from "../src/engine/climate";
@@ -88,4 +89,24 @@ export function steady5R1C(x: { Hve: number; Bve: number; Hw: number; Bw: number
   }
   const v = A.map((row, i) => row[4] / row[i]);
   return { thetaAir: v[0], thetaS: v[1], thetaM: v[2], phi: v[3], Hem };
+}
+
+/**
+ * Confronto con le fixture salvate: i numeri devono coincidere a meno di 1e-9 relativo, perché l'ultima cifra
+ * decimale può cambiare fra sistemi operativi (es. Windows e Linux); il resto deve essere identico.
+ */
+export function expectFixtureValue(actual: unknown, expected: unknown): void {
+  if (typeof actual === "number" && typeof expected === "number") {
+    expect(Math.abs(actual - expected)).toBeLessThanOrEqual(Math.max(1e-9, Math.abs(expected) * 1e-9));
+  } else if (Array.isArray(actual) && Array.isArray(expected)) {
+    expect(actual).toHaveLength(expected.length);
+    actual.forEach((value, i) => expectFixtureValue(value, expected[i]));
+  } else if (actual !== null && expected !== null && typeof actual === "object" && typeof expected === "object") {
+    const actualRecord = actual as Record<string, unknown>;
+    const expectedRecord = expected as Record<string, unknown>;
+    expect(Object.keys(actualRecord).sort()).toEqual(Object.keys(expectedRecord).sort());
+    for (const key of Object.keys(expectedRecord)) expectFixtureValue(actualRecord[key], expectedRecord[key]);
+  } else {
+    expect(actual).toBe(expected);
+  }
 }

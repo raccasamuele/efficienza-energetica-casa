@@ -8,7 +8,7 @@ import { SystemForm } from "../src/ui/forms";
 import { Results } from "../src/ui/results";
 import { Report } from "../src/ui/report";
 import { startProject } from "../src/ui/journey";
-import { constantClimate, loadMilano, loadMilanoLegacy } from "./helpers";
+import { constantClimate, expectFixtureValue, loadMilano, loadMilanoLegacy } from "./helpers";
 
 const climate = loadMilano();
 const house = () => { const p = exampleProject(); p.service.schedule = defaultHeatingSchedule(); return p; };
@@ -39,7 +39,7 @@ describe("Riscaldamento a orari 0.16.0: percorso continuo", () => {
       const p = startProject(f.mode, true, f.goal);
       p.service.schedule = { ...defaultHeatingSchedule(), mode: "continuo" };
       const ev = evaluate(p, loadMilanoLegacy());
-      expect(ev.packages.map((r) => ({ id: r.id, npv: r.cash?.npv ?? null, spending: r.costs.total, electricityKwh: r.elec.import_kWh, gasSmc: r.gasSmc, investment: r.investment }))).toEqual(f.packages);
+      expectFixtureValue(ev.packages.map((r) => ({ id: r.id, npv: r.cash?.npv ?? null, spending: r.costs.total, electricityKwh: r.elec.import_kWh, gasSmc: r.gasSmc, investment: r.investment })), f.packages);
     }
     const f = JSON.parse(readFileSync(resolve(__dirname, "fixtures/involucro-prima.json"), "utf8")) as { name: string; packages: { heatNeed_kWh: number; peak_kW: number }[] }[];
     const p = house(); p.service.schedule!.mode = "continuo";
