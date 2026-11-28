@@ -1,5 +1,7 @@
 # Casa - simulatore di interventi energetici per la casa
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/raccasamuele-efficienza-energetica-casa-wgfxj7?v=f5b1e321655d2d5ef728606e5bb0b6c5)](https://m8ven.ai/mcp/raccasamuele-efficienza-energetica-casa-wgfxj7?s=readme)
+
 **Casa** confronta, sulla stessa casa e nello stesso anno climatico tipico calcolato ora per ora, la situazione di
 oggi con gli interventi possibili. Risponde a domande concrete, in italiano:
 
